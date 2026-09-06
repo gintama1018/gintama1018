@@ -207,7 +207,7 @@ to hold up across 12+ countries.
 ```
 
 Play the game if you want to see how one of these actually goes down →
-[**Open the Case Terminal**](https://your-hosted-link-here/case-terminal-game.html)
+[**Open the Case Terminal**](https://gintama1018.github.io/case-terminal-game.html)
 *(a small standalone page — nothing here executes inside GitHub, obviously)*
 
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="" />
@@ -255,7 +255,17 @@ Sleep schedule             ○○○○○○○  "case closed, badly"
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gintama1018&layout=compact&theme=github_dark&bg_color=0d1117&title_color=C0C0C0&text_color=E5E5E5&border_color=2b2b2b&hide_border=true" alt="top langs" height="165"/>
 </div>
 
-*(these are community-hosted cards — if one's down, the case board above
+<br/>
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gintama1018/gintama1018/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gintama1018/gintama1018/output/github-contribution-grid-snake.svg" />
+  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/gintama1018/gintama1018/output/github-contribution-grid-snake.svg" width="100%" />
+</picture>
+</div>
+
+*(these are community-hosted cards & automated activity feeds — if one's down, the case board above
 still tells the real story)*
 
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="" />
@@ -300,8 +310,8 @@ DIAGNOSTIC COMPLETE. one note survived the log wipe:
 <p align="center">
   <a href="https://gintama.tech"><img src="https://img.shields.io/badge/Portfolio-gintama.tech-1c1c1c?style=flat-square&logoColor=C0C0C0" /></a>
   <a href="https://github.com/gintama1018"><img src="https://img.shields.io/badge/GitHub-gintama1018-1c1c1c?style=flat-square&logo=github&logoColor=C0C0C0" /></a>
-  <a href="mailto:[YOUR_EMAIL]"><img src="https://img.shields.io/badge/Email-contact-1c1c1c?style=flat-square&logoColor=C0C0C0" /></a>
-  <a href="https://linkedin.com/in/[YOUR_LINKEDIN]"><img src="https://img.shields.io/badge/LinkedIn-connect-1c1c1c?style=flat-square&logo=linkedin&logoColor=C0C0C0" /></a>
+  <a href="mailto:pihujang0@gmail.com"><img src="https://img.shields.io/badge/Email-contact-1c1c1c?style=flat-square&logoColor=C0C0C0" /></a>
+  <a href="https://linkedin.com/in/sonu-jangir-98968b390"><img src="https://img.shields.io/badge/LinkedIn-connect-1c1c1c?style=flat-square&logo=linkedin&logoColor=C0C0C0" /></a>
 </p>
 
 <div align="center">
@@ -318,7 +328,7 @@ $ _
 
 </div>
 
-[INFRAWATCH_REPO]: https://github.com/gintama1018/REPLACE_ME
-[BHARATKART_REPO]: https://github.com/gintama1018/REPLACE_ME
-[ROADSOS_REPO]: https://github.com/gintama1018/REPLACE_ME
-[KISANAI_REPO]: https://github.com/gintama1018/REPLACE_ME
+[INFRAWATCH_REPO]: https://github.com/gintama1018/HACK-FOR-GREEN-BHARAT-HACKATHON
+[BHARATKART_REPO]: https://github.com/gintama1018/BHARAT-KART---AUTONOMOUS-HACKS-FINALE-PROJECT
+[ROADSOS_REPO]: https://github.com/gintama1018/ROAD-SAFETY-PROJECT
+[KISANAI_REPO]: https://github.com/gintama1018/KISAN-AI

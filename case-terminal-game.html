@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOROZUYA :: CASE TERMINAL</title>
+<style>
+  :root{
+    --bg:#0d0d0d; --panel:#141414; --line:#2b2b2b;
+    --silver:#C0C0C0; --dim:#7a7a7a; --gold:#D4AF37;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; min-height:100vh; background:var(--bg); color:var(--silver);
+    font-family:'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+    display:flex; align-items:center; justify-content:center; padding:24px;
+  }
+  .terminal{
+    width:100%; max-width:640px; background:var(--panel);
+    border:1px solid var(--line); border-radius:4px; padding:28px 26px;
+  }
+  .head{ color:var(--dim); font-size:12px; letter-spacing:2px; margin-bottom:18px; }
+  .log{ min-height:220px; font-size:14px; line-height:1.7; white-space:pre-wrap; }
+  .log .stamp{ color:var(--gold); }
+  .choices{ display:flex; flex-direction:column; gap:8px; margin-top:18px; }
+  button{
+    background:transparent; color:var(--silver); border:1px solid var(--line);
+    padding:10px 12px; font-family:inherit; font-size:13px; text-align:left;
+    cursor:pointer; border-radius:2px;
+  }
+  button:hover{ border-color:var(--silver); }
+  .cursor{ display:inline-block; width:8px; background:var(--silver); animation:blink 1s steps(1) infinite; }
+  @keyframes blink{ 50%{ opacity:0; } }
+  .footer{ margin-top:20px; font-size:11px; color:var(--dim); }
+  a{ color:var(--silver); }
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="head">YOROZUYA CASE TERMINAL — SILVER SOUL STUDIOS</div>
+    <div class="log" id="log"></div>
+    <div class="choices" id="choices"></div>
+    <div class="footer">no data leaves this page. it's just a static file.</div>
+  </div>
+
+<script>
+  const log = document.getElementById('log');
+  const choicesEl = document.getElementById('choices');
+
+  const nodes = {
+    start: {
+      text: "CASE #0001 — RE-OPENED\n\nA client walks in. The problem: 'it works on my machine.'\n\nHow do you take the job?",
+      choices: [
+        { label: "Ask for the repro steps first.", next: "repro" },
+        { label: "Just clone it and see what breaks.", next: "clone" }
+      ]
+    },
+    repro: {
+      text: "Good instinct. Half of every audit is refusing to guess.\n\nThe client says: 'it's intermittent.'",
+      choices: [
+        { label: "Add logging and wait for it to fail again.", next: "logging" },
+        { label: "Declare it a race condition and move on.", next: "guess" }
+      ]
+    },
+    clone: {
+      text: "You clone it. It doesn't build. Nobody pinned a dependency version.\n\nWhat now?",
+      choices: [
+        { label: "Pin everything, document it, keep going.", next: "logging" },
+        { label: "Rage-quit and blame the client.", next: "guess" }
+      ]
+    },
+    logging: {
+      text: "Three hours later: a background scanner never stopped on app close.\nClassic. Fixed.\n\nCASE CLOSED — status: SOLVED",
+      choices: [
+        { label: "Run it again", next: "start" },
+        { label: "Exit to profile →", link: "https://github.com/gintama1018" }
+      ]
+    },
+    guess: {
+      text: "It wasn't a race condition. It was a stale timestamp tripping the\nanti-replay check. The guess cost two days.\n\nCASE CLOSED — status: SOLVED, THE HARD WAY",
+      choices: [
+        { label: "Run it again", next: "start" },
+        { label: "Exit to profile →", link: "https://github.com/gintama1018" }
+      ]
+    }
+  };
+
+  function render(id){
+    const node = nodes[id];
+    log.textContent = node.text;
+    choicesEl.innerHTML = "";
+    node.choices.forEach(c => {
+      const btn = document.createElement('button');
+      btn.textContent = "> " + c.label;
+      btn.onclick = () => {
+        if (c.link) { window.location.href = c.link; return; }
+        render(c.next);
+      };
+      choicesEl.appendChild(btn);
+    });
+  }
+
+  render('start');
+</script>
+</body>
+</html>
