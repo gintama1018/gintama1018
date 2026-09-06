@@ -196,9 +196,7 @@ def update_readme(items):
 
     wire_block = f"""{start_tag}
 <!-- Animated Live Surveillance Wire SVG -->
-<div align="center">
-  <img src="./assets/ui/surveillance-wire.svg" width="100%" alt="Live Surveillance Wire Intercept: Real-Time GitHub Activity" />
-</div>
+<img src="./assets/ui/surveillance-wire.svg" width="100%" alt="Live Surveillance Wire Intercept: Real-Time GitHub Activity" />
 {end_tag}"""
 
     if start_tag in content and end_tag in content:

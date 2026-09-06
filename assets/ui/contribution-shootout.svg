@@ -1,85 +1,208 @@
-<svg width="880" height="240" viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tactical Contribution Grid Shootout: Operatives using commit blocks as tactical cover">
+<svg width="880" height="280" viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tactical Contribution Grid Shootout: Destructible commit cover, real-time health bars, alternating K.O. combat rounds">
   <defs>
-    <!-- Grid Cell Colors (Aesthetic Monochromatic & Titanium) -->
     <style>
       .bg { fill: #09090b; }
       .border-box { stroke: #27272a; stroke-width: 1; rx: 8px; }
-      .c-empty { fill: #18181b; }
-      .c-l1 { fill: #27272a; }
-      .c-l2 { fill: #52525b; }
-      .c-l3 { fill: #a1a1aa; }
-      .c-l4 { fill: #f4f4f5; }
-      .mono-txt { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; fill: #71717a; }
-      .hud-red { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; fill: #d4d4d8; font-weight: 600; }
-      .hud-gold { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; fill: #c5a059; font-weight: 600; }
-      .hud-green { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; fill: #f4f4f5; font-weight: 600; }
+      .c-empty { fill: #141417; }
+      .c-l1 { fill: #222227; }
+      .c-l2 { fill: #3f3f46; }
+      .c-l3 { fill: #71717a; }
+      .c-l4 { fill: #d4d4d8; }
+      .c-solid { fill: #f4f4f5; }
+      .mono-txt { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9px; fill: #71717a; }
+      .mono-bold { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; font-weight: 700; }
+      .hud-title { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; fill: #f4f4f5; font-weight: 700; letter-spacing: 1px; }
+      .dmg-crit { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; fill: #f85149; font-weight: 800; }
+      .dmg-normal { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; fill: #c5a059; font-weight: 700; }
+      .ko-text { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; font-weight: 800; letter-spacing: 2px; }
     </style>
 
-    <!-- Muzzle Flash Shape -->
+    <!-- Muzzle Flash -->
     <g id="muzzle-flash">
-      <polygon points="0,0 14,-4 22,0 14,4" fill="#ffffff" opacity="0.9"/>
-      <polygon points="0,0 8,-2 14,0 8,2" fill="#d4d4d8"/>
-      <circle cx="2" cy="0" r="3" fill="#ffffff"/>
+      <polygon points="0,0 16,-5 26,0 16,5" fill="#ffffff" opacity="0.95"/>
+      <polygon points="0,0 10,-3 18,0 10,3" fill="#fef08a"/>
+      <circle cx="3" cy="0" r="3.5" fill="#ffffff"/>
     </g>
 
     <!-- Spark Burst Shape -->
-    <g id="sparks">
-      <circle cx="0" cy="0" r="1.8" fill="#ffffff"/>
-      <line x1="0" y1="0" x2="-6" y2="-6" stroke="#ffffff" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="-4" y2="-8" stroke="#d4d4d8" stroke-width="1"/>
-      <line x1="0" y1="0" x2="2" y2="-7" stroke="#c5a059" stroke-width="1.2"/>
-      <line x1="0" y1="0" x2="-7" y2="-2" stroke="#a1a1aa" stroke-width="1"/>
+    <g id="spark-burst">
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+      <line x1="0" y1="0" x2="-8" y2="-7" stroke="#ffffff" stroke-width="1.4"/>
+      <line x1="0" y1="0" x2="-5" y2="-10" stroke="#fef08a" stroke-width="1.2"/>
+      <line x1="0" y1="0" x2="4" y2="-9" stroke="#c5a059" stroke-width="1.4"/>
+      <line x1="0" y1="0" x2="-9" y2="-2" stroke="#d4d4d8" stroke-width="1.2"/>
+      <line x1="0" y1="0" x2="-3" y2="7" stroke="#f85149" stroke-width="1.2"/>
+    </g>
+
+    <!-- Crumbling Cover Fragments -->
+    <g id="debris-fragments">
+      <polygon points="0,0 4,-3 3,4" fill="#d4d4d8"/>
+      <polygon points="-4,2 -1,5 -5,6" fill="#71717a"/>
+      <polygon points="2,-4 5,-1 3,-5" fill="#a1a1aa"/>
+      <polygon points="-2,-3 1,-6 -3,-5" fill="#52525b"/>
     </g>
 
     <!-- Shell Casing -->
-    <g id="casing">
-      <rect width="3" height="1.5" rx="0.5" fill="#a8a29e"/>
+    <g id="shell-casing">
+      <rect width="3.5" height="1.8" rx="0.5" fill="#c5a059"/>
     </g>
   </defs>
 
   <!-- Background Panel -->
-  <rect width="880" height="240" class="bg"/>
-  <rect x="1" y="1" width="878" height="238" fill="none" class="border-box"/>
+  <rect width="880" height="280" class="bg"/>
+  <rect x="1" y="1" width="878" height="278" fill="none" class="border-box"/>
 
-  <!-- Tactical HUD Header -->
-  <g transform="translate(24, 26)">
+  <!-- ================================================================= -->
+  <!-- TOP HUD BAR: CAM FEED, ROUND STATUS BANNER, PROTOCOL LEVEL        -->
+  <!-- ================================================================= -->
+  <g transform="translate(24, 24)">
+    <!-- Red Surveillance REC LED -->
     <circle cx="6" cy="6" r="4" fill="#f85149">
       <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
     </circle>
-    <text x="18" y="9.5" class="hud-red" letter-spacing="1">LIVE SURVEILLANCE CAM // SECTOR 01018</text>
-    <text x="320" y="9.5" class="mono-txt">GRID THREAT ENGAGEMENT // COMMIT COVER TAKEN</text>
-    <text x="730" y="9.5" class="hud-gold">SECURITY: LEVEL 4</text>
+    <text x="18" y="9.5" class="hud-title" fill="#f4f4f5">SURVEILLANCE CAM // SECTOR 01018</text>
+
+    <!-- Dynamic Round / Status HUD Banner (Center) -->
+    <!-- ROUND 1 (0s to 12s) -->
+    <g transform="translate(260, 0)">
+      <rect x="-10" y="-3" width="310" height="18" rx="3" fill="#121215" stroke="#27272a" stroke-width="1"/>
+      <!-- Text for Round 1: Engagement (0s - 7.2s) -->
+      <text x="145" y="9.5" class="mono-bold" fill="#c5a059" text-anchor="middle">
+        ROUND 01 // AGENT PURSUIT [ENGAGED]
+        <animate attributeName="display" values="inline;inline;none;none;none"
+                 keyTimes="0; 0.29; 0.31; 0.99; 1" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <!-- Text for Round 1: K.O. (7.2s - 11.5s) -->
+      <text x="145" y="9.5" class="ko-text" fill="#f4f4f5" text-anchor="middle">
+        ⚡ K.O. — AGENT SECURES ROUND 1
+        <animate attributeName="display" values="none;none;inline;inline;none;none"
+                 keyTimes="0; 0.299; 0.30; 0.48; 0.481; 1" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <!-- Text for Round 2: Engagement (12s - 19.2s) -->
+      <text x="145" y="9.5" class="mono-bold" fill="#f85149" text-anchor="middle">
+        ROUND 02 // INFILTRATOR COUNTER-ATTACK
+        <animate attributeName="display" values="none;none;inline;inline;none;none"
+                 keyTimes="0; 0.499; 0.50; 0.79; 0.791; 1" dur="24s" repeatCount="indefinite"/>
+      </text>
+      <!-- Text for Round 2: K.O. (19.2s - 23.5s) -->
+      <text x="145" y="9.5" class="ko-text" fill="#f85149" text-anchor="middle">
+        💀 K.O. — INFILTRATOR WINS ROUND 2
+        <animate attributeName="display" values="none;none;inline;inline;none"
+                 keyTimes="0; 0.799; 0.80; 0.98; 0.981" dur="24s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- Top Right Status -->
+    <text x="730" y="9.5" class="mono-bold" fill="#c5a059">RULES: BEST OF 3</text>
   </g>
 
-  <!-- Contribution Grid Representation (52 Columns x 7 Rows) -->
-  <g id="commit-grid" transform="translate(70, 68)">
-    <!-- Months Labels -->
+  <!-- ================================================================= -->
+  <!-- OPERATIVE HEALTH BARS (DYNAMIC REAL-TIME HP GAUGES)              -->
+  <!-- ================================================================= -->
+  <!-- Left Agent Health Bar (x=140, y=42) -->
+  <g transform="translate(140, 42)">
+    <text x="0" y="8" class="mono-bold" fill="#f4f4f5">AGENT // YOROZUYA</text>
+    <!-- HP Gauge Outline -->
+    <rect x="135" y="0" width="110" height="10" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+    <!-- Animated Health Fill -->
+    <rect x="136" y="1" width="108" height="8" rx="1.5" fill="#f4f4f5">
+      <animate attributeName="width"
+        values="108; 108; 75; 75; 108; 108; 70; 70; 0; 0; 108"
+        keyTimes="0; 0.187; 0.196; 0.49; 0.50; 0.604; 0.613; 0.770; 0.780; 0.983; 1"
+        dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="fill"
+        values="#f4f4f5; #f4f4f5; #c5a059; #c5a059; #f4f4f5; #f4f4f5; #c5a059; #c5a059; #f85149; #f85149; #f4f4f5"
+        keyTimes="0; 0.187; 0.196; 0.49; 0.50; 0.604; 0.613; 0.770; 0.780; 0.983; 1"
+        dur="24s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Numeric HP Text -->
+    <text x="252" y="8.5" class="mono-bold" fill="#a1a1aa">
+      <tspan>
+        100%
+        <animate attributeName="display" values="inline;inline;none;none;inline;inline;none;none;none;none;inline"
+                 keyTimes="0; 0.187; 0.188; 0.499; 0.50; 0.604; 0.605; 0.770; 0.780; 0.983; 1" dur="24s" repeatCount="indefinite"/>
+      </tspan>
+      <tspan fill="#c5a059">
+        70%
+        <animate attributeName="display" values="none;none;inline;inline;none;none;none;none;none;none;none"
+                 keyTimes="0; 0.187; 0.188; 0.499; 0.50; 0.604; 0.605; 0.770; 0.780; 0.983; 1" dur="24s" repeatCount="indefinite"/>
+      </tspan>
+      <tspan fill="#c5a059">
+        65%
+        <animate attributeName="display" values="none;none;none;none;none;none;inline;inline;none;none;none"
+                 keyTimes="0; 0.187; 0.188; 0.499; 0.50; 0.604; 0.605; 0.770; 0.780; 0.983; 1" dur="24s" repeatCount="indefinite"/>
+      </tspan>
+      <tspan fill="#f85149">
+        0% K.O.
+        <animate attributeName="display" values="none;none;none;none;none;none;none;none;inline;inline;none"
+                 keyTimes="0; 0.187; 0.188; 0.499; 0.50; 0.604; 0.605; 0.770; 0.780; 0.983; 1" dur="24s" repeatCount="indefinite"/>
+      </tspan>
+    </text>
+  </g>
+
+  <!-- Right Infiltrator Health Bar (x=505, y=42) -->
+  <g transform="translate(505, 42)">
+    <text x="0" y="8" class="mono-bold" fill="#f85149">ROGUE INFILTRATOR</text>
+    <!-- HP Gauge Outline -->
+    <rect x="135" y="0" width="110" height="10" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+    <!-- Animated Health Fill -->
+    <rect x="136" y="1" width="108" height="8" rx="1.5" fill="#f85149">
+      <animate attributeName="width"
+        values="108; 108; 81; 81; 0; 0; 108; 108; 75; 75; 108"
+        keyTimes="0; 0.104; 0.113; 0.283; 0.292; 0.491; 0.50; 0.683; 0.696; 0.983; 1"
+        dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="fill"
+        values="#f85149; #f85149; #c5a059; #c5a059; #71717a; #71717a; #f85149; #f85149; #c5a059; #c5a059; #f85149"
+        keyTimes="0; 0.104; 0.113; 0.283; 0.292; 0.491; 0.50; 0.683; 0.696; 0.983; 1"
+        dur="24s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Numeric HP Text -->
+    <text x="252" y="8.5" class="mono-bold" fill="#a1a1aa">
+      <tspan>
+        100%
+        <animate attributeName="display" values="inline;inline;none;none;none;none;inline;inline;none;none;inline"
+                 keyTimes="0; 0.104; 0.105; 0.283; 0.284; 0.499; 0.50; 0.683; 0.684; 0.983; 1" dur="24s" repeatCount="indefinite"/>
+      </tspan>
+      <tspan fill="#c5a059">
+        75%
+        <animate attributeName="display" values="none;none;inline;inline;none;none;none;none;none;none;none"
+                 keyTimes="0; 0.104; 0.105; 0.283; 0.284; 0.499; 0.50; 0.683; 0.684; 0.983; 1" dur="24s" repeatCount="indefinite"/>
+      </tspan>
+      <tspan fill="#f85149">
+        0% K.O.
+        <animate attributeName="display" values="none;none;none;none;inline;inline;none;none;none;none;none"
+                 keyTimes="0; 0.104; 0.105; 0.283; 0.284; 0.499; 0.50; 0.683; 0.684; 0.983; 1" dur="24s" repeatCount="indefinite"/>
+      </tspan>
+      <tspan fill="#c5a059">
+        70%
+        <animate attributeName="display" values="none;none;none;none;none;none;none;none;inline;inline;none"
+                 keyTimes="0; 0.104; 0.105; 0.283; 0.284; 0.499; 0.50; 0.683; 0.684; 0.983; 1" dur="24s" repeatCount="indefinite"/>
+      </tspan>
+    </text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- CONTRIBUTION GRID REPRESENTATION (52 COLS X 7 ROWS)               -->
+  <!-- ================================================================= -->
+  <g id="commit-grid" transform="translate(68, 88)">
+    <!-- Month Labels -->
     <g class="mono-txt" transform="translate(0, -8)">
-      <text x="0">Jan</text>
-      <text x="64">Feb</text>
-      <text x="130">Mar</text>
-      <text x="194">Apr</text>
-      <text x="258">May</text>
-      <text x="322">Jun</text>
-      <text x="386">Jul</text>
-      <text x="450">Aug</text>
-      <text x="514">Sep</text>
-      <text x="578">Oct</text>
-      <text x="642">Nov</text>
-      <text x="706">Dec</text>
+      <text x="0">Jan</text><text x="64">Feb</text><text x="130">Mar</text>
+      <text x="194">Apr</text><text x="258">May</text><text x="322">Jun</text>
+      <text x="386">Jul</text><text x="450">Aug</text><text x="514">Sep</text>
+      <text x="578">Oct</text><text x="642">Nov</text><text x="706">Dec</text>
     </g>
 
     <!-- Weekday Labels -->
-    <g class="mono-txt" transform="translate(-32, 10)">
+    <g class="mono-txt" transform="translate(-30, 10)">
       <text x="0" y="12">Mon</text>
       <text x="0" y="40">Wed</text>
       <text x="0" y="68">Fri</text>
     </g>
 
     <!-- Base Grid Columns (Background Commits) -->
-    <!-- Col 0-10 (Quiet weeks) -->
     <g fill="#161b22">
-      <!-- Col 0 -->
+      <!-- Col 0-8 -->
       <rect x="0" y="0" width="10" height="10" rx="2" class="c-empty"/>
       <rect x="0" y="14" width="10" height="10" rx="2" class="c-l1"/>
       <rect x="0" y="28" width="10" height="10" rx="2" class="c-empty"/>
@@ -88,7 +211,6 @@
       <rect x="0" y="70" width="10" height="10" rx="2" class="c-empty"/>
       <rect x="0" y="84" width="10" height="10" rx="2" class="c-empty"/>
 
-      <!-- Col 1-5 -->
       <rect x="14" y="0" width="10" height="10" rx="2" class="c-l1"/>
       <rect x="14" y="14" width="10" height="10" rx="2" class="c-empty"/>
       <rect x="14" y="28" width="10" height="10" rx="2" class="c-l2"/>
@@ -144,119 +266,186 @@
       <rect x="98" y="56" width="10" height="10" rx="2" class="c-l3"/>
       <rect x="98" y="70" width="10" height="10" rx="2" class="c-l2"/>
       <rect x="98" y="84" width="10" height="10" rx="2" class="c-l1"/>
-
-      <rect x="112" y="0" width="10" height="10" rx="2" class="c-empty"/>
-      <rect x="112" y="14" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="112" y="28" width="10" height="10" rx="2" class="c-l2"/>
-      <rect x="112" y="42" width="10" height="10" rx="2" class="c-l1"/>
-      <rect x="112" y="56" width="10" height="10" rx="2" class="c-empty"/>
-      <rect x="112" y="70" width="10" height="10" rx="2" class="c-empty"/>
-      <rect x="112" y="84" width="10" height="10" rx="2" class="c-l1"/>
     </g>
 
-    <!-- TACTICAL BUNKER 1 (LEFT SIDE - AGENT 1 COVER) -->
-    <!-- Col 10, 11, 12, 13 (High Commit Stacks acting as Fortress) -->
-    <g>
-      <!-- Col 10 (x=140) -->
+    <!-- =============================================================== -->
+    <!-- TACTICAL BUNKER 1: LEFT SIDE (AGENT COVER)                      -->
+    <!-- Includes DESTRUCTIBLE CRACKING & SHATTERING BLOCKS              -->
+    <!-- =============================================================== -->
+    <g id="bunker-left">
+      <!-- Base Solid Pillars -->
       <rect x="140" y="0" width="10" height="10" rx="2" class="c-l2"/>
       <rect x="140" y="14" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="140" y="28" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="140" y="28" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="140" y="42" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="140" y="56" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="140" y="70" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="140" y="56" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="140" y="70" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="140" y="84" width="10" height="10" rx="2" class="c-l3"/>
 
-      <!-- Col 11 (x=154) High Cover Wall -->
+      <!-- High Wall Col 11 (x=154) -->
       <rect x="154" y="0" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="154" y="14" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="154" y="28" width="10" height="10" rx="2" class="c-l4" id="cover-left-top"/>
-      <rect x="154" y="42" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="154" y="56" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="154" y="70" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="154" y="84" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="154" y="14" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="154" y="28" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="154" y="42" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="154" y="56" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="154" y="70" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="154" y="84" width="10" height="10" rx="2" class="c-solid"/>
 
-      <!-- Col 12 (x=168) Sandbag ridge -->
-      <rect x="168" y="28" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="168" y="42" width="10" height="10" rx="2" class="c-l4"/>
+      <!-- Col 12 (x=168): FRONT COVER BLOCKS (TAKES HEAVY DAMAGE & BREAKS IN ROUND 2) -->
+      <rect x="168" y="42" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="168" y="56" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="168" y="70" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="168" y="84" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="168" y="70" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="168" y="84" width="10" height="10" rx="2" class="c-solid"/>
+
+      <!-- CRACKING & DESTRUCTIBLE BLOCK 1 (x=168, y=28): AGENT PRIMARY SHIELD -->
+      <g transform="translate(168, 28)">
+        <!-- Intact Block -->
+        <rect width="10" height="10" rx="2" class="c-solid">
+          <!-- In Round 1, cracks at T=4.5s; in Round 2, completely shatters at T=18.4s! -->
+          <animate attributeName="fill"
+            values="#f4f4f5; #f4f4f5; #a1a1aa; #a1a1aa; #f4f4f5; #f4f4f5; #a1a1aa; #3f3f46; #f4f4f5"
+            keyTimes="0; 0.187; 0.196; 0.49; 0.50; 0.604; 0.613; 0.77; 1"
+            dur="24s" repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+            values="1; 1; 1; 1; 1; 1; 1; 0; 0; 1"
+            keyTimes="0; 0.187; 0.49; 0.50; 0.604; 0.765; 0.77; 0.98; 1"
+            dur="24s" repeatCount="indefinite"/>
+        </rect>
+
+        <!-- Dynamic Fracture / Crack Lines on Block -->
+        <g stroke="#09090b" stroke-width="1.1" stroke-linecap="round" opacity="0">
+          <line x1="2" y1="1" x2="6" y2="5"/>
+          <line x1="6" y1="5" x2="9" y2="4"/>
+          <line x1="6" y1="5" x2="4" y2="9"/>
+          <!-- Appears when hit in R1 (T=4.6s), resets R2, cracks again (T=14.6s), then explodes -->
+          <animate attributeName="opacity"
+            values="0; 0; 1; 1; 0; 0; 1; 0; 0"
+            keyTimes="0; 0.191; 0.196; 0.49; 0.50; 0.608; 0.613; 0.77; 1"
+            dur="24s" repeatCount="indefinite"/>
+        </g>
+
+        <!-- Flying Shards / Explosion when shattered in Round 2 (T=18.4s / 0.767) -->
+        <g transform="translate(5, 5)" opacity="0">
+          <use href="#debris-fragments"/>
+          <animateTransform attributeName="transform" type="translate"
+            values="5,5; -8,-14; -16,-6; -20,18"
+            keyTimes="0.767; 0.785; 0.810; 0.850"
+            dur="24s" repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+            values="0; 0; 1; 1; 0; 0"
+            keyTimes="0; 0.766; 0.768; 0.820; 0.860; 1"
+            dur="24s" repeatCount="indefinite"/>
+        </g>
+      </g>
     </g>
 
-    <!-- NO-MAN'S LAND (Middle Columns 13 to 37) with scattered low cover -->
+    <!-- =============================================================== -->
+    <!-- NO-MAN'S LAND (MIDDLE SECTOR 196 to 514)                         -->
+    <!-- =============================================================== -->
     <g>
-      <!-- Scattered dots across the open battlefield -->
-      <!-- x=196 -->
       <rect x="196" y="70" width="10" height="10" rx="2" class="c-l2"/>
       <rect x="196" y="84" width="10" height="10" rx="2" class="c-l3"/>
-      <!-- x=224 -->
       <rect x="224" y="56" width="10" height="10" rx="2" class="c-l1"/>
       <rect x="224" y="70" width="10" height="10" rx="2" class="c-l2"/>
-      <rect x="224" y="84" width="10" height="10" rx="2" class="c-l4"/>
-      <!-- x=252 -->
+      <rect x="224" y="84" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="252" y="84" width="10" height="10" rx="2" class="c-l2"/>
-      <!-- x=280 Low Pillar -->
+      <!-- Midfield Bunker -->
       <rect x="280" y="42" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="280" y="56" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="280" y="70" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="280" y="56" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="280" y="70" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="280" y="84" width="10" height="10" rx="2" class="c-l3"/>
-      <!-- x=308 -->
       <rect x="308" y="70" width="10" height="10" rx="2" class="c-l1"/>
       <rect x="308" y="84" width="10" height="10" rx="2" class="c-l2"/>
-      <!-- x=350 Center Landmark -->
+      <!-- High Center Landmark -->
       <rect x="350" y="28" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="350" y="42" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="350" y="56" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="350" y="42" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="350" y="56" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="350" y="70" width="10" height="10" rx="2" class="c-l3"/>
       <rect x="350" y="84" width="10" height="10" rx="2" class="c-l2"/>
-      <!-- x=392 -->
       <rect x="392" y="84" width="10" height="10" rx="2" class="c-l1"/>
-      <!-- x=420 -->
       <rect x="420" y="70" width="10" height="10" rx="2" class="c-l2"/>
       <rect x="420" y="84" width="10" height="10" rx="2" class="c-l3"/>
-      <!-- x=448 Middle Bunker -->
       <rect x="448" y="42" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="448" y="56" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="448" y="70" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="448" y="56" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="448" y="70" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="448" y="84" width="10" height="10" rx="2" class="c-l3"/>
-      <!-- x=476 -->
       <rect x="476" y="84" width="10" height="10" rx="2" class="c-l1"/>
-      <!-- x=504 -->
       <rect x="504" y="70" width="10" height="10" rx="2" class="c-l2"/>
       <rect x="504" y="84" width="10" height="10" rx="2" class="c-l3"/>
     </g>
 
-    <!-- TACTICAL BUNKER 2 (RIGHT SIDE - AGENT 2 COVER) -->
-    <!-- Col 38, 39, 40 (x=532, 546, 560) -->
-    <g>
-      <!-- Col 38 (x=532) -->
-      <rect x="532" y="28" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="532" y="42" width="10" height="10" rx="2" class="c-l4"/>
+    <!-- =============================================================== -->
+    <!-- TACTICAL BUNKER 2: RIGHT SIDE (ROGUE COVER)                     -->
+    <!-- Includes DESTRUCTIBLE CRACKING & SHATTERING BLOCKS              -->
+    <!-- =============================================================== -->
+    <g id="bunker-right">
+      <!-- Col 38 (x=532): FRONT COVER (SHATTERS IN ROUND 1 at T=6.7s) -->
+      <rect x="532" y="42" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="532" y="56" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="532" y="70" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="532" y="84" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="532" y="70" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="532" y="84" width="10" height="10" rx="2" class="c-solid"/>
 
-      <!-- Col 39 (x=546) Fortified Tower -->
+      <!-- CRACKING & DESTRUCTIBLE BLOCK 2 (x=532, y=28): ROGUE SHIELD -->
+      <g transform="translate(532, 28)">
+        <!-- Intact Block -->
+        <rect width="10" height="10" rx="2" class="c-solid">
+          <!-- In Round 1: hit at T=2.5s (cracks), destroyed at T=6.7s (shatters), respawns Round 2 at 12s -->
+          <animate attributeName="fill"
+            values="#f4f4f5; #f4f4f5; #a1a1aa; #a1a1aa; #3f3f46; #f4f4f5; #f4f4f5; #a1a1aa; #f4f4f5"
+            keyTimes="0; 0.104; 0.113; 0.278; 0.283; 0.50; 0.683; 0.696; 1"
+            dur="24s" repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+            values="1; 1; 1; 1; 0; 0; 1; 1; 1"
+            keyTimes="0; 0.104; 0.278; 0.280; 0.283; 0.495; 0.50; 0.98; 1"
+            dur="24s" repeatCount="indefinite"/>
+        </rect>
+
+        <!-- Dynamic Crack Lines on Rogue Cover -->
+        <g stroke="#09090b" stroke-width="1.1" stroke-linecap="round" opacity="0">
+          <line x1="8" y1="2" x2="4" y2="5"/>
+          <line x1="4" y1="5" x2="1" y2="3"/>
+          <line x1="4" y1="5" x2="5" y2="9"/>
+          <!-- Appears at T=2.5s (0.104), visible till blast at T=6.8s -->
+          <animate attributeName="opacity"
+            values="0; 0; 1; 1; 0; 0; 0; 0"
+            keyTimes="0; 0.103; 0.108; 0.278; 0.283; 0.50; 0.98; 1"
+            dur="24s" repeatCount="indefinite"/>
+        </g>
+
+        <!-- Flying Shards / Explosion when shattered in Round 1 (T=6.7s / 0.279) -->
+        <g transform="translate(5, 5)" opacity="0">
+          <use href="#debris-fragments"/>
+          <animateTransform attributeName="transform" type="translate"
+            values="5,5; 10,-15; 18,-6; 22,18"
+            keyTimes="0.279; 0.298; 0.320; 0.360"
+            dur="24s" repeatCount="indefinite"/>
+          <animate attributeName="opacity"
+            values="0; 0; 1; 1; 0; 0"
+            keyTimes="0; 0.278; 0.280; 0.330; 0.370; 1"
+            dur="24s" repeatCount="indefinite"/>
+        </g>
+      </g>
+
+      <!-- Col 39 (x=546): Fortified Tower -->
       <rect x="546" y="0" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="546" y="14" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="546" y="28" width="10" height="10" rx="2" class="c-l4" id="cover-right-top"/>
-      <rect x="546" y="42" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="546" y="56" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="546" y="70" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="546" y="14" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="546" y="28" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="546" y="42" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="546" y="56" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="546" y="70" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="546" y="84" width="10" height="10" rx="2" class="c-l3"/>
 
-      <!-- Col 40 (x=560) Backing Wall -->
+      <!-- Col 40 (x=560): Backing Wall -->
       <rect x="560" y="14" width="10" height="10" rx="2" class="c-l2"/>
       <rect x="560" y="28" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="560" y="42" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="560" y="42" width="10" height="10" rx="2" class="c-solid"/>
       <rect x="560" y="56" width="10" height="10" rx="2" class="c-l3"/>
-      <rect x="560" y="70" width="10" height="10" rx="2" class="c-l4"/>
-      <rect x="560" y="84" width="10" height="10" rx="2" class="c-l4"/>
+      <rect x="560" y="70" width="10" height="10" rx="2" class="c-solid"/>
+      <rect x="560" y="84" width="10" height="10" rx="2" class="c-solid"/>
     </g>
 
-    <!-- Filling in rest of grid to 52 cols with faint dots -->
+    <!-- Distant Background Commits (Cols 41-51) -->
     <g class="c-empty">
-      <!-- Remaining grid background dots -->
       <rect x="588" y="14" width="10" height="10" rx="2" class="c-l1"/>
       <rect x="588" y="28" width="10" height="10" rx="2" class="c-l2"/>
       <rect x="588" y="70" width="10" height="10" rx="2" class="c-l1"/>
@@ -273,195 +462,324 @@
   </g>
 
   <!-- ================================================================= -->
-  <!-- OPERATIVE 1: LEFT AGENT (GINTAMA / SILVER DETECTIVE)             -->
-  <!-- Base position behind Left Bunker (x=196, y=72)                    -->
+  <!-- OPERATIVE 1: LEFT AGENT (SILVER SOUL / YOROZUYA)                  -->
+  <!-- Round 1: Active & Wins!                                           -->
+  <!-- Round 2: Takes lethal critical hit & K.O. Collapses at T=18.6s    -->
   <!-- ================================================================= -->
-  <g id="agent-left" transform="translate(196, 72)">
-    <!-- Motion: Crouches behind blocks, pops up to shoot, ducks to reload -->
+  <g id="agent-left" transform="translate(196, 92)">
+    <!-- Motion Choreography: Crouch, pop-up, shoot, take hit, collapse in R2! -->
     <animateTransform attributeName="transform" type="translate"
-      values="196,72; 196,44; 196,44; 196,44; 196,72; 196,72; 196,72"
-      keyTimes="0; 0.15; 0.42; 0.48; 0.58; 0.85; 1"
-      dur="4.5s" repeatCount="indefinite"/>
+      values="
+        196,92;  196,62;  196,62;  196,92;  196,92;
+        196,92;  196,62;  196,62;  178,96;  178,102; 196,92
+      "
+      keyTimes="
+        0;       0.06;    0.16;    0.20;    0.50;
+        0.52;    0.62;    0.76;    0.78;    0.96;    1
+      "
+      dur="24s" repeatCount="indefinite"/>
 
-    <!-- Operative Body (Pixel Art Silhouette) -->
+    <!-- Death Rotation in Round 2 (collapses backward flat onto the floor from T=18.6s to 23.5s) -->
+    <animateTransform attributeName="transform" type="rotate" additive="sum"
+      values="
+        0 9 24;  0 9 24;  0 9 24;  -90 9 24; -90 9 24; 0 9 24
+      "
+      keyTimes="
+        0;       0.765;   0.775;   0.795;    0.98;     1
+      "
+      dur="24s" repeatCount="indefinite"/>
+
     <!-- Trenchcoat / Body -->
-    <rect x="2" y="18" width="14" height="20" rx="2" fill="#1c1c1c" stroke="#C0C0C0" stroke-width="1.2"/>
-    <!-- Head with Silver Hair -->
-    <circle cx="9" cy="11" r="6.5" fill="#e5e5e5"/>
-    <!-- Silver Hair Spikes (Gintoki/Yorozuya nod) -->
-    <polygon points="3,8 9,2 15,8" fill="#FFFFFF"/>
-    <polygon points="1,11 5,7 9,10" fill="#E0E0E0"/>
-    <polygon points="15,11 11,7 7,10" fill="#C0C0C0"/>
-    <!-- Cyber Eye Visor -->
-    <rect x="7" y="10" width="5" height="2" rx="0.5" fill="#39d353"/>
+    <rect x="2" y="18" width="14" height="20" rx="2" fill="#18181b" stroke="#f4f4f5" stroke-width="1.2">
+      <!-- Flash white on taking hit at T=4.6s and T=18.6s -->
+      <animate attributeName="fill"
+        values="#18181b; #18181b; #f4f4f5; #18181b; #18181b; #f85149; #18181b"
+        keyTimes="0; 0.190; 0.195; 0.205; 0.772; 0.778; 0.795"
+        dur="24s" repeatCount="indefinite"/>
+    </rect>
 
-    <!-- Weapon Hand & Heavy Pistol extending right toward enemy -->
-    <g transform="translate(14, 17)">
-      <!-- Arm -->
-      <rect x="0" y="0" width="8" height="4" rx="1.5" fill="#1c1c1c" stroke="#C0C0C0" stroke-width="1"/>
-      <!-- Cyber Pistol -->
-      <rect x="6" y="-1" width="11" height="4.5" rx="1" fill="#C0C0C0"/>
-      <rect x="7" y="3.5" width="3" height="4" rx="0.8" fill="#2b2b2b"/>
-      <circle cx="17" cy="1.25" r="1" fill="#39d353"/> <!-- Laser Sight Dot -->
+    <!-- Head with Silver Hair -->
+    <circle cx="9" cy="11" r="6.5" fill="#e4e4e7"/>
+    <!-- Silver Hair Spikes -->
+    <polygon points="3,8 9,2 15,8" fill="#ffffff"/>
+    <polygon points="1,11 5,7 9,10" fill="#d4d4d8"/>
+    <polygon points="15,11 11,7 7,10" fill="#a1a1aa"/>
+    <!-- Visor -->
+    <rect x="7" y="10" width="5" height="2" rx="0.5" fill="#c5a059">
+      <!-- Turns off upon death -->
+      <animate attributeName="fill"
+        values="#c5a059; #c5a059; #27272a; #27272a; #c5a059"
+        keyTimes="0; 0.775; 0.785; 0.98; 1"
+        dur="24s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Weapon Hand & Heavy Pistol -->
+    <g id="agent-gun" transform="translate(14, 17)">
+      <rect x="0" y="0" width="8" height="4" rx="1.5" fill="#18181b" stroke="#f4f4f5" stroke-width="1"/>
+      <rect x="6" y="-1" width="11" height="4.5" rx="1" fill="#d4d4d8"/>
+      <rect x="7" y="3.5" width="3" height="4" rx="0.8" fill="#27272a"/>
+      <circle cx="17" cy="1.25" r="1" fill="#c5a059"/>
     </g>
 
-    <!-- Muzzle Flash (Left Agent Firing Burst: 0.8s, 1.2s, 1.6s) -->
+    <!-- Muzzle Flash (Left Agent Firing Burst in Round 1 & Round 2) -->
     <g transform="translate(32, 18)" opacity="0">
       <use href="#muzzle-flash"/>
+      <!-- Firing at R1 (T=1.8s, 2.2s, 6.4s) & R2 (T=15.8s, 16.2s) -->
       <animate attributeName="opacity"
-        values="0; 1; 0; 0; 1; 0; 0; 1; 0; 0"
-        keyTimes="0; 0.20; 0.23; 0.28; 0.31; 0.34; 0.39; 0.42; 0.45; 1"
-        dur="4.5s" repeatCount="indefinite"/>
+        values="
+          0; 0; 1; 0; 1; 0; 0; 1; 0; 0; 1; 0; 1; 0; 0
+        "
+        keyTimes="
+          0; 0.075; 0.082; 0.091; 0.100; 0.110; 0.264; 0.272; 0.280; 0.655; 0.665; 0.675; 0.685; 0.695; 1
+        "
+        dur="24s" repeatCount="indefinite"/>
     </g>
 
-    <!-- Ejected Brass Casings -->
+    <!-- Ejected Brass Casing -->
     <g transform="translate(20, 16)" opacity="0">
-      <use href="#casing"/>
+      <use href="#shell-casing"/>
       <animateTransform attributeName="transform" type="translate"
         values="20,16; 14,8; 8,24"
-        keyTimes="0.2; 0.26; 0.35"
-        begin="0s" dur="4.5s" repeatCount="indefinite"/>
+        keyTimes="0.08; 0.10; 0.13"
+        dur="24s" repeatCount="indefinite"/>
       <animate attributeName="opacity"
         values="0; 1; 1; 0"
-        keyTimes="0.19; 0.21; 0.32; 0.36"
-        dur="4.5s" repeatCount="indefinite"/>
+        keyTimes="0.078; 0.082; 0.12; 0.14"
+        dur="24s" repeatCount="indefinite"/>
     </g>
   </g>
 
   <!-- ================================================================= -->
-  <!-- OPERATIVE 2: RIGHT AGENT (TACTICAL ADVERSARY / BUG HUNTER)       -->
-  <!-- Base position behind Right Bunker (x=630, y=72)                   -->
+  <!-- OPERATIVE 2: RIGHT AGENT (ROGUE INFILTRATOR)                      -->
+  <!-- Round 1: Takes lethal blast & K.O. Collapses at T=7.0s            -->
+  <!-- Round 2: Respawns, returns heavy fire & Wins Round 2 at T=18.6s   -->
   <!-- ================================================================= -->
-  <g id="agent-right" transform="translate(630, 72)">
-    <!-- Motion: Crouches, pops up during Left's reload to return fire -->
+  <g id="agent-right" transform="translate(636, 92)">
+    <!-- Motion Choreography: Crouch, pop-up, shoot, take hit, collapse in R1! -->
     <animateTransform attributeName="transform" type="translate"
-      values="630,72; 630,72; 630,44; 630,44; 630,44; 630,72; 630,72"
-      keyTimes="0; 0.48; 0.58; 0.78; 0.84; 0.92; 1"
-      dur="4.5s" repeatCount="indefinite"/>
+      values="
+        636,92;  636,62;  652,96;  652,102; 636,92;
+        636,92;  636,62;  636,62;  636,92;  636,92
+      "
+      keyTimes="
+        0;       0.17;    0.29;    0.31;    0.49;
+        0.50;    0.58;    0.78;    0.84;    1
+      "
+      dur="24s" repeatCount="indefinite"/>
 
-    <!-- Operative Body (Tactical Infiltrator) -->
-    <rect x="0" y="18" width="14" height="20" rx="2" fill="#141414" stroke="#f85149" stroke-width="1.2"/>
-    <!-- Head with Helmet / Balaclava -->
-    <circle cx="7" cy="11" r="6.5" fill="#2b2b2b"/>
-    <rect x="2" y="10" width="8" height="2.5" rx="0.5" fill="#f85149"/> <!-- Red Visor Strip -->
+    <!-- Death Rotation in Round 1 (collapses backward flat from T=7.0s to 11.5s) -->
+    <animateTransform attributeName="transform" type="rotate" additive="sum"
+      values="
+        0 7 24;  0 7 24;  90 7 24; 90 7 24; 0 7 24; 0 7 24
+      "
+      keyTimes="
+        0;       0.288;   0.305;   0.485;   0.50;   1
+      "
+      dur="24s" repeatCount="indefinite"/>
+
+    <!-- Body / Tactical Armor -->
+    <rect x="0" y="18" width="14" height="20" rx="2" fill="#121215" stroke="#f85149" stroke-width="1.2">
+      <!-- Flash red/white on hit at T=2.6s and T=6.9s -->
+      <animate attributeName="fill"
+        values="#121215; #121215; #f85149; #121215; #121215; #f85149; #121215"
+        keyTimes="0; 0.106; 0.112; 0.120; 0.285; 0.292; 0.310"
+        dur="24s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Head with Tactical Helmet -->
+    <circle cx="7" cy="11" r="6.5" fill="#27272a"/>
+    <!-- Red Visor Strip -->
+    <rect x="2" y="10" width="8" height="2.5" rx="0.5" fill="#f85149">
+      <!-- Dims upon death in Round 1 -->
+      <animate attributeName="fill"
+        values="#f85149; #f85149; #27272a; #27272a; #f85149"
+        keyTimes="0; 0.29; 0.30; 0.49; 0.50"
+        dur="24s" repeatCount="indefinite"/>
+    </rect>
 
     <!-- Weapon Hand & Assault Rifle pointing Left -->
-    <g transform="translate(-8, 17)">
-      <!-- Arm -->
-      <rect x="6" y="0" width="8" height="4" rx="1.5" fill="#141414" stroke="#f85149" stroke-width="1"/>
-      <!-- Rifle Receiver & Barrel pointing left -->
-      <rect x="-4" y="-1" width="13" height="4.5" rx="1" fill="#7a7a7a"/>
-      <rect x="-9" y="0.5" width="6" height="2" fill="#3a3a3a"/>
-      <rect x="4" y="3.5" width="3" height="5" rx="0.8" fill="#1c1c1c"/>
+    <g id="rogue-gun" transform="translate(-8, 17)">
+      <rect x="6" y="0" width="8" height="4" rx="1.5" fill="#121215" stroke="#f85149" stroke-width="1"/>
+      <rect x="-4" y="-1" width="13" height="4.5" rx="1" fill="#71717a"/>
+      <rect x="-9" y="0.5" width="6" height="2" fill="#3f3f46"/>
+      <rect x="4" y="3.5" width="3" height="5" rx="0.8" fill="#18181b"/>
     </g>
 
-    <!-- Muzzle Flash (Right Agent Firing Salvo: 2.7s, 3.1s, 3.5s) -->
+    <!-- Muzzle Flash (Right Rogue Firing Burst) -->
     <g transform="translate(-18, 18) scale(-1, 1)" opacity="0">
       <use href="#muzzle-flash"/>
+      <!-- Firing in R1 (T=4.0s, 4.4s) & R2 (T=14.0s, 14.4s, 18.0s, 18.4s) -->
       <animate attributeName="opacity"
-        values="0; 0; 1; 0; 0; 1; 0; 0; 1; 0"
-        keyTimes="0; 0.60; 0.63; 0.66; 0.70; 0.73; 0.76; 0.80; 0.83; 1"
-        dur="4.5s" repeatCount="indefinite"/>
+        values="
+          0; 0; 1; 0; 1; 0; 0; 1; 0; 1; 0; 0; 1; 0; 1; 0; 0
+        "
+        keyTimes="
+          0; 0.165; 0.173; 0.180; 0.188; 0.198; 0.580; 0.588; 0.596; 0.604; 0.614; 0.748; 0.756; 0.764; 0.772; 0.780; 1
+        "
+        dur="24s" repeatCount="indefinite"/>
     </g>
   </g>
 
   <!-- ================================================================= -->
-  <!-- BULLETS & TRACERS CROSSING THE NO-MAN'S LAND                      -->
+  <!-- HIGH-VELOCITY TRACERS & BULLETS (MUTUAL FIREFIGHT)                -->
   <!-- ================================================================= -->
-  <!-- Bullets Fired by LEFT AGENT (Silver Tracers heading East) -->
+  <!-- Agent's Bullets (Heading East: x 230 -> 610) -->
   <g>
-    <!-- Bullet 1 (T=0.9s / 20%) -->
-    <line x1="230" y1="62" x2="252" y2="62" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0">
-      <animate attributeName="x1" values="230; 580" keyTimes="0.20; 0.26" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="252; 604" keyTimes="0.20; 0.26" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.19; 0.20; 0.25; 0.26" dur="4.5s" repeatCount="indefinite"/>
+    <!-- Bullet 1: Glancing Cover Strike on Rogue (T=2.2s / 0.091 -> T=2.6s / 0.108) -->
+    <line x1="230" y1="80" x2="256" y2="80" stroke="#f4f4f5" stroke-width="2" stroke-linecap="round" opacity="0">
+      <animate attributeName="x1" values="230; 590" keyTimes="0.091; 0.108" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="256; 616" keyTimes="0.091; 0.108" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.090; 0.092; 0.106; 0.108" dur="24s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Bullet 2 (T=1.4s / 31%) -->
-    <line x1="230" y1="64" x2="252" y2="64" stroke="#d4d4d8" stroke-width="1.8" stroke-linecap="round" opacity="0">
-      <animate attributeName="x1" values="230; 590" keyTimes="0.31; 0.37" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="252; 614" keyTimes="0.31; 0.37" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.30; 0.31; 0.36; 0.37" dur="4.5s" repeatCount="indefinite"/>
+    <!-- Bullet 2: Armor Piercing Lethal Blast in R1 (T=6.5s / 0.270 -> T=6.9s / 0.287) -->
+    <line x1="230" y1="78" x2="260" y2="78" stroke="#fef08a" stroke-width="2.4" stroke-linecap="round" opacity="0">
+      <animate attributeName="x1" values="230; 636" keyTimes="0.270; 0.287" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="260; 666" keyTimes="0.270; 0.287" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.269; 0.271; 0.285; 0.287" dur="24s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Bullet 3 (T=1.9s / 42%) -->
-    <line x1="230" y1="61" x2="256" y2="61" stroke="#c5a059" stroke-width="2" stroke-linecap="round" opacity="0">
-      <animate attributeName="x1" values="230; 600" keyTimes="0.42; 0.48" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="256; 626" keyTimes="0.42; 0.48" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.41; 0.42; 0.47; 0.48" dur="4.5s" repeatCount="indefinite"/>
+    <!-- Bullet 3: Round 2 Glancing Hit on Rogue (T=16.2s / 0.675 -> T=16.6s / 0.692) -->
+    <line x1="230" y1="80" x2="256" y2="80" stroke="#d4d4d8" stroke-width="2" stroke-linecap="round" opacity="0">
+      <animate attributeName="x1" values="230; 610" keyTimes="0.675; 0.692" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="256; 636" keyTimes="0.675; 0.692" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.674; 0.676; 0.690; 0.692" dur="24s" repeatCount="indefinite"/>
     </line>
   </g>
 
-  <!-- Bullets Fired by RIGHT AGENT (Amber Tracers heading West) -->
+  <!-- Rogue's Bullets (Heading West: x 610 -> 230) -->
   <g>
-    <!-- Enemy Bullet 1 (T=2.7s / 60%) -->
-    <line x1="620" y1="62" x2="598" y2="62" stroke="#a1a1aa" stroke-width="1.8" stroke-linecap="round" opacity="0">
-      <animate attributeName="x1" values="620; 240" keyTimes="0.60; 0.66" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="598; 218" keyTimes="0.60; 0.66" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.59; 0.60; 0.65; 0.66" dur="4.5s" repeatCount="indefinite"/>
+    <!-- Enemy Bullet 1: Hit Agent in R1 (T=4.2s / 0.175 -> T=4.6s / 0.192) -->
+    <line x1="610" y1="80" x2="584" y2="80" stroke="#f85149" stroke-width="2" stroke-linecap="round" opacity="0">
+      <animate attributeName="x1" values="610; 230" keyTimes="0.175; 0.192" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="584; 204" keyTimes="0.175; 0.192" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.174; 0.176; 0.190; 0.192" dur="24s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Enemy Bullet 2 (T=3.15s / 70%) -->
-    <line x1="620" y1="65" x2="598" y2="65" stroke="#c5a059" stroke-width="1.8" stroke-linecap="round" opacity="0">
-      <animate attributeName="x1" values="620; 240" keyTimes="0.70; 0.76" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="598; 218" keyTimes="0.70; 0.76" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.69; 0.70; 0.75; 0.76" dur="4.5s" repeatCount="indefinite"/>
+    <!-- Enemy Bullet 2: Heavy Hit on Agent in R2 (T=14.2s / 0.591 -> T=14.6s / 0.608) -->
+    <line x1="610" y1="82" x2="584" y2="82" stroke="#c5a059" stroke-width="2" stroke-linecap="round" opacity="0">
+      <animate attributeName="x1" values="610; 232" keyTimes="0.591; 0.608" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="584; 206" keyTimes="0.591; 0.608" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.590; 0.592; 0.606; 0.608" dur="24s" repeatCount="indefinite"/>
     </line>
 
-    <!-- Enemy Bullet 3 (T=3.6s / 80%) -->
-    <line x1="620" y1="61" x2="598" y2="61" stroke="#f4f4f5" stroke-width="2" stroke-linecap="round" opacity="0">
-      <animate attributeName="x1" values="620; 235" keyTimes="0.80; 0.86" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="598; 213" keyTimes="0.80; 0.86" dur="4.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.79; 0.80; 0.85; 0.86" dur="4.5s" repeatCount="indefinite"/>
+    <!-- Enemy Bullet 3: Lethal Armor-Breaker in R2 (T=18.2s / 0.758 -> T=18.6s / 0.775) -->
+    <line x1="610" y1="78" x2="580" y2="78" stroke="#f85149" stroke-width="2.5" stroke-linecap="round" opacity="0">
+      <animate attributeName="x1" values="610; 200" keyTimes="0.758; 0.775" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="580; 170" keyTimes="0.758; 0.775" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 1; 1; 0" keyTimes="0.757; 0.759; 0.773; 0.775" dur="24s" repeatCount="indefinite"/>
     </line>
   </g>
 
   <!-- ================================================================= -->
-  <!-- IMPACT SPARKS UPON STRIKING COMMIT COVER                          -->
+  <!-- IMPACT SPARK BURSTS                                               -->
   <!-- ================================================================= -->
-  <!-- Sparks on Right Bunker (when Left's bullets hit x=605) -->
-  <g transform="translate(615, 63)" opacity="0">
-    <use href="#sparks"/>
-    <animate attributeName="opacity" values="0; 1; 0" keyTimes="0.25; 0.27; 0.32" dur="4.5s" repeatCount="indefinite"/>
+  <!-- Spark on Rogue Bunker (R1 T=2.6s) -->
+  <g transform="translate(600, 80)" opacity="0">
+    <use href="#spark-burst"/>
+    <animate attributeName="opacity" values="0; 1; 0" keyTimes="0.106; 0.110; 0.125" dur="24s" repeatCount="indefinite"/>
   </g>
-  <g transform="translate(618, 62)" opacity="0">
-    <use href="#sparks"/>
-    <animate attributeName="opacity" values="0; 1; 0" keyTimes="0.46; 0.48; 0.53" dur="4.5s" repeatCount="indefinite"/>
+  <!-- Massive Critical Spark on Rogue Lethal K.O. (R1 T=6.9s) -->
+  <g transform="translate(642, 78) scale(1.4)" opacity="0">
+    <use href="#spark-burst"/>
+    <animate attributeName="opacity" values="0; 1; 0" keyTimes="0.285; 0.290; 0.315" dur="24s" repeatCount="indefinite"/>
   </g>
 
-  <!-- Sparks on Left Bunker (when Right's bullets hit x=235) -->
-  <g transform="translate(232, 63) scale(-1, 1)" opacity="0">
-    <use href="#sparks"/>
-    <animate attributeName="opacity" values="0; 1; 0" keyTimes="0.65; 0.67; 0.72" dur="4.5s" repeatCount="indefinite"/>
+  <!-- Spark on Agent Bunker (R1 T=4.6s) -->
+  <g transform="translate(230, 80) scale(-1, 1)" opacity="0">
+    <use href="#spark-burst"/>
+    <animate attributeName="opacity" values="0; 1; 0" keyTimes="0.190; 0.194; 0.208" dur="24s" repeatCount="indefinite"/>
   </g>
-  <g transform="translate(230, 61) scale(-1, 1)" opacity="0">
-    <use href="#sparks"/>
-    <animate attributeName="opacity" values="0; 1; 0" keyTimes="0.85; 0.87; 0.92" dur="4.5s" repeatCount="indefinite"/>
+  <!-- Massive Critical Spark on Agent Lethal K.O. (R2 T=18.6s) -->
+  <g transform="translate(204, 78) scale(-1.4, 1.4)" opacity="0">
+    <use href="#spark-burst"/>
+    <animate attributeName="opacity" values="0; 1; 0" keyTimes="0.773; 0.778; 0.805" dur="24s" repeatCount="indefinite"/>
   </g>
 
   <!-- ================================================================= -->
-  <!-- DYNAMIC TACTICAL FLOATING TEXT / HUD CALLOUTS                     -->
+  <!-- FLOATING DAMAGE POPUPS ("-25", "-30", "-75 CRIT!", etc.)          -->
   <!-- ================================================================= -->
-  <!-- Left Side Telemetry Prompt -->
-  <g transform="translate(140, 208)">
-    <rect x="-8" y="-12" width="146" height="18" rx="3" fill="#121215" stroke="#27272a" stroke-width="1"/>
-    <text x="0" y="1" class="hud-green">▶ +1 COMMIT SHIPPED</text>
-    <animate attributeName="opacity" values="0.7; 1; 0.7" dur="2s" repeatCount="indefinite"/>
+  <!-- Popups on Rogue -->
+  <g transform="translate(640, 68)" opacity="0">
+    <text x="0" y="0" class="dmg-normal">-25</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="640,68; 640,46" keyTimes="0.108; 0.138" dur="24s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0; 1; 1; 0" keyTimes="0.107; 0.110; 0.132; 0.140" dur="24s" repeatCount="indefinite"/>
+  </g>
+  <g transform="translate(635, 62)" opacity="0">
+    <text x="0" y="0" class="dmg-crit">-75 CRIT!</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="635,62; 635,36" keyTimes="0.287; 0.325" dur="24s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0; 1; 1; 0" keyTimes="0.286; 0.290; 0.318; 0.328" dur="24s" repeatCount="indefinite"/>
   </g>
 
-  <!-- Center Status Badge -->
-  <g transform="translate(360, 208)">
-    <rect x="-10" y="-12" width="168" height="18" rx="3" fill="#121215" stroke="#27272a" stroke-width="1"/>
-    <text x="0" y="1" class="hud-gold">COVER INTEGRITY: 100%</text>
+  <!-- Popups on Agent -->
+  <g transform="translate(210, 68)" opacity="0">
+    <text x="0" y="0" class="dmg-normal">-30</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="210,68; 210,46" keyTimes="0.192; 0.222" dur="24s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0; 1; 1; 0" keyTimes="0.191; 0.194; 0.216; 0.224" dur="24s" repeatCount="indefinite"/>
+  </g>
+  <g transform="translate(210, 68)" opacity="0">
+    <text x="0" y="0" class="dmg-normal">-35</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="210,68; 210,46" keyTimes="0.608; 0.638" dur="24s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0; 1; 1; 0" keyTimes="0.607; 0.610; 0.632; 0.640" dur="24s" repeatCount="indefinite"/>
+  </g>
+  <g transform="translate(195, 62)" opacity="0">
+    <text x="0" y="0" class="dmg-crit">-65 CRIT!</text>
+    <animateTransform attributeName="transform" type="translate"
+      values="195,62; 195,36" keyTimes="0.775; 0.815" dur="24s" repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0; 1; 1; 0" keyTimes="0.774; 0.778; 0.808; 0.818" dur="24s" repeatCount="indefinite"/>
   </g>
 
-  <!-- Right Side Telemetry Prompt -->
-  <g transform="translate(580, 208)">
-    <rect x="-8" y="-12" width="150" height="18" rx="3" fill="#121215" stroke="#27272a" stroke-width="1"/>
-    <text x="0" y="1" class="hud-red">◀ MERGE DEFLECTED</text>
-    <animate attributeName="opacity" values="0.7; 1; 0.7" dur="2.2s" repeatCount="indefinite"/>
+  <!-- ================================================================= -->
+  <!-- CINEMATIC K.O. CALLOUT BANNERS (CENTER FIELD)                     -->
+  <!-- ================================================================= -->
+  <!-- ROUND 1 K.O. BANNER: AGENT WINS -->
+  <g transform="translate(270, 105)" opacity="0">
+    <rect x="0" y="0" width="340" height="42" rx="4" fill="#121215" stroke="#c5a059" stroke-width="1.4"/>
+    <text x="170" y="18" class="ko-text" fill="#fef08a" text-anchor="middle">⚔️ TARGET ELIMINATED</text>
+    <text x="170" y="32" class="mono-bold" fill="#a1a1aa" text-anchor="middle">ROUND 1 WON BY AGENT // +1 COMMIT SHIPPED</text>
+    <animate attributeName="opacity"
+      values="0; 0; 1; 1; 0; 0"
+      keyTimes="0; 0.300; 0.308; 0.460; 0.470; 1"
+      dur="24s" repeatCount="indefinite"/>
   </g>
 
-  <!-- Laser Rangefinder Grid Overlay Lines -->
-  <line x1="70" y1="184" x2="810" y2="184" stroke="#3f3f46" stroke-width="0.8" stroke-dasharray="4,6" opacity="0.4"/>
+  <!-- ROUND 2 K.O. BANNER: ROGUE WINS -->
+  <g transform="translate(270, 105)" opacity="0">
+    <rect x="0" y="0" width="340" height="42" rx="4" fill="#121215" stroke="#f85149" stroke-width="1.4"/>
+    <text x="170" y="18" class="ko-text" fill="#f85149" text-anchor="middle">💀 PERIMETER BREACHED</text>
+    <text x="170" y="32" class="mono-bold" fill="#d4d4d8" text-anchor="middle">ROUND 2 WON BY INFILTRATOR // COVER SHATTERED</text>
+    <animate attributeName="opacity"
+      values="0; 0; 1; 1; 0; 0"
+      keyTimes="0; 0.785; 0.793; 0.950; 0.960; 1"
+      dur="24s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- BOTTOM TACTICAL TELEMETRY FOOTER                                  -->
+  <!-- ================================================================= -->
+  <!-- Laser Rangefinder Grid Overlay Line -->
+  <line x1="68" y1="228" x2="812" y2="228" stroke="#27272a" stroke-width="1" stroke-dasharray="4,6"/>
+
+  <g transform="translate(68, 252)">
+    <!-- Round 1 Tag -->
+    <rect x="0" y="-14" width="210" height="20" rx="3" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="12" y="0" class="mono-bold" fill="#d4d4d8">▶ R1: AGENT SECURES GRID</text>
+
+    <!-- Center Interactive Prompt -->
+    <rect x="250" y="-14" width="244" height="20" rx="3" fill="#121215" stroke="#3f3f46" stroke-width="1"/>
+    <text x="372" y="0" class="mono-bold" fill="#c5a059" text-anchor="middle">💥 DESTRUCTIBLE COVER ACTIVE</text>
+
+    <!-- Round 2 Tag -->
+    <rect x="534" y="-14" width="210" height="20" rx="3" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="546" y="0" class="mono-bold" fill="#f85149">◀ R2: ROGUE RETALIATION</text>
+  </g>
 </svg>

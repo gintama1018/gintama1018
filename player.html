@@ -366,21 +366,27 @@
     <div id="shootoutControls" class="hidden">
       <div class="controls-grid">
         <button class="action-btn primary" onclick="fireLeftRifle()">
-          💥 LEFT OPERATIVE FIRE
+          💥 LEFT AGENT FIRE
         </button>
         <button class="action-btn" onclick="fireRightRifle()">
-          💥 RIGHT OPERATIVE FIRE
+          💥 ROGUE FIRE
         </button>
         <button class="action-btn" onclick="playRicochet()">
-          ⚡ BULLET RICOCHET
+          ⚡ RICOCHET DEFLECT
         </button>
-        <button class="action-btn" onclick="playBrassDrop()">
-          🪙 BRASS CASING
+        <button class="action-btn" onclick="playCoverShatter()">
+          🧱 COVER SHATTER
         </button>
       </div>
       <div class="controls-grid" style="margin-top: 8px;">
+        <button class="action-btn" onclick="playCriticalHit()">
+          🩸 CRITICAL DAMAGE (-75)
+        </button>
+        <button class="action-btn" onclick="playKoJingle()">
+          🏆 K.O. FANFARE
+        </button>
         <button class="action-btn primary" id="autoCombatBtn" style="grid-column: span 2;" onclick="toggleAutoCombat()">
-          ▶ START AUTOMATED SHOOTOUT COMBAT LOOP
+          ▶ START FULL 2-ROUND TOURNAMENT LOOP
         </button>
       </div>
     </div>
@@ -743,32 +749,172 @@
       osc.stop(t + 0.05);
     }
 
+    function playCoverShatter() {
+      initAudio();
+      const t = audioCtx.currentTime;
+      // Synthesize crunchy stone / commit block shatter (filtered noise burst + resonance crunch)
+      const bufferSize = audioCtx.sampleRate * 0.28;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.35));
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(1800, t);
+      filter.frequency.exponentialRampToValueAtTime(400, t + 0.25);
+      filter.Q.setValueAtTime(4.5, t);
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.9, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.28);
+
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(masterGain);
+      noise.start(t);
+
+      log("💥 COVER DESTROYED: Commit bunker shattered into debris!", "gold");
+    }
+
+    function playCriticalHit() {
+      initAudio();
+      const t = audioCtx.currentTime;
+      // High-impact body blow thud + armor penetration sizzle
+      const osc = audioCtx.createOscillator();
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(140, t);
+      osc.frequency.exponentialRampToValueAtTime(40, t + 0.18);
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.85, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.2);
+
+      osc.connect(gain);
+      gain.connect(masterGain);
+      osc.start(t);
+      osc.stop(t + 0.22);
+
+      // Sizzle / armor shred layer
+      const bufferSize = audioCtx.sampleRate * 0.15;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.25));
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const f = audioCtx.createBiquadFilter();
+      f.type = 'highpass';
+      f.frequency.setValueAtTime(2200, t);
+      const nGain = audioCtx.createGain();
+      nGain.gain.setValueAtTime(0.6, t);
+      nGain.gain.exponentialRampToValueAtTime(0.001, t + 0.15);
+
+      noise.connect(f);
+      f.connect(nGain);
+      nGain.connect(masterGain);
+      noise.start(t);
+
+      log("🩸 CRITICAL HIT: Armor breached! -75 HP heavy damage.", "white");
+    }
+
+    function playKoJingle() {
+      initAudio();
+      const t = audioCtx.currentTime;
+      // Retro arcade K.O. chime arpeggio (3-note punch)
+      const notes = [
+        { f: 523.25, time: 0.00, dur: 0.12 }, // C5
+        { f: 659.25, time: 0.12, dur: 0.12 }, // E5
+        { f: 783.99, time: 0.24, dur: 0.14 }, // G5
+        { f: 1046.50, time: 0.38, dur: 0.40 } // C6 (Sustain)
+      ];
+
+      notes.forEach(n => {
+        const osc = audioCtx.createOscillator();
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(n.f, t + n.time);
+
+        const gain = audioCtx.createGain();
+        gain.gain.setValueAtTime(0.001, t + n.time);
+        gain.gain.linearRampToValueAtTime(0.18, t + n.time + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + n.time + n.dur);
+
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(t + n.time);
+        osc.stop(t + n.time + n.dur + 0.05);
+      });
+
+      log("🏆 K.O. VICTORY: Operative neutralized! Round concluded.", "gold");
+    }
+
     let isAutoCombatOn = false;
     function toggleAutoCombat() {
       const btn = document.getElementById('autoCombatBtn');
       if (!isAutoCombatOn) {
         initAudio();
         isAutoCombatOn = true;
-        btn.innerText = "⏹ STOP AUTOMATED COMBAT LOOP";
+        btn.innerText = "⏹ STOP TOURNAMENT COMBAT LOOP";
         btn.classList.add('primary');
-        log("AUTOMATED TACTICAL SEQUENCE ENGAGED.", "gold");
+        log("TOURNAMENT COMBAT LOOP INITIALIZED (24s MATCH CYCLE).", "gold");
 
-        let step = 0;
+        let tournamentTime = 0;
+        // Scripted match cycle matching the 24s SVG animation!
         autoCombatInterval = setInterval(() => {
-          if (step % 2 === 0) {
+          const sec = tournamentTime % 24;
+
+          // Round 1 (0s to 12s) -> Agent Wins
+          if (sec === 1) {
+            log("--- [ROUND 01: AGENT INITIATIVE] ---", "gold");
             fireLeftRifle();
-          } else {
+          } else if (sec === 2) {
+            playRicochet();
+          } else if (sec === 4) {
             fireRightRifle();
+          } else if (sec === 5) {
+            playRicochet();
+          } else if (sec === 6) {
+            fireLeftRifle();
+          } else if (sec === 7) {
+            playCoverShatter();
+            playCriticalHit();
+          } else if (sec === 8) {
+            playKoJingle();
+            log("⚡ ROUND 1 WINNER: AGENT SECURES PERIMETER", "white");
           }
-          step++;
-        }, 850);
+
+          // Round 2 (12s to 24s) -> Rogue Infiltrator Wins
+          else if (sec === 13) {
+            log("--- [ROUND 02: INFILTRATOR COUNTER-ATTACK] ---", "white");
+            fireRightRifle();
+          } else if (sec === 14) {
+            playRicochet();
+          } else if (sec === 16) {
+            fireLeftRifle();
+          } else if (sec === 17) {
+            playRicochet();
+          } else if (sec === 18) {
+            fireRightRifle();
+            playCoverShatter();
+            playCriticalHit();
+          } else if (sec === 19) {
+            playKoJingle();
+            log("💀 ROUND 2 WINNER: INFILTRATOR BREACHES SECTOR", "white");
+          }
+
+          tournamentTime++;
+        }, 1000);
       } else {
         isAutoCombatOn = false;
         clearInterval(autoCombatInterval);
         autoCombatInterval = null;
-        btn.innerText = "▶ START AUTOMATED SHOOTOUT COMBAT LOOP";
+        btn.innerText = "▶ START FULL 2-ROUND TOURNAMENT LOOP";
         btn.classList.remove('primary');
-        log("Tactical combat loop ceased.");
+        log("Tactical tournament loop halted.");
       }
     }
 
