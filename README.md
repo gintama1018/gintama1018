@@ -250,9 +250,9 @@ Sleep schedule             ○○○○○○○  "case closed, badly"
 ## SURVEILLANCE LOG
 
 <div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=gintama1018&show_icons=true&theme=github_dark&bg_color=0d1117&title_color=C0C0C0&text_color=E5E5E5&icon_color=C0C0C0&border_color=2b2b2b&hide_border=true" alt="stats" height="165"/>
+<img src="https://github-stats-extended.vercel.app/api?username=gintama1018&show_icons=true&theme=github_dark&bg_color=0d1117&title_color=C0C0C0&text_color=E5E5E5&icon_color=C0C0C0&border_color=2b2b2b&hide_border=true" alt="stats" height="165"/>
 <img src="https://streak-stats.demolab.com/?user=gintama1018&theme=dark&background=0D1117&stroke=2b2b2b&ring=C0C0C0&fire=C0C0C0&currStreakLabel=C0C0C0&sideLabels=E5E5E5&sideNums=E5E5E5&dates=8b8b8b&hide_border=true" alt="streak" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gintama1018&layout=compact&theme=github_dark&bg_color=0d1117&title_color=C0C0C0&text_color=E5E5E5&border_color=2b2b2b&hide_border=true" alt="top langs" height="165"/>
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=gintama1018&layout=compact&theme=github_dark&bg_color=0d1117&title_color=C0C0C0&text_color=E5E5E5&border_color=2b2b2b&hide_border=true" alt="top langs" height="165"/>
 </div>
 
 <br/>
