@@ -1,0 +1,112 @@
+<svg width="720" height="130" viewBox="0 0 720 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cyber Cassette Player: Yorozuya Blues audio player and agent status">
+  <defs>
+    <style>
+      .bg { fill: #141414; stroke: #2b2b2b; stroke-width: 1.5; }
+      .tape-window { fill: #0d0d0d; stroke: #333; stroke-width: 1; }
+      .reel-ring { fill: none; stroke: #C0C0C0; stroke-width: 1.5; }
+      .reel-center { fill: #2b2b2b; }
+      .reel-teeth { fill: #C0C0C0; }
+      .gold { fill: #D4AF37; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: bold; }
+      .silver { fill: #C0C0C0; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+      .dim { fill: #6e7681; font-family: 'JetBrains Mono', monospace; font-size: 9px; }
+      .rcb-red { fill: #e53935; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- Player Outer Body -->
+  <rect width="720" height="130" rx="8" class="bg"/>
+
+  <!-- Left: Cassette Tape Window -->
+  <g transform="translate(18, 16)">
+    <!-- Tape Body -->
+    <rect width="180" height="98" rx="6" fill="#1c1c1c" stroke="#333" stroke-width="1"/>
+    <!-- Cassette Center Window -->
+    <rect x="25" y="24" width="130" height="50" rx="4" class="tape-window"/>
+
+    <!-- Left Rotating Reel -->
+    <g transform="translate(58, 49)">
+      <animateTransform attributeName="transform" type="rotate" from="0 58 49" to="360 58 49" dur="2.5s" repeatCount="indefinite"/>
+      <circle cx="58" cy="49" r="16" class="reel-ring"/>
+      <circle cx="58" cy="49" r="7" class="reel-center"/>
+      <!-- 3 Reel Teeth -->
+      <rect x="56.5" y="36" width="3" height="5" class="reel-teeth"/>
+      <rect x="56.5" y="57" width="3" height="5" class="reel-teeth"/>
+      <rect x="47" y="47.5" width="5" height="3" class="reel-teeth"/>
+      <rect x="64" y="47.5" width="5" height="3" class="reel-teeth"/>
+    </g>
+
+    <!-- Right Rotating Reel -->
+    <g transform="translate(122, 49)">
+      <animateTransform attributeName="transform" type="rotate" from="0 122 49" to="360 122 49" dur="2.5s" repeatCount="indefinite"/>
+      <circle cx="122" cy="49" r="16" class="reel-ring"/>
+      <circle cx="122" cy="49" r="7" class="reel-center"/>
+      <!-- 3 Reel Teeth -->
+      <rect x="120.5" y="36" width="3" height="5" class="reel-teeth"/>
+      <rect x="120.5" y="57" width="3" height="5" class="reel-teeth"/>
+      <rect x="111" y="47.5" width="5" height="3" class="reel-teeth"/>
+      <rect x="128" y="47.5" width="5" height="3" class="reel-teeth"/>
+    </g>
+
+    <!-- Magnetic Tape Band connecting reels -->
+    <line x1="74" y1="44" x2="106" y2="44" stroke="#483218" stroke-width="4"/>
+    <line x1="74" y1="54" x2="106" y2="54" stroke="#483218" stroke-width="4"/>
+
+    <!-- Tape Label Text -->
+    <text x="90" y="16" text-anchor="middle" class="dim" letter-spacing="1">YOROZUYA HI-FI TAPE</text>
+  </g>
+
+  <!-- Center & Right: Track Metadata & Equalizer -->
+  <g transform="translate(225, 25)">
+    <!-- Currently Playing Line -->
+    <text x="0" y="10" class="gold">▶ NOW PLAYING: Gintama OST — "Yorozuya Blues (Lo-Fi Audit Mix)"</text>
+    
+    <!-- Audio Progress Bar -->
+    <g transform="translate(0, 26)">
+      <rect width="360" height="4" rx="2" fill="#2b2b2b"/>
+      <rect width="210" height="4" rx="2" fill="#D4AF37">
+        <animate attributeName="width" values="210;290;210" dur="8s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="210" cy="2" r="4" fill="#FFFFFF">
+        <animate attributeName="cx" values="210;290;210" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="375" y="6" class="dim">02:45 / 04:12</text>
+    </g>
+
+    <!-- Off-The-Record Agent Metadata -->
+    <g transform="translate(0, 52)">
+      <text x="0" y="0" class="silver">CRICKET FAITH :</text>
+      <text x="120" y="0" class="rcb-red">❤️💛 BLEEDS RED &amp; GOLD FOR RCB [PLAY BOLD]</text>
+
+      <text x="0" y="18" class="silver">DIECAST VAULT :</text>
+      <text x="120" y="18" class="silver">🏎️ 40+ Scale Models Hoarded (Zero Garage Tech Debt)</text>
+
+      <text x="0" y="36" class="silver">CORE PHILOSOPHY:</text>
+      <text x="120" y="36" style="font-family:'JetBrains Mono',monospace;font-size:10px;fill:#39d353;">"Ship first, audit like an enemy agent afterward."</text>
+    </g>
+
+    <!-- Animated Equalizer Frequency Bars -->
+    <g transform="translate(435, 14)">
+      <!-- 7 dancing equalizer bars -->
+      <rect x="0" y="0" width="3" height="18" rx="1.5" fill="#39d353">
+        <animate attributeName="height" values="8;24;6;20;12;24" dur="0.8s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="16;0;18;4;12;0" dur="0.8s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="6" y="0" width="3" height="18" rx="1.5" fill="#39d353">
+        <animate attributeName="height" values="16;6;24;10;22;6" dur="0.9s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="8;18;0;14;2;18" dur="0.9s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="12" y="0" width="3" height="18" rx="1.5" fill="#D4AF37">
+        <animate attributeName="height" values="22;12;6;24;14;20" dur="0.7s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="2;12;18;0;10;4" dur="0.7s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="18" y="0" width="3" height="18" rx="1.5" fill="#D4AF37">
+        <animate attributeName="height" values="6;24;14;8;22;16" dur="0.85s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="18;0;10;16;2;8" dur="0.85s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="24" y="0" width="3" height="18" rx="1.5" fill="#f85149">
+        <animate attributeName="height" values="14;8;22;16;6;24" dur="0.75s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="10;16;2;8;18;0" dur="0.75s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+</svg>

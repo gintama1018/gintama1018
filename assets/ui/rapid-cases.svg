@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 250" width="100%" height="100%">
+  <defs>
+    <!-- Card Gradients -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e131d"/>
+      <stop offset="100%" stop-color="#090d14"/>
+    </linearGradient>
+
+    <linearGradient id="orbitRays" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#39d353" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Shimmer Sheen -->
+    <linearGradient id="glassSheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-1 0" to="2 0" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ==================== CARD 1: KISAN-AI ==================== -->
+  <g transform="translate(10, 10)">
+    <!-- Base Card Frame -->
+    <rect x="0" y="0" width="265" height="230" rx="10" fill="url(#cardBg)" stroke="#238636" stroke-width="1.5"/>
+    <rect x="0" y="0" width="265" height="230" rx="10" fill="url(#glassSheen)"/>
+
+    <!-- Header & Status -->
+    <rect x="12" y="12" width="60" height="18" rx="3" fill="#16291a" stroke="#39d353" stroke-width="0.8"/>
+    <text x="42" y="24" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#39d353" text-anchor="middle">FILE 04</text>
+
+    <rect x="185" y="12" width="68" height="18" rx="3" fill="#162235" stroke="#58a6ff" stroke-width="0.8"/>
+    <text x="219" y="24" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#79c0ff" text-anchor="middle">LIVE PROD</text>
+
+    <text x="12" y="48" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+      🌾 KISAN-AI
+    </text>
+    <text x="12" y="62" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8b949e">
+      Satellite Multispectral Remote Sensing
+    </text>
+
+    <!-- Mini Satellite Orbit Animation Box -->
+    <g transform="translate(12, 70)">
+      <rect x="0" y="0" width="241" height="85" rx="6" fill="#060c07" stroke="#1f4a25" stroke-width="1"/>
+      
+      <!-- Crop Ground Grid -->
+      <polygon points="0,85 241,85 241,55 0,55" fill="#0d2411"/>
+      <line x1="0" y1="70" x2="241" y2="70" stroke="#1f4a25" stroke-width="1"/>
+      <line x1="60" y1="55" x2="40" y2="85" stroke="#1f4a25" stroke-width="1"/>
+      <line x1="120" y1="55" x2="120" y2="85" stroke="#1f4a25" stroke-width="1"/>
+      <line x1="180" y1="55" x2="200" y2="85" stroke="#1f4a25" stroke-width="1"/>
+
+      <!-- Orbiting Satellite & Scanning Cone -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="20,0; 180,0; 20,0" dur="6s" repeatCount="indefinite"/>
+        
+        <!-- Beaming Scanning Rays -->
+        <polygon points="20,20 0,65 40,65" fill="url(#orbitRays)"/>
+
+        <!-- Satellite Body -->
+        <rect x="14" y="14" width="12" height="8" rx="1" fill="#c9d1d9"/>
+        <!-- Solar Panels -->
+        <rect x="4" y="16" width="9" height="4" fill="#388bfd" stroke="#58a6ff" stroke-width="0.5"/>
+        <rect x="27" y="16" width="9" height="4" fill="#388bfd" stroke="#58a6ff" stroke-width="0.5"/>
+        <circle cx="20" cy="18" r="1.5" fill="#39d353"/>
+      </g>
+
+      <!-- Telemetry Overlay -->
+      <text x="8" y="16" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#39d353">NDVI: 0.81 (HEALTHY)</text>
+      <text x="8" y="28" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#8b949e">SENTINEL-2 L2A 10m</text>
+    </g>
+
+    <!-- Metrics & Link Badges -->
+    <text x="12" y="174" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c9d1d9">
+      • Real-time soil moisture &amp; nitrogen
+    </text>
+    <text x="12" y="188" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c9d1d9">
+      • Eliminates yield estimation errors
+    </text>
+
+    <!-- Buttons -->
+    <g transform="translate(12, 198)">
+      <rect x="0" y="0" width="115" height="20" rx="3" fill="#238636"/>
+      <text x="57" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">LIVE APP ↗</text>
+
+      <rect x="125" y="0" width="115" height="20" rx="3" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <text x="182" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#c9d1d9" text-anchor="middle">VIEW CODE</text>
+    </g>
+  </g>
+
+  <!-- ==================== CARD 2: BHARATKART ==================== -->
+  <g transform="translate(290, 10)">
+    <!-- Base Card Frame -->
+    <rect x="0" y="0" width="265" height="230" rx="10" fill="url(#cardBg)" stroke="#D4AF37" stroke-width="1.5"/>
+    <rect x="0" y="0" width="265" height="230" rx="10" fill="url(#glassSheen)"/>
+
+    <!-- Header & Status -->
+    <rect x="12" y="12" width="60" height="18" rx="3" fill="#292209" stroke="#D4AF37" stroke-width="0.8"/>
+    <text x="42" y="24" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#FFE066" text-anchor="middle">FILE 05</text>
+
+    <rect x="175" y="12" width="78" height="18" rx="3" fill="#292209" stroke="#D4AF37" stroke-width="0.8"/>
+    <text x="214" y="24" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#FFE066" text-anchor="middle">🏆 1ST PLACE</text>
+
+    <text x="12" y="48" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+      🛍️ BharatKart
+    </text>
+    <text x="12" y="62" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8b949e">
+      Voice-First Dialect E-Commerce
+    </text>
+
+    <!-- Mini Dialect Audio-to-Catalog Box -->
+    <g transform="translate(12, 70)">
+      <rect x="0" y="0" width="241" height="85" rx="6" fill="#120e03" stroke="#4d3a08" stroke-width="1"/>
+
+      <!-- Mic Icon -->
+      <circle cx="28" cy="36" r="14" fill="#292209" stroke="#D4AF37" stroke-width="1"/>
+      <path d="M 25 30 L 31 30 L 31 38 A 3 3 0 0 1 25 38 Z M 23 35 A 5 5 0 0 0 33 35 M 28 40 L 28 44 M 25 44 L 31 44"
+            fill="none" stroke="#FFE066" stroke-width="1.2"/>
+
+      <!-- Audio wave converting into catalog item -->
+      <g transform="translate(52, 26)">
+        <rect x="0" y="8" width="2.5" height="14" fill="#FFE066">
+          <animate attributeName="height" values="8;18;8" dur="0.4s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="5" y="4" width="2.5" height="22" fill="#FFE066">
+          <animate attributeName="height" values="22;10;22" dur="0.5s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="10" y="9" width="2.5" height="12" fill="#FFE066">
+          <animate attributeName="height" values="12;20;12" dur="0.45s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- Conversion Arrow -->
+      <path d="M 72 36 L 86 36 M 82 31 L 87 36 L 82 41" stroke="#D4AF37" stroke-width="1.5"/>
+
+      <!-- E-commerce Catalog Box Output -->
+      <g transform="translate(98, 16)">
+        <rect x="0" y="0" width="130" height="52" rx="4" fill="#1d1708" stroke="#D4AF37" stroke-width="0.8"/>
+        <text x="8" y="16" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#FFE066">ITEM: Handwoven Shawl</text>
+        <text x="8" y="28" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c9d1d9">PRICE: ₹1,250 · STOCK: 14</text>
+        <text x="8" y="42" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#39d353">✓ CATALOG GENERATED</text>
+      </g>
+
+      <text x="8" y="78" font-family="'JetBrains Mono', monospace" font-size="7" fill="#8b949e">
+        AUDIO: "दो शॉल बनाई हैं, बारह सौ पचास..."
+      </text>
+    </g>
+
+    <!-- Metrics & Link Badges -->
+    <text x="12" y="174" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c9d1d9">
+      • Zero-typing audio catalog creation
+    </text>
+    <text x="12" y="188" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c9d1d9">
+      • Awarded 1st Place at HackUEM
+    </text>
+
+    <!-- Buttons -->
+    <g transform="translate(12, 198)">
+      <rect x="0" y="0" width="240" height="20" rx="3" fill="#D4AF37"/>
+      <text x="120" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#0d0d0d" text-anchor="middle">EXAMINE AWARDED CODE ↗</text>
+    </g>
+  </g>
+
+  <!-- ==================== CARD 3: ROADSOS ==================== -->
+  <g transform="translate(570, 10)">
+    <!-- Base Card Frame -->
+    <rect x="0" y="0" width="265" height="230" rx="10" fill="url(#cardBg)" stroke="#f85149" stroke-width="1.5"/>
+    <rect x="0" y="0" width="265" height="230" rx="10" fill="url(#glassSheen)"/>
+
+    <!-- Header & Status -->
+    <rect x="12" y="12" width="60" height="18" rx="3" fill="#2d1211" stroke="#f85149" stroke-width="0.8"/>
+    <text x="42" y="24" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#ff7b72" text-anchor="middle">FILE 06</text>
+
+    <rect x="180" y="12" width="73" height="18" rx="3" fill="#161b22" stroke="#6e7681" stroke-width="0.8"/>
+    <text x="216" y="24" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#8b949e" text-anchor="middle">OFFLINE GRID</text>
+
+    <text x="12" y="48" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+      🆘 ROADSoS
+    </text>
+    <text x="12" y="62" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8b949e">
+      Zero-Coverage Emergency Platform
+    </text>
+
+    <!-- Mini Radar Distress Wave Box -->
+    <g transform="translate(12, 70)">
+      <rect x="0" y="0" width="241" height="85" rx="6" fill="#130606" stroke="#481a17" stroke-width="1"/>
+
+      <!-- Pulsing Beacon Waves -->
+      <g transform="translate(50, 42)">
+        <circle cx="0" cy="0" r="8" fill="none" stroke="#f85149" stroke-width="1.5">
+          <animate attributeName="r" values="6;35" dur="1.8s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="0" cy="0" r="8" fill="none" stroke="#f85149" stroke-width="1">
+          <animate attributeName="r" values="6;35" dur="1.8s" begin="0.9s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="1;0" dur="1.8s" begin="0.9s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="0" cy="0" r="5" fill="#f85149"/>
+      </g>
+
+      <!-- Jurisdiction Nodes list -->
+      <g transform="translate(105, 14)">
+        <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#ff7b72">DISPATCH MATRIX:</text>
+        <text x="0" y="26" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c9d1d9">🇮🇳 IND: 112 / Police / Med</text>
+        <text x="0" y="38" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c9d1d9">🇺🇸 USA: 911 · 🇬🇧 GBR: 999</text>
+        <text x="0" y="50" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c9d1d9">🌐 12+ Nations Configured</text>
+        <text x="0" y="62" font-family="'JetBrains Mono', monospace" font-size="6.5" fill="#39d353">LAT/LONG SMS ZERO DATA</text>
+      </g>
+    </g>
+
+    <!-- Metrics & Link Badges -->
+    <text x="12" y="174" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c9d1d9">
+      • Zero-bandwidth SMS &amp; GPS dispatch
+    </text>
+    <text x="12" y="188" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c9d1d9">
+      • Local offline emergency caches
+    </text>
+
+    <!-- Buttons -->
+    <g transform="translate(12, 198)">
+      <rect x="0" y="0" width="240" height="20" rx="3" fill="#161b22" stroke="#f85149" stroke-width="1"/>
+      <text x="120" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#ff7b72" text-anchor="middle">EXAMINE REPOSITORY ↗</text>
+    </g>
+  </g>
+</svg>

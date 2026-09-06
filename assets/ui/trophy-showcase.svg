@@ -1,0 +1,288 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="hallBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080b11"/>
+      <stop offset="60%" stop-color="#0f1420"/>
+      <stop offset="100%" stop-color="#070a0e"/>
+    </linearGradient>
+
+    <!-- Floor Grid Gradient -->
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#238636" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#070a0e" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Gold Trophy Glow -->
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+
+    <!-- Cyan Glow -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#79c0ff"/>
+      <stop offset="50%" stop-color="#1f6feb"/>
+      <stop offset="100%" stop-color="#0c2d6b"/>
+    </linearGradient>
+
+    <!-- Bronze Glow -->
+    <linearGradient id="bronzeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0883e"/>
+      <stop offset="50%" stop-color="#bd5b00"/>
+      <stop offset="100%" stop-color="#763600"/>
+    </linearGradient>
+
+    <!-- Light Sheen Sweep -->
+    <linearGradient id="trophySheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-1.5 0" to="1.5 0" dur="3.5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Holographic Beam Gradient -->
+    <linearGradient id="holoBeam" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#39d353" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#39d353" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect x="0" y="0" width="850" height="280" rx="12" fill="url(#hallBg)" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Perspective Floor Grid -->
+  <g opacity="0.35">
+    <line x1="0" y1="210" x2="850" y2="210" stroke="#39d353" stroke-width="1"/>
+    <line x1="0" y1="230" x2="850" y2="230" stroke="#39d353" stroke-width="1"/>
+    <line x1="0" y1="255" x2="850" y2="255" stroke="#39d353" stroke-width="1.5"/>
+    <line x1="425" y1="180" x2="50" y2="280" stroke="#39d353" stroke-width="1"/>
+    <line x1="425" y1="180" x2="220" y2="280" stroke="#39d353" stroke-width="1"/>
+    <line x1="425" y1="180" x2="425" y2="280" stroke="#39d353" stroke-width="1"/>
+    <line x1="425" y1="180" x2="630" y2="280" stroke="#39d353" stroke-width="1"/>
+    <line x1="425" y1="180" x2="800" y2="280" stroke="#39d353" stroke-width="1"/>
+  </g>
+
+  <!-- Top Header Banner -->
+  <g transform="translate(20, 16)">
+    <circle cx="8" cy="8" r="4" fill="#D4AF37">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="22" y="12" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#D4AF37" letter-spacing="1.5">
+      FORENSIC COMMENDATION ARCHIVE // HALL OF CASE VICTORIES
+    </text>
+    <text x="730" y="12" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#8b949e">
+      [5 VERIFIED AWARDS]
+    </text>
+    <line x1="0" y1="20" x2="810" y2="20" stroke="#21262d" stroke-width="1"/>
+  </g>
+
+  <!-- ==================== PODIUM 1: ICAHTE-2026 (BEST PAPER) ==================== -->
+  <g transform="translate(20, 50)">
+    <!-- Base Pedestal -->
+    <polygon points="25,160 135,160 145,175 15,175" fill="#161b22" stroke="#D4AF37" stroke-width="1.2"/>
+    <polygon points="35,160 125,160 115,90 45,90" fill="url(#holoBeam)"/>
+
+    <!-- Floating Trophy Container (Hover Animation) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,-6; 0,0" dur="3.2s" repeatCount="indefinite"/>
+      
+      <!-- Laurel / Medal Graphic -->
+      <circle cx="80" cy="55" r="26" fill="#1f1a09" stroke="url(#goldGlow)" stroke-width="2.5"/>
+      <circle cx="80" cy="55" r="21" fill="none" stroke="#D4AF37" stroke-dasharray="4 2"/>
+      
+      <!-- Trophy Icon Symbol -->
+      <path d="M 72 44 L 88 44 L 88 56 A 8 8 0 0 1 72 56 Z M 70 47 L 66 47 A 5 5 0 0 0 71 55 L 72 55 M 90 47 L 94 47 A 5 5 0 0 1 89 55 L 88 55 M 80 56 L 80 63 M 74 63 L 86 63"
+            fill="none" stroke="#FFE066" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- Shimmer Sheen on Trophy -->
+      <circle cx="80" cy="55" r="26" fill="url(#trophySheen)"/>
+
+      <!-- Sparkle Star -->
+      <polygon points="102,36 104,40 108,42 104,44 102,48 100,44 96,42 100,40" fill="#FFF">
+        <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+
+    <!-- Info Labels -->
+    <rect x="15" y="178" width="130" height="42" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="80" y="193" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#FFE066" text-anchor="middle">
+      BEST PAPER AWARD
+    </text>
+    <text x="80" y="206" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8b949e" text-anchor="middle">
+      ICAHTE-2026 Intl Conf
+    </text>
+    <text x="80" y="216" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#39d353" text-anchor="middle">
+      Paper: AHTE_26_R_101
+    </text>
+  </g>
+
+  <!-- ==================== PODIUM 2: HACKUEM (1ST PLACE) ==================== -->
+  <g transform="translate(185, 50)">
+    <!-- Base Pedestal -->
+    <polygon points="25,160 135,160 145,175 15,175" fill="#161b22" stroke="#39d353" stroke-width="1.2"/>
+    <polygon points="35,160 125,160 115,90 45,90" fill="url(#holoBeam)"/>
+
+    <!-- Floating Trophy Container (Hover Animation) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-4; 0,2; 0,-4" dur="2.8s" repeatCount="indefinite"/>
+      
+      <!-- Big First Place Cup -->
+      <circle cx="80" cy="55" r="26" fill="#0b1a10" stroke="#39d353" stroke-width="2.5"/>
+      <circle cx="80" cy="55" r="21" fill="none" stroke="#238636" stroke-dasharray="3 3"/>
+
+      <!-- 1ST Cup Icon -->
+      <path d="M 68 40 L 92 40 L 92 56 C 92 63 80 65 80 65 C 80 65 68 63 68 56 Z M 68 44 L 62 44 C 60 50 64 56 68 56 M 92 44 L 98 44 C 100 50 96 56 92 56 M 80 65 L 80 70 M 72 70 L 88 70"
+            fill="#16291a" stroke="#39d353" stroke-width="1.8" stroke-linecap="round"/>
+      <text x="80" y="53" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="900" fill="#FFF" text-anchor="middle">1st</text>
+
+      <!-- Shimmer Sheen -->
+      <circle cx="80" cy="55" r="26" fill="url(#trophySheen)"/>
+
+      <!-- Sparkle -->
+      <polygon points="60,34 62,38 66,40 62,42 60,46 58,42 54,40 58,38" fill="#39d353">
+        <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+
+    <!-- Info Labels -->
+    <rect x="15" y="178" width="130" height="42" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="80" y="193" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#39d353" text-anchor="middle">
+      1ST PLACE WINNER
+    </text>
+    <text x="80" y="206" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8b949e" text-anchor="middle">
+      HackUEM Hackathon
+    </text>
+    <text x="80" y="216" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#D4AF37" text-anchor="middle">
+      BharatKart Voice Engine
+    </text>
+  </g>
+
+  <!-- ==================== PODIUM 3: GOOGLE PROMPTWARS (AIR 15) ==================== -->
+  <g transform="translate(350, 50)">
+    <!-- Base Pedestal -->
+    <polygon points="25,160 135,160 145,175 15,175" fill="#161b22" stroke="#58a6ff" stroke-width="1.2"/>
+    <polygon points="35,160 125,160 115,90 45,90" fill="url(#holoBeam)"/>
+
+    <!-- Floating Container -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,1; 0,-5; 0,1" dur="3.5s" repeatCount="indefinite"/>
+
+      <!-- Diamond Cyber Medal -->
+      <polygon points="80,26 108,54 80,82 52,54" fill="#0b172a" stroke="url(#cyanGlow)" stroke-width="2.5"/>
+      <polygon points="80,33 101,54 80,75 59,54" fill="none" stroke="#58a6ff" stroke-dasharray="3 2"/>
+
+      <text x="80" y="52" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#79c0ff" text-anchor="middle">AIR</text>
+      <text x="80" y="65" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="900" fill="#FFF" text-anchor="middle">15</text>
+
+      <!-- Shimmer Sheen -->
+      <polygon points="80,26 108,54 80,82 52,54" fill="url(#trophySheen)"/>
+
+      <!-- Sparkle -->
+      <polygon points="106,30 108,34 112,36 108,38 106,42 104,38 100,36 104,34" fill="#79c0ff">
+        <animate attributeName="opacity" values="1;0;1" dur="1.9s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+
+    <!-- Info Labels -->
+    <rect x="15" y="178" width="130" height="42" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="80" y="193" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#79c0ff" text-anchor="middle">
+      AIR 15 / ~30,000
+    </text>
+    <text x="80" y="206" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8b949e" text-anchor="middle">
+      Google PromptWars 2
+    </text>
+    <text x="80" y="216" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#58a6ff" text-anchor="middle">
+      CarbonPulse Telemetry
+    </text>
+  </g>
+
+  <!-- ==================== PODIUM 4: THUNDERCIPHER CTF (3RD PLACE) ==================== -->
+  <g transform="translate(515, 50)">
+    <!-- Base Pedestal -->
+    <polygon points="25,160 135,160 145,175 15,175" fill="#161b22" stroke="#f0883e" stroke-width="1.2"/>
+    <polygon points="35,160 125,160 115,90 45,90" fill="url(#holoBeam)"/>
+
+    <!-- Floating Container -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,-2; 0,4; 0,-2" dur="3.0s" repeatCount="indefinite"/>
+
+      <!-- Cryptographic Shield -->
+      <path d="M 80 28 L 105 38 L 105 60 C 105 74 80 84 80 84 C 80 84 55 74 55 60 L 55 38 Z"
+            fill="#211206" stroke="url(#bronzeGlow)" stroke-width="2.5"/>
+      
+      <!-- Keyhole / Cryptography Lock -->
+      <circle cx="80" cy="52" r="5" fill="#f0883e"/>
+      <polygon points="78,54 82,54 84,65 76,65" fill="#f0883e"/>
+
+      <!-- Shimmer Sheen -->
+      <path d="M 80 28 L 105 38 L 105 60 C 105 74 80 84 80 84 C 80 84 55 74 55 60 L 55 38 Z" fill="url(#trophySheen)"/>
+
+      <!-- Sparkle -->
+      <polygon points="56,30 58,34 62,36 58,38 56,42 54,38 50,36 54,34" fill="#f0883e">
+        <animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+
+    <!-- Info Labels -->
+    <rect x="15" y="178" width="130" height="42" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="80" y="193" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#f0883e" text-anchor="middle">
+      3RD PLACE PODIUM
+    </text>
+    <text x="80" y="206" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8b949e" text-anchor="middle">
+      ThunderCipher CTF
+    </text>
+    <text x="80" y="216" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#f0883e" text-anchor="middle">
+      ROCA RSA Factorization
+    </text>
+  </g>
+
+  <!-- ==================== PODIUM 5: AI INNOVATION HACKATHON ==================== -->
+  <g transform="translate(680, 50)">
+    <!-- Base Pedestal -->
+    <polygon points="25,160 135,160 145,175 15,175" fill="#161b22" stroke="#d29922" stroke-width="1.2"/>
+    <polygon points="35,160 125,160 115,90 45,90" fill="url(#holoBeam)"/>
+
+    <!-- Floating Container -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,3; 0,-3; 0,3" dur="3.4s" repeatCount="indefinite"/>
+
+      <!-- Hexagonal Neural Emblem -->
+      <polygon points="80,28 106,42 106,70 80,84 54,70 54,42" fill="#1f1805" stroke="#e3b341" stroke-width="2.5"/>
+      <polygon points="80,35 100,46 100,66 80,77 60,66 60,46" fill="none" stroke="#d29922" stroke-dasharray="2 2"/>
+
+      <!-- Neural Core Nodes -->
+      <circle cx="80" cy="56" r="6" fill="#e3b341">
+        <animate attributeName="r" values="5;7;5" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <line x1="80" y1="56" x2="68" y2="48" stroke="#e3b341" stroke-width="1.5"/>
+      <line x1="80" y1="56" x2="92" y2="48" stroke="#e3b341" stroke-width="1.5"/>
+      <line x1="80" y1="56" x2="80" y2="69" stroke="#e3b341" stroke-width="1.5"/>
+
+      <!-- Shimmer Sheen -->
+      <polygon points="80,28 106,42 106,70 80,84 54,70 54,42" fill="url(#trophySheen)"/>
+    </g>
+
+    <!-- Info Labels -->
+    <rect x="15" y="178" width="130" height="42" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="80" y="193" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#e3b341" text-anchor="middle">
+      ROUND 2 FINALIST
+    </text>
+    <text x="80" y="206" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8b949e" text-anchor="middle">
+      AI Innovation Hackathon
+    </text>
+    <text x="80" y="216" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#d29922" text-anchor="middle">
+      AI Teacher 720p Pipeline
+    </text>
+  </g>
+
+  <!-- Bottom Cyber Baseline Pulse -->
+  <line x1="30" y1="268" x2="820" y2="268" stroke="#30363d" stroke-width="1"/>
+  <circle cx="425" cy="268" r="3" fill="#39d353">
+    <animate attributeName="cx" values="30;820;30" dur="8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

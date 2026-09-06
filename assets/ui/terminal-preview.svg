@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 230" width="100%" height="100%">
+  <defs>
+    <!-- CRT Monitor Chassis Gradient -->
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#21262d"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <!-- CRT Screen Phosphor Gradient -->
+    <radialGradient id="screenPhosphor" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#082112"/>
+      <stop offset="70%" stop-color="#031209"/>
+      <stop offset="100%" stop-color="#010804"/>
+    </radialGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="crtScanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.8" opacity="0.6"/>
+    </pattern>
+
+    <!-- CRT Glow Filter -->
+    <filter id="greenGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Monitor Outer Plastic Bezel -->
+  <rect x="0" y="0" width="820" height="230" rx="16" fill="url(#chassisGrad)" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Bezel Screws -->
+  <circle cx="16" cy="16" r="3" fill="#484f58"/>
+  <circle cx="804" cy="16" r="3" fill="#484f58"/>
+  <circle cx="16" cy="214" r="3" fill="#484f58"/>
+  <circle cx="804" cy="214" r="3" fill="#484f58"/>
+
+  <!-- Power LED Indicator (Blinking Amber/Green) -->
+  <circle cx="780" cy="214" r="4" fill="#39d353">
+    <animate attributeName="opacity" values="1;0.4;1" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="740" y="217" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#8b949e">PWR ON</text>
+
+  <!-- Inner CRT Curved Glass Screen -->
+  <rect x="25" y="22" width="770" height="175" rx="10" fill="url(#screenPhosphor)" stroke="#238636" stroke-width="1.5"/>
+  <rect x="25" y="22" width="770" height="175" rx="10" fill="url(#crtScanlines)"/>
+
+  <!-- Terminal Content with Phosphor Green Glow -->
+  <g transform="translate(42, 44)">
+    <!-- Terminal Header line -->
+    <text x="0" y="12" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="bold" fill="#39d353" letter-spacing="1">
+      YOROZUYA FORENSIC TERMINAL SIMULATOR v2.4 [TTY-01]
+    </text>
+    <line x1="0" y1="20" x2="735" y2="20" stroke="#238636" stroke-width="0.8" stroke-dasharray="6 3"/>
+
+    <!-- Executed Command -->
+    <text x="0" y="38" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#7ee787">
+      investigator@silver-soul:~$ ./launch_investigation.sh --mode=INTERACTIVE
+    </text>
+
+    <!-- Simulated Log Output -->
+    <text x="0" y="56" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#39d353">
+      [+] INITIALIZING AUDIT ENGINE................... [OK]
+    </text>
+    <text x="0" y="72" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#39d353">
+      [+] LOADED EVIDENCE CASES (01 THRU 07).......... [VERIFIED]
+    </text>
+    <text x="0" y="88" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#D4AF37">
+      [*] WARNING: 3 ADVERSARIAL ANOMALIES DETECTED IN PACKET BUFFER.
+    </text>
+
+    <!-- Call to Action Button in Terminal -->
+    <g transform="translate(140, 104)">
+      <!-- Animated Pulsing Frame -->
+      <rect x="0" y="0" width="450" height="34" rx="6" fill="#0d2818" stroke="#39d353" stroke-width="1.8">
+        <animate attributeName="stroke-width" values="1.5;3;1.5" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Flashing Prompt Icon -->
+      <text x="20" y="22" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="900" fill="#FFE066">
+        ▶ CLICK HERE TO BOOT IN-BROWSER GAME SIMULATOR
+      </text>
+
+      <!-- Blinking block cursor -->
+      <rect x="425" y="10" width="8" height="14" fill="#39d353">
+        <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Subtext -->
+    <text x="367" y="152" font-family="'JetBrains Mono', monospace" font-size="8" fill="#6e7681" text-anchor="middle">
+      Zero dependencies · Hosted on GitHub Pages · Real-time command feedback
+    </text>
+  </g>
+</svg>
