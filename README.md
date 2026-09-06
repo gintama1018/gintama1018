@@ -18,7 +18,7 @@
 <br/><br/>
 
 <!-- Dynamic Typing Tagline -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=19&pause=1400&color=d4d4d8&center=true&vCenter=true&width=740&lines=Every+bug+is+a+cold+case+until+someone+reads+the+logs.;I+don't+specialize+in+a+stack.+I+specialize+in+finding+what's+broken.;Protocol+engineering+%C2%B7+Applied+cryptography+%C2%B7+Civic+AI.;Currently+investigating%3A+one+mesh+network%2C+one+sleep+schedule." alt="Detective Tagline" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&pause=1400&color=d4d4d8&center=true&vCenter=true&width=740&lines=Every+bug+is+a+cold+case+until+someone+reads+the+logs.;I+don't+specialize+in+a+stack.+I+specialize+in+finding+what's+broken.;Protocol+engineering+%C2%B7+Applied+cryptography+%C2%B7+Civic+AI.;Currently+investigating%3A+one+mesh+network%2C+one+sleep+schedule." alt="Detective Tagline" />
 
 <br/><br/>
 
@@ -42,188 +42,286 @@
 
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
 
-## 🪪 FILE 00 — SUBJECT DOSSIER & THE YOROZUYA CODEX
+<br/>
+
+<!-- ================================================================= -->
+<!-- SECTION 00: OPERATIVE DOSSIER & LORE                              -->
+<!-- ================================================================= -->
+
+<div align="center">
+
+### 🪪 FILE 00 — SUBJECT DOSSIER & THE YOROZUYA CODEX
+<sub><em>Classified personnel file for Lead Systems Architect &amp; Security Auditor Sonu Jangir</em></sub>
+
+<br/><br/>
 
 <!-- Animated Aesthetic Agent ID Pass -->
-<div align="center">
-  <img src="./assets/ui/agent-badge.svg" width="100%" alt="Agent Identification Pass: Sonu Jangir" />
-</div>
+<img src="./assets/ui/agent-badge.svg" width="100%" alt="Agent Identification Pass: Sonu Jangir" />
 
-<br/>
+<br/><br/>
 
 <!-- Animated Audio Cassette Player & Lore Widget -->
-<div align="center">
-  <a href="https://gintama1018.github.io/player.html?mode=cassette" title="Click to play synthesized Noir Radio audio">
-    <img src="./assets/ui/cyber-cassette.svg" width="100%" alt="Cyber Cassette Tape: Yorozuya Blues Audio Player" />
-  </a>
-  <br/>
-  <sub><em>(▶ <strong>Click the Cassette above to launch the live synthesized Noir Radio audio player</strong> — runs natively in browser)</em></sub>
+<a href="https://gintama1018.me/player.html?mode=cassette" title="Click to play synthesized Noir Radio audio">
+  <img src="./assets/ui/cyber-cassette.svg" width="100%" alt="Cyber Cassette Tape: Yorozuya Blues Audio Player" />
+</a>
+<br/>
+<sub><em>(▶ <strong>Click the Cassette above to launch the live synthesized Noir Radio audio player</strong> — runs natively in browser)</em></sub>
+
 </div>
 
+<br/>
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
 
-## 🏆 FORENSIC RECORD — COMMENDATIONS & CASE VICTORIES
+<!-- ================================================================= -->
+<!-- SECTION 01: FORENSIC COMMENDATIONS                                -->
+<!-- ================================================================= -->
+
+<div align="center">
+
+### 🏆 FORENSIC RECORD — COMMENDATIONS &amp; CASE VICTORIES
+<sub><em>Peer-reviewed academic awards, national hackathon championships, and competitive CTF podiums</em></sub>
+
+<br/><br/>
 
 <!-- Animated Trophy Cabinet & Commendations Showcase -->
-<div align="center">
-  <img src="./assets/ui/trophy-showcase.svg" width="100%" alt="Holographic Trophy Cabinet: 5 Verified Commendations" />
+<img src="./assets/ui/trophy-showcase.svg" width="100%" alt="Holographic Trophy Cabinet: 5 Verified Commendations" />
+
 </div>
 
+<br/>
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
 
-## 📋 THE CASE BOARD — ACTIVE INVESTIGATIONS
+<!-- ================================================================= -->
+<!-- SECTION 02: MASTER CASE DIRECTORY                                 -->
+<!-- ================================================================= -->
+
+<div align="center">
+
+### 📋 THE CASE BOARD — ACTIVE INVESTIGATION DIRECTORY
+<sub><em>Overview of active protocols, production AI systems, and mission-critical repositories</em></sub>
+
+<br/><br/>
 
 <!-- Master Case Board -->
-<div align="center">
-  <img src="./assets/ui/case-board.svg" width="100%" alt="Master Investigation Directory: 6 Case Dossiers" />
+<img src="./assets/ui/case-board.svg" width="100%" alt="Master Investigation Directory: 6 Case Dossiers" />
+
 </div>
 
+<br/>
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
 
-## 📡 FILE 01 — MeshWhisper
-**STATUS: ACTIVE INVESTIGATION** — Zero-signal, zero-tower encrypted mesh communication
+<!-- ================================================================= -->
+<!-- CASE FILE 01: MESHWISPER                                          -->
+<!-- ================================================================= -->
 
-An Android BLE mesh platform engineered for total infrastructure blackouts. Relays forward end-to-end encrypted packet envelopes without possessing the private keys to read them.
+<div align="center">
+
+### 📡 FILE 01 — MeshWhisper
+<sub><strong>STATUS: ACTIVE INVESTIGATION</strong> // Android BLE Encrypted Mesh Communications</sub>
+<br/>
+<sub><em>Zero cellular towers, zero Wi-Fi, zero internet. Relays forward blind ciphertext envelopes.</em></sub>
+
+<br/><br/>
 
 <!-- Animated BLE Mesh Routing Diagram -->
-<div align="center">
-  <img src="./assets/cases/meshwhisper-diagram.svg" width="740" alt="MeshWhisper BLE mesh routing diagram" />
-</div>
+<img src="./assets/cases/meshwhisper-diagram.svg" width="100%" alt="MeshWhisper BLE mesh routing diagram" />
 
-<br/>
+<br/><br/>
 
 <!-- Animated 32-Bit Protocol Frame & Threat Defense Matrix -->
-<div align="center">
-  <img src="./assets/cases/meshwhisper-protocol.svg" width="100%" alt="MeshWhisper 32-Bit Binary Wire Protocol and Threat Model" />
+<img src="./assets/cases/meshwhisper-protocol.svg" width="100%" alt="MeshWhisper 32-Bit Binary Wire Protocol and Threat Model" />
+
+<br/><br/>
+
+<a href="https://github.com/gintama1018/BIT-FOR-US">
+  <img src="https://img.shields.io/badge/INSPECT_CASE_CODE-BIT--FOR--US-18181b?style=for-the-badge&logo=android&logoColor=f4f4f5" alt="Repo" />
+</a>
+
 </div>
 
 <br/>
+<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
+
+<!-- ================================================================= -->
+<!-- CASE FILE 02: INFRAWATCH NEXUS                                    -->
+<!-- ================================================================= -->
 
 <div align="center">
-  <a href="https://github.com/gintama1018/BIT-FOR-US">
-    <img src="https://img.shields.io/badge/REPO-EXAMINE_MESHWISPER-18181b?style=for-the-badge&logo=android&logoColor=f4f4f5" alt="Repo" />
-  </a>
-</div>
 
-<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+### 🗑️ FILE 02 — InfraWatch Nexus
+<sub><strong>STATUS: BEST PAPER AWARD</strong> // ICAHTE-2026 International Conference (Paper ID: `AHTE_26_R_101`)</sub>
+<br/>
+<sub><em>Autonomous civic monitoring deployed across 106 real Municipal Corporation of Delhi (MCD) sanitation nodes.</em></sub>
 
-## 🗑️ FILE 02 — InfraWatch Nexus
-**STATUS: AWARDED** — Best Paper Award, ICAHTE-2026 (Paper ID: `AHTE_26_R_101`)
-
-An AI-driven civic monitoring platform deployed across **106 real Municipal Corporation of Delhi (MCD)** sanitation collection stations. Combines physical QR-coded bins as Civic Reference Nodes with real-time AI multimodal scoring.
+<br/><br/>
 
 <!-- Animated Radar Scanner Widget -->
-<div align="center">
-  <img src="./assets/ui/radar-scanner.svg" width="100%" alt="InfraWatch Nexus Radar Scanner: 106 MCD Nodes" />
-</div>
+<img src="./assets/ui/radar-scanner.svg" width="100%" alt="InfraWatch Nexus Radar Scanner: 106 MCD Nodes" />
 
-<br/>
+<br/><br/>
 
 <!-- Animated Civic AI Pipeline Architecture -->
-<div align="center">
-  <img src="./assets/cases/infrawatch-pipeline.svg" width="100%" alt="InfraWatch Nexus 4-Stage Civic AI Architecture" />
+<img src="./assets/cases/infrawatch-pipeline.svg" width="100%" alt="InfraWatch Nexus 4-Stage Civic AI Architecture" />
+
+<br/><br/>
+
+<a href="https://github.com/gintama1018/HACK-FOR-GREEN-BHARAT-HACKATHON">
+  <img src="https://img.shields.io/badge/INSPECT_AWARDED_RESEARCH-INFRAWATCH_NEXUS-18181b?style=for-the-badge&logo=googlecloud&logoColor=c5a059" alt="Repo" />
+</a>
+
 </div>
 
 <br/>
+<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
+
+<!-- ================================================================= -->
+<!-- CASE FILE 03: AI TEACHER                                          -->
+<!-- ================================================================= -->
 
 <div align="center">
-  <a href="https://github.com/gintama1018/HACK-FOR-GREEN-BHARAT-HACKATHON">
-    <img src="https://img.shields.io/badge/REPO-EXAMINE_INFRAWATCH-18181b?style=for-the-badge&logo=googlecloud&logoColor=c5a059" alt="Repo" />
-  </a>
-</div>
 
-<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+### 🎓 FILE 03 — AI Teacher (Bharat Academix)
+<sub><strong>STATUS: SUBMITTED</strong> // Round 2 Finalist, AI Innovation Hackathon 2026</sub>
+<br/>
+<sub><em>Dual-LLM pedagogical engine synthesizing complete 720p video lessons with synchronized lip-sync avatar.</em></sub>
 
-## 🎓 FILE 03 — AI Teacher (Bharat Academix)
-**STATUS: SUBMITTED** — Round 2 Finalist, AI Innovation Hackathon 2026
-
-An autonomous pedagogical system that scripts, visualizes, narrates, and encodes complete, downloadable 720p educational videos with an on-screen synchronized SVG avatar and dynamic audio synthesis.
+<br/><br/>
 
 <!-- Animated AI Video Synthesis Pipeline SVG -->
-<div align="center">
-  <img src="./assets/cases/ai-teacher-pipeline.svg" width="100%" alt="AI Teacher 720p Video Synthesis Pipeline: Dual-LLM & Synchronized Avatar" />
+<img src="./assets/cases/ai-teacher-pipeline.svg" width="100%" alt="AI Teacher 720p Video Synthesis Pipeline: Dual-LLM & Synchronized Avatar" />
+
+<br/><br/>
+
+<a href="https://github.com/gintama1018/ML-HACKATHON-2-LEVEL-ASSIGNMENT">
+  <img src="https://img.shields.io/badge/INSPECT_PIPELINE_CODE-AI_TEACHER-18181b?style=for-the-badge&logo=fastapi&logoColor=f4f4f5" alt="Repo" />
+</a>
+
 </div>
 
 <br/>
+<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
+
+<!-- ================================================================= -->
+<!-- CASE FILES 04, 05, 06: RAPID CASES                                -->
+<!-- ================================================================= -->
 
 <div align="center">
-  <a href="https://github.com/gintama1018/ML-HACKATHON-2-LEVEL-ASSIGNMENT">
-    <img src="https://img.shields.io/badge/REPO-EXAMINE_AI_TEACHER-18181b?style=for-the-badge&logo=fastapi&logoColor=f4f4f5" alt="Repo" />
-  </a>
-</div>
 
-<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+### 🗃️ RAPID CASE FILES — 04, 05, 06
+<sub><em>Satellite Crop Intelligence · Voice-First Rural Marketplace · Zero-Coverage Emergency SOS</em></sub>
 
-## 🗃️ RAPID CASE FILES — 04, 05, 06
+<br/><br/>
 
 <!-- Animated Triad Holographic Cards for Kisan-AI, BharatKart, ROADSoS -->
-<div align="center">
-  <img src="./assets/ui/rapid-cases.svg" width="100%" alt="Rapid Cases Showcase: KISAN-AI, BharatKart, ROADSoS" />
+<img src="./assets/ui/rapid-cases.svg" width="100%" alt="Rapid Cases Showcase: KISAN-AI, BharatKart, ROADSoS" />
+
+<br/><br/>
+
+<a href="https://kisan-ai-b2lz.onrender.com"><img src="https://img.shields.io/badge/DEMO-KISAN--AI_LIVE-18181b?style=for-the-badge&logo=render&logoColor=f4f4f5" alt="Demo" /></a>
+<a href="https://github.com/gintama1018/KISAN-AI"><img src="https://img.shields.io/badge/REPO-KISAN--AI-18181b?style=for-the-badge&logo=github&logoColor=a1a1aa" alt="Repo" /></a>
+<a href="https://github.com/gintama1018/BHARAT-KART---AUTONOMOUS-HACKS-FINALE-PROJECT"><img src="https://img.shields.io/badge/REPO-BHARATKART_WINNER-18181b?style=for-the-badge&logo=github&logoColor=c5a059" alt="Repo" /></a>
+<a href="https://github.com/gintama1018/ROAD-SAFETY-PROJECT"><img src="https://img.shields.io/badge/REPO-ROADSOS_OFFLINE-18181b?style=for-the-badge&logo=github&logoColor=d4d4d8" alt="Repo" /></a>
+
 </div>
 
 <br/>
+<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
+
+<!-- ================================================================= -->
+<!-- SECTION 04: EVIDENCE LOCKERS & SIMULATION                         -->
+<!-- ================================================================= -->
 
 <div align="center">
-  <a href="https://kisan-ai-b2lz.onrender.com"><img src="https://img.shields.io/badge/DEMO-KISAN--AI_LIVE-18181b?style=for-the-badge&logo=render&logoColor=f4f4f5" alt="Demo" /></a>
-  <a href="https://github.com/gintama1018/KISAN-AI"><img src="https://img.shields.io/badge/REPO-KISAN--AI-18181b?style=for-the-badge&logo=github&logoColor=a1a1aa" alt="Repo" /></a>
-  <a href="https://github.com/gintama1018/BHARAT-KART---AUTONOMOUS-HACKS-FINALE-PROJECT"><img src="https://img.shields.io/badge/REPO-BHARATKART_WINNER-18181b?style=for-the-badge&logo=github&logoColor=c5a059" alt="Repo" /></a>
-  <a href="https://github.com/gintama1018/ROAD-SAFETY-PROJECT"><img src="https://img.shields.io/badge/REPO-ROADSOS_OFFLINE-18181b?style=for-the-badge&logo=github&logoColor=d4d4d8" alt="Repo" /></a>
-</div>
 
-<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+### 🔐 FILE 07 — EVIDENCE LOCKER (Forensic CTFs &amp; Hardware)
+<sub><em>Infineon ROCA RSA cryptanalysis, custom VM reversing, covert network channels, and bare-metal AVR matrix</em></sub>
 
-## 🔐 FILE 07 — EVIDENCE LOCKER (Forensic CTFs & Hardware)
+<br/><br/>
 
 <!-- Retro CRT Terminal Preview Banner for Interactive Game -->
-<div align="center">
-  <a href="https://gintama1018.github.io/case-terminal-game.html">
-    <img src="./assets/ui/terminal-preview.svg" width="100%" alt="Launch Interactive Case Terminal Simulator" />
-  </a>
-  <br/>
-  <sub><em>(Click the console above to boot our zero-dependency detective terminal simulation hosted on GitHub Pages)</em></sub>
-</div>
-
+<a href="https://gintama1018.me/case-terminal-game.html" title="Boot In-Browser Investigation Simulator">
+  <img src="./assets/ui/terminal-preview.svg" width="100%" alt="Launch Interactive Case Terminal Simulator" />
+</a>
 <br/>
+<sub><em>(Click the console above to boot our zero-dependency detective terminal simulation hosted on GitHub Pages)</em></sub>
+
+<br/><br/>
 
 <!-- Animated Forensic Evidence Lockers with 8x8 LED Face -->
-<div align="center">
-  <img src="./assets/ui/evidence-lockers.svg" width="100%" alt="Forensic Evidence Lockers: ROCA, Custom VM, Covert PCAP, and 8x8 LED Matrix" />
-</div>
+<img src="./assets/ui/evidence-lockers.svg" width="100%" alt="Forensic Evidence Lockers: ROCA, Custom VM, Covert PCAP, and 8x8 LED Matrix" />
 
-<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
-
-## 🧰 FILE 08 — ISSUED FIELD ARSENAL
-
-<!-- Tactical Skill Icons -->
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=py,ts,js,kotlin,java,rust,nextjs,fastapi,tailwind,sqlite,postgres,androidstudio,git,github,bash&theme=dark" alt="Skill Icons" />
 </div>
 
 <br/>
+<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
+
+<!-- ================================================================= -->
+<!-- SECTION 05: FIELD ARSENAL & TOOLING                               -->
+<!-- ================================================================= -->
+
+<div align="center">
+
+### 🧰 FILE 08 — ISSUED FIELD ARSENAL &amp; TOOLING
+<sub><em>Primary systems, neural pipelines, full-stack frameworks, and reverse engineering toolsets</em></sub>
+
+<br/><br/>
+
+<!-- Tactical Skill Icons -->
+<img src="https://skillicons.dev/icons?i=py,ts,js,kotlin,java,rust,nextjs,fastapi,tailwind,sqlite,postgres,androidstudio,git,github,bash&theme=dark" alt="Skill Icons" />
+
+<br/><br/>
 
 <!-- Animated Cyber Field Arsenal Rack with Aesthetic Readiness Meters -->
-<div align="center">
-  <img src="./assets/ui/arsenal-rack.svg" width="100%" alt="Tactical Cyber Field Arsenal Rack: 4 Primed Tooling Loadouts" />
+<img src="./assets/ui/arsenal-rack.svg" width="100%" alt="Tactical Cyber Field Arsenal Rack: 4 Primed Tooling Loadouts" />
+
 </div>
 
+<br/>
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
 
-## ⚔️ TACTICAL COMMIT GRID — THE 2D COVER SHOOTOUT
+<!-- ================================================================= -->
+<!-- SECTION 06: TACTICAL CONTRIBUTION SHOOTOUT                        -->
+<!-- ================================================================= -->
 
-GitHub won't let you run binaries in a README — so we transformed the contribution grid into an active 2D tactical combat zone. Two operatives locked in an exchange of fire, using monochromatic commit stacks as bulletproof cover:
+<div align="center">
+
+### ⚔️ TACTICAL COMMIT GRID — THE 2D COVER SHOOTOUT
+<sub><em>Two operatives locked in a firefight, using monochromatic commit stacks as bulletproof cover</em></sub>
+
+<br/><br/>
 
 <!-- 2D Animated Contribution Shootout SVG -->
-<div align="center">
-  <a href="https://gintama1018.github.io/player.html?mode=shootout" title="Click to launch live Tactical Combat Soundboard">
-    <img src="./assets/ui/contribution-shootout.svg" width="100%" alt="Tactical Shootout on Contribution Grid: Operatives using commit blocks as tactical cover" />
-  </a>
-  <br/>
-  <sub><em>(🔊 <strong>Click the Commit Grid above to play live tactical shootout gunfire &amp; ricochet sound effects</strong>)</em></sub>
+<a href="https://gintama1018.me/player.html?mode=shootout" title="Click to launch live Tactical Combat Soundboard">
+  <img src="./assets/ui/contribution-shootout.svg" width="100%" alt="Tactical Shootout on Contribution Grid: Operatives using commit blocks as tactical cover" />
+</a>
+<br/>
+<sub><em>(🔊 <strong>Click the Commit Grid above to play live tactical shootout gunfire &amp; ricochet sound effects</strong>)</em></sub>
+
 </div>
 
+<br/>
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
 
-## 📡 LIVE SURVEILLANCE WIRE — INTERCEPTED DISPATCHES
+<!-- ================================================================= -->
+<!-- SECTION 07: LIVE SURVEILLANCE WIRE (AUTOMATED)                    -->
+<!-- ================================================================= -->
+
+<div align="center">
+
+### 📡 LIVE SURVEILLANCE WIRE — REAL-TIME DISPATCH INTERCEPT
+<sub><em>Autonomous telemetry intercept updated every 6 hours via scheduled GitHub Actions cron</em></sub>
+
+<br/><br/>
 
 <!-- SURVEILLANCE_WIRE_START -->
 <!-- Animated Live Surveillance Wire SVG -->
@@ -232,11 +330,22 @@ GitHub won't let you run binaries in a README — so we transformed the contribu
 </div>
 <!-- SURVEILLANCE_WIRE_END -->
 
-<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+</div>
 
-## 📡 SURVEILLANCE TELEMETRY & LIVE METRICS
+<br/>
+<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
+
+<!-- ================================================================= -->
+<!-- SECTION 08: TELEMETRY METRICS                                     -->
+<!-- ================================================================= -->
 
 <div align="center">
+
+### 📊 SURVEILLANCE TELEMETRY &amp; LIVE CODE METRICS
+<sub><em>Monochromatic activity streak, language distribution, and commit telemetry</em></sub>
+
+<br/><br/>
 
 <img src="https://github-stats-extended.vercel.app/api?username=gintama1018&show_icons=true&theme=github_dark&bg_color=09090b&title_color=f4f4f5&text_color=a1a1aa&icon_color=d4d4d8&border_color=27272a&hide_border=false" alt="Stats" height="165"/>
 <img src="https://streak-stats.demolab.com/?user=gintama1018&theme=dark&background=09090B&stroke=27272a&ring=c5a059&fire=c5a059&currStreakLabel=f4f4f5&sideLabels=a1a1aa&sideNums=f4f4f5&dates=71717a&hide_border=false" alt="Streak" height="165"/>
@@ -244,25 +353,45 @@ GitHub won't let you run binaries in a README — so we transformed the contribu
 
 </div>
 
+<br/>
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
 
-## 🔒 CLASSIFIED INCIDENT AUTOPSIES
+<!-- ================================================================= -->
+<!-- SECTION 09: CLASSIFIED AUTOPSIES & DIAGNOSTIC                     -->
+<!-- ================================================================= -->
+
+<div align="center">
+
+### 🔒 CLASSIFIED INCIDENT AUTOPSIES &amp; DIAGNOSTIC
+<sub><em>Incident 099 post-mortem analysis alongside real-time hardware &amp; log verification runner</em></sub>
+
+<br/><br/>
 
 <!-- Animated Redacted Incident Autopsy & Health Diagnostic Console -->
-<div align="center">
-  <img src="./assets/ui/incident-diagnostic.svg" width="100%" alt="Classified Incident Report 099 Autopsy and System Health Diagnostic" />
-</div>
+<img src="./assets/ui/incident-diagnostic.svg" width="100%" alt="Classified Incident Report 099 Autopsy and System Health Diagnostic" />
 
-<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
-
-## 📮 DISPATCH CHANNELS — CONTACT THE AGENCY
-
-<!-- Animated Radio Transceiver Comms Deck -->
-<div align="center">
-  <img src="./assets/ui/dispatch-terminal.svg" width="100%" alt="Open Comms Transceiver: Contact Channels" />
 </div>
 
 <br/>
+<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+<br/>
+
+<!-- ================================================================= -->
+<!-- SECTION 10: DISPATCH CHANNELS & CONTACT                           -->
+<!-- ================================================================= -->
+
+<div align="center">
+
+### 📮 DISPATCH CHANNELS — CONTACT THE AGENCY
+<sub><em>Have an intriguing protocol bug, a high-stakes challenge, or an adversarial audit?</em></sub>
+
+<br/><br/>
+
+<!-- Animated Radio Transceiver Comms Deck -->
+<img src="./assets/ui/dispatch-terminal.svg" width="100%" alt="Open Comms Transceiver: Contact Channels" />
+
+<br/><br/>
 
 <p align="center">
   <a href="https://gintama.tech"><img src="https://img.shields.io/badge/Portfolio-gintama.tech-18181b?style=for-the-badge&logo=safari&logoColor=f4f4f5" alt="Portfolio" /></a>
@@ -271,7 +400,7 @@ GitHub won't let you run binaries in a README — so we transformed the contribu
   <a href="https://linkedin.com/in/sonu-jangir-98968b390"><img src="https://img.shields.io/badge/LinkedIn-sonu--jangir-18181b?style=for-the-badge&logo=linkedin&logoColor=0077B5" alt="LinkedIn" /></a>
 </p>
 
-<div align="center">
+<br/>
 
 <!-- Dynamic Cyber Wave Footer -->
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:09090b,50:18181b,100:09090b&height=120&section=footer" alt="Footer Wave" />
