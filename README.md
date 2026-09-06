@@ -364,15 +364,11 @@ Sleep Schedule & Sanity                   ██░░░░░░░░░░�
 
 <br/>
 
-### 🐍 The Contribution Patrol Grid
-GitHub won't run arbitrary binaries in a README, but it will let a snake eat the contribution history:
+### ⚔️ TACTICAL COMMIT GRID — THE GREEN COVER SHOOTOUT
+GitHub won't let you run arbitrary game binaries in a README — so we turned the contribution grid into a 2D combat zone. Two operatives locked in an exchange of fire, using green commit clusters as tactical bulletproof cover:
 
 <div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/gintama1018/gintama1018/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/gintama1018/gintama1018/output/github-contribution-grid-snake.svg" />
-  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/gintama1018/gintama1018/output/github-contribution-grid-snake.svg" width="100%" />
-</picture>
+  <img src="./assets/ui/contribution-shootout.svg" width="100%" alt="Tactical Shootout on Contribution Grid: Operatives using commit blocks as tactical cover" />
 </div>
 
 <br/>
