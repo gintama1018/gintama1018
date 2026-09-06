@@ -1,0 +1,48 @@
+name: Live Surveillance Wire Updater
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/update_wire.py'
+
+permissions:
+  contents: write
+
+jobs:
+  update-wire:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch Live Activity & Generate Surveillance Wire
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/update_wire.py
+
+      - name: Commit & Push if Changes Detected
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Yorozuya Wire Bot"
+          git add assets/ui/surveillance-wire.svg README.md
+          if git diff --staged --quiet; then
+            echo "No new surveillance dispatches detected. Clean state."
+          else
+            git commit -m "chore(telemetry): auto-update live surveillance wire [skip ci]"
+            git push origin main
+          fi

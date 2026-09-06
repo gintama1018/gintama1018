@@ -223,6 +223,17 @@ GitHub won't let you run binaries in a README — so we transformed the contribu
 
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
 
+## 📡 LIVE SURVEILLANCE WIRE — INTERCEPTED DISPATCHES
+
+<!-- SURVEILLANCE_WIRE_START -->
+<!-- Animated Live Surveillance Wire SVG -->
+<div align="center">
+  <img src="./assets/ui/surveillance-wire.svg" width="100%" alt="Live Surveillance Wire Intercept: Real-Time GitHub Activity" />
+</div>
+<!-- SURVEILLANCE_WIRE_END -->
+
+<img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
+
 ## 📡 SURVEILLANCE TELEMETRY & LIVE METRICS
 
 <div align="center">

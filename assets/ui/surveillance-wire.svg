@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wireDarkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <linearGradient id="wireSheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-1 0" to="2 0" dur="4.5s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="260" rx="10" fill="url(#wireDarkBg)" stroke="#27272a" stroke-width="1"/>
+  <rect x="0" y="0" width="820" height="260" rx="10" fill="url(#wireSheen)"/>
+
+  <!-- Header -->
+  <g transform="translate(20, 16)">
+    <circle cx="6" cy="6" r="3.5" fill="#f85149">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="18" y="9.5" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#f4f4f5" letter-spacing="1.5">
+      LIVE SURVEILLANCE WIRE // REAL-TIME DISPATCH FEED
+    </text>
+    <rect x="650" y="-3" width="150" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="725" y="9.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
+      REC: 2026-09-06 07:29 UTC
+    </text>
+    <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
+  </g>
+
+  <!-- Items -->
+  
+    <!-- Intercept Row 1 -->
+    <g transform="translate(16, 52)">
+      <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+      <circle cx="14" cy="21" r="3" fill="#c5a059"/>
+      <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
+        [Sep 06, 07:22 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/gintama1018.github.io</tspan>
+      </text>
+      <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
+        └─ "Deploy Cyber Audio Player and Interactive Case Terminal Game to G..." (main@2c9506f)
+      </text>
+    </g>
+    <!-- Intercept Row 2 -->
+    <g transform="translate(16, 100)">
+      <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+      <circle cx="14" cy="21" r="3" fill="#c5a059"/>
+      <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
+        [Sep 06, 07:10 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/gintama1018</tspan>
+      </text>
+      <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
+        └─ "Add interactive Web Audio Player and Tactical SFX Deck linked to ..." (main@7dc3963)
+      </text>
+    </g>
+    <!-- Intercept Row 3 -->
+    <g transform="translate(16, 148)">
+      <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+      <circle cx="14" cy="21" r="3" fill="#c5a059"/>
+      <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
+        [Sep 06, 04:02 UTC] <tspan fill="#f4f4f5" font-weight="bold">CREATED</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/gintama1018</tspan>
+      </text>
+      <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
+        └─ Initialized new branch on gintama1018/gintama1018
+      </text>
+    </g>
+    <!-- Intercept Row 4 -->
+    <g transform="translate(16, 196)">
+      <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+      <circle cx="14" cy="21" r="3" fill="#c5a059"/>
+      <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
+        [Sep 05, 14:12 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/ML-HACKATHON-2-LEVEL-ASSIGNMENT</tspan>
+      </text>
+      <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
+        └─ "feat: add root GET / landing endpoint" (main@4af966f)
+      </text>
+    </g>
+
+  <!-- Footer status -->
+  <g transform="translate(20, 246)">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#52525b">
+      AUTOMATED TELEMETRY INTERCEPT // SYNCHRONIZED ACROSS ACTIVE PUBLIC REPOSITORIES
+    </text>
+  </g>
+</svg>
