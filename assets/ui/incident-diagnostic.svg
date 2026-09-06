@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="diagDarkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+
+    <!-- Shimmering Redaction Glitch -->
+    <linearGradient id="redactShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#27272a"/>
+      <stop offset="50%" stop-color="#3f3f46"/>
+      <stop offset="100%" stop-color="#27272a"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-1 0" to="2 0" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="220" rx="10" fill="url(#diagDarkBg)" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Top Header -->
+  <g transform="translate(20, 16)">
+    <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="#f4f4f5" letter-spacing="2">
+      CLASSIFIED AUTOPSIES // SYSTEM DIAGNOSTIC RUNNER
+    </text>
+    <rect x="670" y="-3" width="130" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="735" y="9.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#a1a1aa" text-anchor="middle">
+      INTEGRITY 1.00
+    </text>
+    <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
+  </g>
+
+  <!-- Left Side: Redacted Autopsy Report #099 -->
+  <g transform="translate(20, 44)">
+    <rect x="0" y="0" width="375" height="160" rx="6" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    <rect x="0" y="0" width="375" height="22" rx="6" fill="#18181b"/>
+    <text x="12" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">
+      📁 INCIDENT 099: DISQUALIFICATION AUTOPSY
+    </text>
+
+    <!-- Report Body -->
+    <g transform="translate(12, 32)" font-family="'JetBrains Mono', monospace" font-size="8" fill="#a1a1aa">
+      <text x="0" y="12">SUBJECT: Hackathon Disqualification Event</text>
+      <text x="0" y="26">CAUSE  : Automated Git commit author header</text>
+      
+      <!-- Redacted Bar 1 -->
+      <rect x="0" y="34" width="220" height="10" rx="2" fill="url(#redactShimmer)"/>
+      <text x="228" y="42" font-size="7" fill="#71717a">[FINGERPRINT]</text>
+
+      <text x="0" y="58">ADVERSARIAL AUTOPSY PROTOCOL:</text>
+      <text x="12" y="70">1. Audited commit logs with --pretty=fuller</text>
+      <text x="12" y="82">2. Identified automated authorship agent flag</text>
+      <text x="12" y="94">3. Verdict: Valid call. Audited, learned, fixed.</text>
+
+      <!-- Bottom takeaway -->
+      <rect x="0" y="104" width="351" height="18" rx="2" fill="#18181b"/>
+      <text x="175" y="116.5" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
+        "Never argue with judges until you've audited your logs."
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Side: Live System Health Diagnostic -->
+  <g transform="translate(415, 44)">
+    <rect x="0" y="0" width="385" height="160" rx="6" fill="#0c0c0e" stroke="#27272a" stroke-width="0.8"/>
+    <rect x="0" y="0" width="385" height="22" rx="6" fill="#18181b"/>
+    <text x="12" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">
+      $ ./yorozuya_diagnostic.sh --verbose
+    </text>
+
+    <g transform="translate(12, 34)" font-family="'JetBrains Mono', monospace" font-size="8">
+      <text x="0" y="12" fill="#71717a">&gt; [INIT] Verifying active cases..... <tspan fill="#f4f4f5">[6 OPEN FILES]</tspan></text>
+      <text x="0" y="28" fill="#71717a">&gt; [AUDIT] Code shipped vs Claims.... <tspan fill="#f4f4f5">[RATIO: 1.00 OK]</tspan></text>
+      <text x="0" y="44" fill="#71717a">&gt; [BENCH] BLE Mesh wall-penetration. <tspan fill="#f4f4f5">[~20m @ ZERO LOSS]</tspan></text>
+      <text x="0" y="60" fill="#71717a">&gt; [SYSTEM] RCB Win Probability Formula <tspan fill="#c5a059">[DIV_BY_ZERO]</tspan></text>
+      <text x="0" y="76" fill="#71717a">&gt; [STATUS] Sleep Schedule........... <tspan fill="#a1a1aa">[CRITICAL ERROR]</tspan></text>
+
+      <!-- Terminal Verdict Box -->
+      <rect x="0" y="90" width="361" height="26" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="12" y="103" font-size="7.5" fill="#a1a1aa">DIAGNOSTIC VERDICT:</text>
+      <text x="12" y="113" font-size="7.5" font-weight="600" fill="#f4f4f5">
+        "Hardware is patient. Logs never lie. Keep shipping."
+      </text>
+    </g>
+  </g>
+</svg>

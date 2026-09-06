@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 240" width="100%" height="100%">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="protoBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#060608"/>
+    </linearGradient>
+
+    <!-- Parity Check Scan Beam -->
+    <linearGradient id="parityScan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect x="0" y="0" width="820" height="240" rx="10" fill="url(#protoBg)" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Top Header -->
+  <g transform="translate(20, 16)">
+    <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#f4f4f5" letter-spacing="2">
+      MESHWISPER // 32-BIT BINARY WIRE PROTOCOL &amp; THREAT MODEL
+    </text>
+    <rect x="680" y="-3" width="120" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="740" y="9.5" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#a1a1aa" text-anchor="middle">
+      ZERO PLAINTEXT
+    </text>
+    <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
+  </g>
+
+  <!-- Left: 32-Bit Protocol Layout Visualizer -->
+  <g transform="translate(20, 44)">
+    <rect x="0" y="0" width="470" height="180" rx="6" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    
+    <!-- Bit Rulers: 0, 8, 16, 24, 31 -->
+    <g font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#71717a">
+      <text x="12" y="14">BIT 00</text>
+      <text x="125" y="14">BIT 08</text>
+      <text x="235" y="14">BIT 16</text>
+      <text x="350" y="14">BIT 24</text>
+      <text x="440" y="14">31</text>
+      <line x1="12" y1="18" x2="455" y2="18" stroke="#27272a" stroke-width="0.8"/>
+    </g>
+
+    <!-- Row 1: TTL | TYPE | SEQUENCE -->
+    <g transform="translate(12, 24)">
+      <rect x="0" y="0" width="105" height="24" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="52" y="15" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5" text-anchor="middle">TTL (1 Byte)</text>
+
+      <rect x="110" y="0" width="105" height="24" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="162" y="15" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5" text-anchor="middle">TYPE (1 Byte)</text>
+
+      <rect x="220" y="0" width="223" height="24" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="331" y="15" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">SEQUENCE_ID (2 Bytes)</text>
+    </g>
+
+    <!-- Row 2: SENDER EPHEMERAL PUBKEY -->
+    <g transform="translate(12, 54)">
+      <rect x="0" y="0" width="443" height="24" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="221" y="15.5" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5" text-anchor="middle">
+        SENDER_EPHEMERAL_PUBKEY (X25519 — 32 Bytes)
+      </text>
+    </g>
+
+    <!-- Row 3: AES-256-GCM NONCE -->
+    <g transform="translate(12, 84)">
+      <rect x="0" y="0" width="443" height="24" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="221" y="15.5" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#a1a1aa" text-anchor="middle">
+        AES-256-GCM INITIALIZATION NONCE (12 Bytes)
+      </text>
+    </g>
+
+    <!-- Row 4: ENCRYPTED PAYLOAD -->
+    <g transform="translate(12, 114)">
+      <rect x="0" y="0" width="443" height="26" rx="2" fill="#1e1e24" stroke="#52525b" stroke-width="1"/>
+      <text x="221" y="16.5" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" fill="#fef08a" text-anchor="middle">
+        🔒 ENCRYPTED CIPHERTEXT ENVELOPE (Variable Length)
+      </text>
+    </g>
+
+    <!-- Row 5: AUTH TAG & SIGNATURE -->
+    <g transform="translate(12, 146)">
+      <rect x="0" y="0" width="180" height="22" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="90" y="14.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c5a059" text-anchor="middle">GCM AUTH TAG (16B)</text>
+
+      <rect x="185" y="0" width="258" height="22" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="314" y="14.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#f4f4f5" text-anchor="middle">ED25519 SIGNATURE (64 Bytes)</text>
+    </g>
+
+    <!-- Animated Verification Scanline -->
+    <g>
+      <rect x="8" y="24" width="451" height="6" fill="url(#parityScan)">
+        <animate attributeName="y" values="24;160;24" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Right: Adversarial Defense Matrix -->
+  <g transform="translate(505, 44)">
+    <rect x="0" y="0" width="295" height="180" rx="6" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    
+    <rect x="0" y="0" width="295" height="24" rx="6" fill="#18181b"/>
+    <text x="12" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" fill="#f4f4f5">
+      ADVERSARIAL DEFENSE MATRIX
+    </text>
+
+    <g transform="translate(12, 34)" font-family="'JetBrains Mono', monospace">
+      <!-- Shield 1 -->
+      <text x="0" y="12" font-size="8" font-weight="600" fill="#f4f4f5">✓ Eavesdropping Mitigation</text>
+      <text x="14" y="24" font-size="7" fill="#71717a">Ephemeral X25519. Relays forward blindly.</text>
+
+      <!-- Shield 2 -->
+      <text x="0" y="44" font-size="8" font-weight="600" fill="#f4f4f5">✓ Flood &amp; Replay Prevention</text>
+      <text x="14" y="56" font-size="7" fill="#71717a">Sliding-window sequence index. Max 7 hops.</text>
+
+      <!-- Shield 3 -->
+      <text x="0" y="76" font-size="8" font-weight="600" fill="#c5a059">✓ Physical Seizure Defense</text>
+      <text x="14" y="88" font-size="7" fill="#71717a">SQLCipher AES-256 with memory panic-wipe.</text>
+
+      <!-- Shield 4 -->
+      <text x="0" y="108" font-size="8" font-weight="600" fill="#f4f4f5">✓ Packet Corruption Recovery</text>
+      <text x="14" y="120" font-size="7" fill="#71717a">SHA-256 chunked transport with selective ACK.</text>
+    </g>
+
+    <!-- Benchmark Pill -->
+    <rect x="10" y="152" width="275" height="20" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="147" y="165" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#d4d4d8" text-anchor="middle">
+      BENCHMARK: ~20m Concrete @ 0% Packet Loss
+    </text>
+  </g>
+</svg>

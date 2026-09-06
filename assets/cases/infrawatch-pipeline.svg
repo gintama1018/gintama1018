@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 190" width="100%" height="100%">
+  <defs>
+    <linearGradient id="infraPipeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="190" rx="10" fill="url(#infraPipeBg)" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Top Header -->
+  <g transform="translate(20, 16)">
+    <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600" fill="#f4f4f5" letter-spacing="2">
+      INFRAWATCH NEXUS // MULTI-STAGE CIVIC AI ARCHITECTURE
+    </text>
+    <rect x="670" y="-3" width="130" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="735" y="9.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
+      BEST PAPER 2026
+    </text>
+    <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
+  </g>
+
+  <!-- ==================== STAGE 1: CIVIC NODES ==================== -->
+  <g transform="translate(20, 44)">
+    <rect x="0" y="0" width="170" height="125" rx="6" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    <rect x="0" y="0" width="170" height="22" rx="6" fill="#18181b"/>
+    <text x="85" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5" text-anchor="middle">
+      01. CIVIC QR NODES
+    </text>
+
+    <!-- QR icon & details -->
+    <g transform="translate(14, 30)">
+      <rect x="0" y="0" width="28" height="28" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <rect x="4" y="4" width="8" height="8" fill="#f4f4f5"/>
+      <rect x="16" y="4" width="8" height="8" fill="#f4f4f5"/>
+      <rect x="4" y="16" width="8" height="8" fill="#f4f4f5"/>
+      <rect x="16" y="16" width="8" height="8" fill="#c5a059"/>
+
+      <text x="36" y="12" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5">MCD Reference</text>
+      <text x="36" y="24" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">Physical Bin Anchors</text>
+    </g>
+
+    <text x="14" y="80" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      • Citizen image capture
+    </text>
+    <text x="14" y="94" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      • Geotag &amp; timestamp lock
+    </text>
+    <text x="14" y="108" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">
+      LAT/LONG GROUND TRUTH
+    </text>
+  </g>
+
+  <!-- Flow Connector 1 -> 2 -->
+  <g transform="translate(195, 100)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#3f3f46" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff">
+      <animate attributeName="cx" values="0;30" dur="1.3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ==================== STAGE 2: GEMINI 1.5 PRO ==================== -->
+  <g transform="translate(230, 44)">
+    <rect x="0" y="0" width="170" height="125" rx="6" fill="#121215" stroke="#3f3f46" stroke-width="1"/>
+    <rect x="0" y="0" width="170" height="22" rx="6" fill="#18181b"/>
+    <text x="85" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5" text-anchor="middle">
+      02. MULTIMODAL AI
+    </text>
+
+    <g transform="translate(14, 30)">
+      <circle cx="14" cy="14" r="12" fill="#18181b" stroke="#52525b" stroke-width="0.8"/>
+      <circle cx="14" cy="14" r="4" fill="#c5a059"/>
+      <text x="36" y="12" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5">Gemini 1.5 Pro</text>
+      <text x="36" y="24" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c5a059">Hazard Severity Index</text>
+    </g>
+
+    <text x="14" y="80" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      • Overflow volume score
+    </text>
+    <text x="14" y="94" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      • Biohazard risk detect
+    </text>
+    <text x="14" y="108" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">
+      ZERO HALLUCINATIONS
+    </text>
+  </g>
+
+  <!-- Flow Connector 2 -> 3 -->
+  <g transform="translate(405, 100)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#3f3f46" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff">
+      <animate attributeName="cx" values="0;30" dur="1.3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ==================== STAGE 3: PATHWAY STREAMING ==================== -->
+  <g transform="translate(440, 44)">
+    <rect x="0" y="0" width="170" height="125" rx="6" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    <rect x="0" y="0" width="170" height="22" rx="6" fill="#18181b"/>
+    <text x="85" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5" text-anchor="middle">
+      03. PATHWAY STREAM
+    </text>
+
+    <g transform="translate(14, 30)">
+      <rect x="0" y="0" width="28" height="28" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <path d="M 6 14 L 14 6 L 22 14 L 14 22 Z" fill="#d4d4d8"/>
+      <text x="36" y="12" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5">Pathway Engine</text>
+      <text x="36" y="24" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">In-Memory Re-Indexing</text>
+    </g>
+
+    <text x="14" y="80" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      • Dynamic queue priorities
+    </text>
+    <text x="14" y="94" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      • Real-time graph updates
+    </text>
+    <text x="14" y="108" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">
+      SUB-SECOND SYNC
+    </text>
+  </g>
+
+  <!-- Flow Connector 3 -> 4 -->
+  <g transform="translate(615, 100)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#3f3f46" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff">
+      <animate attributeName="cx" values="0;30" dur="1.3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ==================== STAGE 4: VOICE DISPATCH ==================== -->
+  <g transform="translate(650, 44)">
+    <rect x="0" y="0" width="150" height="125" rx="6" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    <rect x="0" y="0" width="150" height="22" rx="6" fill="#18181b"/>
+    <text x="75" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5" text-anchor="middle">
+      04. TRUCK DISPATCH
+    </text>
+
+    <g transform="translate(12, 30)">
+      <circle cx="12" cy="14" r="10" fill="#18181b" stroke="#52525b" stroke-width="0.8"/>
+      <polygon points="9,10 17,14 9,18" fill="#f4f4f5"/>
+      <text x="28" y="12" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5">ElevenLabs TTS</text>
+      <text x="28" y="24" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c5a059">Hindi Voice Alerts</text>
+    </g>
+
+    <text x="12" y="80" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      • OSRM turn navigation
+    </text>
+    <text x="12" y="94" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      • Driver audio queue
+    </text>
+    <text x="12" y="108" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">
+      INSTANT FLEET DISPATCH
+    </text>
+  </g>
+</svg>

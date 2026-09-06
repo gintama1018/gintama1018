@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vaultBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+
+    <linearGradient id="vaultCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121215"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="850" height="240" rx="10" fill="url(#vaultBg)" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Top Header -->
+  <g transform="translate(20, 16)">
+    <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#f4f4f5" letter-spacing="2">
+      FILE 07 // EVIDENCE LOCKER // FORENSIC CTFs &amp; HARDWARE VAULTS
+    </text>
+    <rect x="710" y="-3" width="100" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="760" y="9.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#a1a1aa" text-anchor="middle">
+      UNSEALED
+    </text>
+    <line x1="0" y1="18" x2="810" y2="18" stroke="#27272a" stroke-width="0.8"/>
+  </g>
+
+  <!-- ==================== VAULT 07-A: ROCA RSA ==================== -->
+  <g transform="translate(20, 44)">
+    <rect x="0" y="0" width="195" height="180" rx="6" fill="url(#vaultCardBg)" stroke="#3f3f46" stroke-width="1"/>
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#18181b"/>
+    <text x="10" y="16" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">
+      VAULT 07-A // ROCA RSA
+    </text>
+
+    <!-- Mini Keyhole graphic -->
+    <g transform="translate(10, 32)">
+      <circle cx="10" cy="10" r="8" fill="#18181b" stroke="#52525b" stroke-width="0.8"/>
+      <circle cx="10" cy="8" r="2.5" fill="#c5a059"/>
+      <text x="24" y="13" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5">Coppersmith Lattice</text>
+    </g>
+
+    <g transform="translate(10, 58)" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      <text x="0" y="12">• Infineon return attack</text>
+      <text x="0" y="26">• 512-bit modulus factored</text>
+      <text x="0" y="40">• Extracted ransomware</text>
+      <text x="0" y="54">  PRNG master seed</text>
+      <text x="0" y="68">• ThunderCipher 3rd Place</text>
+    </g>
+
+    <rect x="8" y="152" width="179" height="18" rx="3" fill="#18181b"/>
+    <text x="97" y="164.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
+      RESULT: KEY FACTORIZED
+    </text>
+  </g>
+
+  <!-- ==================== VAULT 07-B: CUSTOM VM ==================== -->
+  <g transform="translate(225, 44)">
+    <rect x="0" y="0" width="195" height="180" rx="6" fill="url(#vaultCardBg)" stroke="#27272a" stroke-width="0.8"/>
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#18181b"/>
+    <text x="10" y="16" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">
+      VAULT 07-B // VM REVERSING
+    </text>
+
+    <g transform="translate(10, 32)">
+      <rect x="0" y="0" width="20" height="16" rx="2" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+      <text x="10" y="11" font-family="'JetBrains Mono', monospace" font-size="7" fill="#f4f4f5" text-anchor="middle">ASM</text>
+      <text x="26" y="13" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5">Stack Bytecode</text>
+    </g>
+
+    <g transform="translate(10, 58)" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      <text x="0" y="12">• Proprietary obfuscated VM</text>
+      <text x="0" y="26">• Ghidra static analysis</text>
+      <text x="0" y="40">• Python disassembler</text>
+      <text x="0" y="54">• Solved dispatch loops</text>
+      <text x="0" y="68">• Flag logic decrypted</text>
+    </g>
+
+    <rect x="8" y="152" width="179" height="18" rx="3" fill="#18181b"/>
+    <text x="97" y="164.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#d4d4d8" text-anchor="middle">
+      RESULT: DISPATCH SOLVED
+    </text>
+  </g>
+
+  <!-- ==================== VAULT 07-C: COVERT CHANNELS ==================== -->
+  <g transform="translate(430, 44)">
+    <rect x="0" y="0" width="195" height="180" rx="6" fill="url(#vaultCardBg)" stroke="#27272a" stroke-width="0.8"/>
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#18181b"/>
+    <text x="10" y="16" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">
+      VAULT 07-C // COVERT PCAP
+    </text>
+
+    <g transform="translate(10, 32)">
+      <circle cx="8" cy="8" r="6" fill="#18181b" stroke="#52525b" stroke-width="0.8"/>
+      <text x="20" y="12" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5">Multi-Layer Stego</text>
+    </g>
+
+    <g transform="translate(10, 58)" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      <text x="0" y="12">• Insane difficulty PCAP</text>
+      <text x="0" y="26">• DNS query steganography</text>
+      <text x="0" y="40">• ICMP payload tunneling</text>
+      <text x="0" y="54">• TCP Urgent pointer bits</text>
+      <text x="0" y="68">• Binary GOB stream dump</text>
+    </g>
+
+    <rect x="8" y="152" width="179" height="18" rx="3" fill="#18181b"/>
+    <text x="97" y="164.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#d4d4d8" text-anchor="middle">
+      RESULT: DATA EXTRACTED
+    </text>
+  </g>
+
+  <!-- ==================== VAULT 07-D: 8x8 LED MATRIX ==================== -->
+  <g transform="translate(635, 44)">
+    <rect x="0" y="0" width="195" height="180" rx="6" fill="url(#vaultCardBg)" stroke="#3f3f46" stroke-width="1"/>
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#18181b"/>
+    <text x="10" y="16" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">
+      VAULT 07-D // 8x8 LED FACE
+    </text>
+
+    <!-- Animated 8x8 LED Pixel Face Grid -->
+    <g transform="translate(14, 32)">
+      <rect x="0" y="0" width="50" height="50" rx="3" fill="#09090b" stroke="#27272a" stroke-width="0.8"/>
+      <!-- Eyes row -->
+      <circle cx="14" cy="18" r="3" fill="#c5a059">
+        <animate attributeName="r" values="3;0.5;3" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="36" cy="18" r="3" fill="#c5a059">
+        <animate attributeName="r" values="3;0.5;3" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Smile pixels -->
+      <circle cx="14" cy="34" r="2" fill="#d4d4d8"/>
+      <circle cx="21" cy="38" r="2" fill="#d4d4d8"/>
+      <circle cx="29" cy="38" r="2" fill="#d4d4d8"/>
+      <circle cx="36" cy="34" r="2" fill="#d4d4d8"/>
+
+      <text x="56" y="20" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5">AVR Driver</text>
+      <text x="56" y="32" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">MAX7219 Chip</text>
+      <text x="56" y="44" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c5a059">PROGMEM Buffer</text>
+    </g>
+
+    <g transform="translate(10, 92)" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">
+      <text x="0" y="12">• Bare-metal assembly timing</text>
+      <text x="0" y="26">• Patched column glitch</text>
+      <text x="0" y="40">• Smooth bitmapped faces</text>
+    </g>
+
+    <rect x="8" y="152" width="179" height="18" rx="3" fill="#18181b"/>
+    <text x="97" y="164.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
+      RESULT: GLITCH PATCHED
+    </text>
+  </g>
+</svg>

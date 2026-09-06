@@ -1,194 +1,183 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 250" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="rackBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0a0e17"/>
-      <stop offset="100%" stop-color="#06090e"/>
+    <linearGradient id="rackDarkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#050507"/>
     </linearGradient>
 
-    <!-- Neon Bar Gradients -->
-    <linearGradient id="greenMeter" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#238636"/>
-      <stop offset="100%" stop-color="#39d353"/>
+    <!-- Silver & Champagne Meter Gradients -->
+    <linearGradient id="silverMeter" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#52525b"/>
+      <stop offset="100%" stop-color="#e4e4e7"/>
     </linearGradient>
 
-    <linearGradient id="cyanMeter" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1f6feb"/>
-      <stop offset="100%" stop-color="#58a6ff"/>
+    <linearGradient id="champagneMeter" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#785c28"/>
+      <stop offset="100%" stop-color="#c5a059"/>
     </linearGradient>
 
-    <linearGradient id="goldMeter" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#d29922"/>
-      <stop offset="100%" stop-color="#FFE066"/>
+    <linearGradient id="titaniumMeter" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3f3f46"/>
+      <stop offset="100%" stop-color="#d4d4d8"/>
     </linearGradient>
-
-    <linearGradient id="purpleMeter" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8957e5"/>
-      <stop offset="100%" stop-color="#d2a8ff"/>
-    </linearGradient>
-
-    <pattern id="gridPattern" width="16" height="16" patternUnits="userSpaceOnUse">
-      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#161f2e" stroke-width="0.8"/>
-    </pattern>
   </defs>
 
   <!-- Frame Background -->
-  <rect x="0" y="0" width="850" height="260" rx="12" fill="url(#rackBg)" stroke="#30363d" stroke-width="1.5"/>
-  <rect x="0" y="0" width="850" height="260" rx="12" fill="url(#gridPattern)"/>
+  <rect x="0" y="0" width="850" height="250" rx="10" fill="url(#rackDarkBg)" stroke="#27272a" stroke-width="1"/>
 
-  <!-- Top HUD Header -->
+  <!-- Top Header Bar -->
   <g transform="translate(20, 16)">
-    <polygon points="0,0 8,8 0,16" fill="#39d353"/>
-    <text x="18" y="12" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#ffffff" letter-spacing="1.5">
-      ISSUED FIELD ARSENAL // WEAPONS &amp; TOOLING LOADOUT
+    <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#f4f4f5" letter-spacing="2">
+      ISSUED FIELD ARSENAL // TOOLING &amp; SYSTEM SPECIFICATION
     </text>
-    <rect x="680" y="0" width="130" height="16" rx="3" fill="#161f2e" stroke="#39d353" stroke-width="0.8"/>
-    <text x="745" y="11" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#39d353" text-anchor="middle">
-      ALL SYSTEMS PRIMED
+    <rect x="690" y="-3" width="120" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="750" y="9.5" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#a1a1aa" text-anchor="middle">
+      ACTIVE LOADOUT
     </text>
-    <line x1="0" y1="22" x2="810" y2="22" stroke="#21262d" stroke-width="1"/>
+    <line x1="0" y1="18" x2="810" y2="18" stroke="#27272a" stroke-width="0.8"/>
   </g>
 
-  <!-- ==================== RACK COLUMN 1: SYSTEMS & CRYPTO ==================== -->
-  <g transform="translate(20, 48)">
-    <rect x="0" y="0" width="195" height="195" rx="8" fill="#0d1117" stroke="#39d353" stroke-width="1.2"/>
+  <!-- ==================== COLUMN 1: SYSTEMS & CRYPTO ==================== -->
+  <g transform="translate(20, 44)">
+    <rect x="0" y="0" width="195" height="190" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
     
     <!-- Title Strip -->
-    <rect x="0" y="0" width="195" height="26" rx="8" fill="#0e2316"/>
-    <text x="10" y="17" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#39d353">
-      🔒 SYSTEMS &amp; CRYPTO
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#18181b"/>
+    <text x="10" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" fill="#f4f4f5">
+      SYSTEMS &amp; CRYPTO
     </text>
 
-    <!-- Progress Meter -->
-    <g transform="translate(10, 34)">
-      <rect x="0" y="0" width="175" height="6" rx="2" fill="#161b22"/>
-      <rect x="0" y="0" width="168" height="6" rx="2" fill="url(#greenMeter)">
+    <!-- Meter -->
+    <g transform="translate(10, 32)">
+      <rect x="0" y="0" width="175" height="4" rx="2" fill="#27272a"/>
+      <rect x="0" y="0" width="168" height="4" rx="2" fill="url(#silverMeter)">
         <animate attributeName="width" values="100;168;150;168" dur="4s" repeatCount="indefinite"/>
       </rect>
     </g>
 
-    <!-- Equipment Items -->
-    <g transform="translate(10, 52)">
-      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Curve25519 / X25519</text>
-      <text x="0" y="28" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ AES-256-GCM / Wire</text>
-      <text x="0" y="44" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Ghidra Decompiler</text>
-      <text x="0" y="60" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Wireshark PCAP Audit</text>
-      <text x="0" y="76" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ SQLCipher AES-CBC</text>
-      <text x="0" y="92" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Android Native / Rust</text>
-      <text x="0" y="108" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ GDB &amp; Memory Reversing</text>
+    <!-- Items -->
+    <g transform="translate(10, 48)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Curve25519 / X25519</text>
+      <text x="0" y="26" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ AES-256-GCM / Wire</text>
+      <text x="0" y="40" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Ghidra Decompiler</text>
+      <text x="0" y="54" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Wireshark PCAP Audit</text>
+      <text x="0" y="68" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ SQLCipher AES-CBC</text>
+      <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Android Native / Rust</text>
+      <text x="0" y="96" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ GDB &amp; Memory Reversing</text>
     </g>
 
-    <!-- Bottom Status -->
-    <rect x="8" y="170" width="179" height="16" rx="3" fill="#161f2e"/>
-    <text x="97" y="181" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#39d353" text-anchor="middle">
+    <!-- Status Strip -->
+    <rect x="8" y="166" width="179" height="16" rx="3" fill="#18181b"/>
+    <text x="97" y="177.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#a1a1aa" text-anchor="middle">
       READINESS: 98% (HARDENED)
     </text>
   </g>
 
-  <!-- ==================== RACK COLUMN 2: NEURAL & AI ==================== -->
-  <g transform="translate(225, 48)">
-    <rect x="0" y="0" width="195" height="195" rx="8" fill="#0d1117" stroke="#58a6ff" stroke-width="1.2"/>
+  <!-- ==================== COLUMN 2: NEURAL & AI ==================== -->
+  <g transform="translate(225, 44)">
+    <rect x="0" y="0" width="195" height="190" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
 
     <!-- Title Strip -->
-    <rect x="0" y="0" width="195" height="26" rx="8" fill="#0b1b33"/>
-    <text x="10" y="17" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#58a6ff">
-      🧠 NEURAL &amp; APPLIED AI
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#18181b"/>
+    <text x="10" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" fill="#f4f4f5">
+      NEURAL &amp; APPLIED AI
     </text>
 
-    <!-- Progress Meter -->
-    <g transform="translate(10, 34)">
-      <rect x="0" y="0" width="175" height="6" rx="2" fill="#161b22"/>
-      <rect x="0" y="0" width="162" height="6" rx="2" fill="url(#cyanMeter)">
+    <!-- Meter -->
+    <g transform="translate(10, 32)">
+      <rect x="0" y="0" width="175" height="4" rx="2" fill="#27272a"/>
+      <rect x="0" y="0" width="162" height="4" rx="2" fill="url(#champagneMeter)">
         <animate attributeName="width" values="120;162;140;162" dur="3.6s" repeatCount="indefinite"/>
       </rect>
     </g>
 
-    <!-- Equipment Items -->
-    <g transform="translate(10, 52)">
-      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Gemini 1.5 Pro API</text>
-      <text x="0" y="28" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Claude 3.5 Sonnet</text>
-      <text x="0" y="44" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Pathway In-Memory AI</text>
-      <text x="0" y="60" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ ChromaDB Vector Store</text>
-      <text x="0" y="76" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ MediaPipe Vision Core</text>
-      <text x="0" y="92" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ ElevenLabs Neural TTS</text>
-      <text x="0" y="108" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Sentinel NDVI Remote</text>
+    <!-- Items -->
+    <g transform="translate(10, 48)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Gemini 1.5 Pro API</text>
+      <text x="0" y="26" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Claude 3.5 Sonnet</text>
+      <text x="0" y="40" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Pathway Streaming Engine</text>
+      <text x="0" y="54" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ ChromaDB Vector Store</text>
+      <text x="0" y="68" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ MediaPipe Vision Core</text>
+      <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ ElevenLabs Neural TTS</text>
+      <text x="0" y="96" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Sentinel NDVI Processing</text>
     </g>
 
-    <!-- Bottom Status -->
-    <rect x="8" y="170" width="179" height="16" rx="3" fill="#161f2e"/>
-    <text x="97" y="181" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#79c0ff" text-anchor="middle">
+    <!-- Status Strip -->
+    <rect x="8" y="166" width="179" height="16" rx="3" fill="#18181b"/>
+    <text x="97" y="177.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
       READINESS: 95% (COGNITIVE)
     </text>
   </g>
 
-  <!-- ==================== RACK COLUMN 3: WEB & ARCHITECTURE ==================== -->
-  <g transform="translate(430, 48)">
-    <rect x="0" y="0" width="195" height="195" rx="8" fill="#0d1117" stroke="#D4AF37" stroke-width="1.2"/>
+  <!-- ==================== COLUMN 3: WEB & ARCHITECTURE ==================== -->
+  <g transform="translate(430, 44)">
+    <rect x="0" y="0" width="195" height="190" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
 
     <!-- Title Strip -->
-    <rect x="0" y="0" width="195" height="26" rx="8" fill="#292008"/>
-    <text x="10" y="17" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#FFE066">
-      🌐 WEB &amp; ARCHITECTURE
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#18181b"/>
+    <text x="10" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" fill="#f4f4f5">
+      WEB &amp; ARCHITECTURE
     </text>
 
-    <!-- Progress Meter -->
-    <g transform="translate(10, 34)">
-      <rect x="0" y="0" width="175" height="6" rx="2" fill="#161b22"/>
-      <rect x="0" y="0" width="158" height="6" rx="2" fill="url(#goldMeter)">
+    <!-- Meter -->
+    <g transform="translate(10, 32)">
+      <rect x="0" y="0" width="175" height="4" rx="2" fill="#27272a"/>
+      <rect x="0" y="0" width="158" height="4" rx="2" fill="url(#titaniumMeter)">
         <animate attributeName="width" values="110;158;135;158" dur="4.2s" repeatCount="indefinite"/>
       </rect>
     </g>
 
-    <!-- Equipment Items -->
-    <g transform="translate(10, 52)">
-      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Next.js 15 App Router</text>
-      <text x="0" y="28" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ TypeScript &amp; React 19</text>
-      <text x="0" y="44" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ FastAPI / Async Python</text>
-      <text x="0" y="60" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ PostgreSQL &amp; SQLite</text>
-      <text x="0" y="76" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ SQLAlchemy &amp; Alembic</text>
-      <text x="0" y="92" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Tailwind CSS &amp; SMIL</text>
-      <text x="0" y="108" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ REST &amp; WebSocket Sockets</text>
+    <!-- Items -->
+    <g transform="translate(10, 48)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Next.js 15 App Router</text>
+      <text x="0" y="26" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ TypeScript &amp; React 19</text>
+      <text x="0" y="40" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ FastAPI &amp; Async Python</text>
+      <text x="0" y="54" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ PostgreSQL &amp; SQLite</text>
+      <text x="0" y="68" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ SQLAlchemy &amp; Alembic</text>
+      <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Tailwind CSS &amp; SMIL</text>
+      <text x="0" y="96" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ WebSockets &amp; Real-time</text>
     </g>
 
-    <!-- Bottom Status -->
-    <rect x="8" y="170" width="179" height="16" rx="3" fill="#161f2e"/>
-    <text x="97" y="181" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#FFE066" text-anchor="middle">
+    <!-- Status Strip -->
+    <rect x="8" y="166" width="179" height="16" rx="3" fill="#18181b"/>
+    <text x="97" y="177.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#a1a1aa" text-anchor="middle">
       READINESS: 92% (FULL-STACK)
     </text>
   </g>
 
-  <!-- ==================== RACK COLUMN 4: AUTOMATION & HARDWARE ==================== -->
-  <g transform="translate(635, 48)">
-    <rect x="0" y="0" width="195" height="195" rx="8" fill="#0d1117" stroke="#d2a8ff" stroke-width="1.2"/>
+  <!-- ==================== COLUMN 4: AUTOMATION & HARDWARE ==================== -->
+  <g transform="translate(635, 44)">
+    <rect x="0" y="0" width="195" height="190" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
 
     <!-- Title Strip -->
-    <rect x="0" y="0" width="195" height="26" rx="8" fill="#25163d"/>
-    <text x="10" y="17" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#d2a8ff">
-      ⚙️ AUTOMATION &amp; HARDWARE
+    <rect x="0" y="0" width="195" height="24" rx="6" fill="#18181b"/>
+    <text x="10" y="16" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="bold" fill="#f4f4f5">
+      AUTOMATION &amp; HARDWARE
     </text>
 
-    <!-- Progress Meter -->
-    <g transform="translate(10, 34)">
-      <rect x="0" y="0" width="175" height="6" rx="2" fill="#161b22"/>
-      <rect x="0" y="0" width="150" height="6" rx="2" fill="url(#purpleMeter)">
+    <!-- Meter -->
+    <g transform="translate(10, 32)">
+      <rect x="0" y="0" width="175" height="4" rx="2" fill="#27272a"/>
+      <rect x="0" y="0" width="150" height="4" rx="2" fill="url(#silverMeter)">
         <animate attributeName="width" values="90;150;130;150" dur="3.8s" repeatCount="indefinite"/>
       </rect>
     </g>
 
-    <!-- Equipment Items -->
-    <g transform="translate(10, 52)">
-      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ n8n Workflow Engines</text>
-      <text x="0" y="28" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ GitHub Actions CI/CD</text>
-      <text x="0" y="44" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Bare-Metal AVR / Arduino</text>
-      <text x="0" y="60" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ MAX7219 Matrix Driver</text>
-      <text x="0" y="76" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ OSRM Routing Engine</text>
-      <text x="0" y="92" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Pygame 2D Engines</text>
-      <text x="0" y="108" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#e6edf3">▸ Linux Bash &amp; Powershell</text>
+    <!-- Items -->
+    <g transform="translate(10, 48)">
+      <text x="0" y="12" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ n8n Workflow Pipelines</text>
+      <text x="0" y="26" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ GitHub Actions CI/CD</text>
+      <text x="0" y="40" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Bare-Metal AVR / Arduino</text>
+      <text x="0" y="54" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ MAX7219 LED Matrix</text>
+      <text x="0" y="68" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ OSRM Routing Engine</text>
+      <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Pygame 2D Engines</text>
+      <text x="0" y="96" font-family="'JetBrains Mono', monospace" font-size="8" fill="#e4e4e7">▸ Linux Bash &amp; Powershell</text>
     </g>
 
-    <!-- Bottom Status -->
-    <rect x="8" y="170" width="179" height="16" rx="3" fill="#161f2e"/>
-    <text x="97" y="181" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#d2a8ff" text-anchor="middle">
+    <!-- Status Strip -->
+    <rect x="8" y="166" width="179" height="16" rx="3" fill="#18181b"/>
+    <text x="97" y="177.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#a1a1aa" text-anchor="middle">
       READINESS: 90% (TACTICAL)
     </text>
   </g>

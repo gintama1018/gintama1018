@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 310" width="100%" height="100%">
+  <defs>
+    <linearGradient id="boardDarkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+
+    <linearGradient id="folderBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121215"/>
+      <stop offset="100%" stop-color="#0b0b0e"/>
+    </linearGradient>
+
+    <linearGradient id="boardSilk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-1.5 0" to="2 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Board Frame -->
+  <rect x="0" y="0" width="850" height="310" rx="10" fill="url(#boardDarkBg)" stroke="#27272a" stroke-width="1"/>
+  <rect x="0" y="0" width="850" height="310" rx="10" fill="url(#boardSilk)"/>
+
+  <!-- Top Header -->
+  <g transform="translate(20, 16)">
+    <circle cx="6" cy="6" r="3" fill="#a1a1aa">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="18" y="9.5" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600" fill="#f4f4f5" letter-spacing="2">
+      THE CASE BOARD // MASTER INVESTIGATION DIRECTORY
+    </text>
+    <text x="710" y="9.5" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#71717a">
+      [6 OPEN DOSSIERS]
+    </text>
+    <line x1="0" y1="18" x2="810" y2="18" stroke="#27272a" stroke-width="0.8"/>
+  </g>
+
+  <!-- ==================== ROW 1: CASES 01, 02, 03 ==================== -->
+
+  <!-- CASE 01: MeshWhisper -->
+  <g transform="translate(20, 44)">
+    <rect x="0" y="0" width="260" height="115" rx="6" fill="url(#folderBg)" stroke="#27272a" stroke-width="1"/>
+    <rect x="0" y="0" width="260" height="22" rx="6" fill="#18181b"/>
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">FILE 01 // BLE MESH</text>
+    
+    <!-- Status Tag -->
+    <rect x="185" y="3" width="65" height="16" rx="3" fill="#121215" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="217" y="14" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5" text-anchor="middle">ACTIVE</text>
+
+    <!-- Content -->
+    <text x="12" y="42" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#f4f4f5">MeshWhisper</text>
+    <text x="12" y="58" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">Zero-tower encrypted flood mesh</text>
+    <text x="12" y="72" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#71717a">X25519 · AES-GCM · Android Native</text>
+
+    <!-- Metrics -->
+    <rect x="10" y="85" width="240" height="18" rx="3" fill="#18181b"/>
+    <text x="16" y="97.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#d4d4d8">RANGE: ~20m Concrete / 0 Packet Loss</text>
+  </g>
+
+  <!-- CASE 02: InfraWatch Nexus -->
+  <g transform="translate(295, 44)">
+    <rect x="0" y="0" width="260" height="115" rx="6" fill="url(#folderBg)" stroke="#3f3f46" stroke-width="1"/>
+    <rect x="0" y="0" width="260" height="22" rx="6" fill="#18181b"/>
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#c5a059">FILE 02 // CIVIC AI</text>
+
+    <!-- Status Tag -->
+    <rect x="180" y="3" width="70" height="16" rx="3" fill="#121215" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="215" y="14" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">🏆 AWARDED</text>
+
+    <!-- Content -->
+    <text x="12" y="42" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#f4f4f5">InfraWatch Nexus</text>
+    <text x="12" y="58" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">Real-time municipal sanitation AI</text>
+    <text x="12" y="72" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#71717a">Gemini 1.5 · Pathway · Hindi Voice TTS</text>
+
+    <!-- Metrics -->
+    <rect x="10" y="85" width="240" height="18" rx="3" fill="#18181b"/>
+    <text x="16" y="97.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c5a059">SCALE: 106 Delhi MCD Nodes Monitored</text>
+  </g>
+
+  <!-- CASE 03: AI Teacher -->
+  <g transform="translate(570, 44)">
+    <rect x="0" y="0" width="260" height="115" rx="6" fill="url(#folderBg)" stroke="#27272a" stroke-width="1"/>
+    <rect x="0" y="0" width="260" height="22" rx="6" fill="#18181b"/>
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">FILE 03 // VIDEO AI</text>
+
+    <!-- Status Tag -->
+    <rect x="180" y="3" width="70" height="16" rx="3" fill="#121215" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="215" y="14" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#a1a1aa" text-anchor="middle">FINALIST</text>
+
+    <!-- Content -->
+    <text x="12" y="42" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#f4f4f5">AI Teacher (Bharat)</text>
+    <text x="12" y="58" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">Autonomous 720p lesson synthesis</text>
+    <text x="12" y="72" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#71717a">Claude 3.5 · Gemini · Lip-Sync Avatar</text>
+
+    <!-- Metrics -->
+    <rect x="10" y="85" width="240" height="18" rx="3" fill="#18181b"/>
+    <text x="16" y="97.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#d4d4d8">OUTPUT: 720p Video + Audio in &lt;60s</text>
+  </g>
+
+  <!-- ==================== ROW 2: CASES 04, 05, 06 ==================== -->
+
+  <!-- CASE 04: KISAN-AI -->
+  <g transform="translate(20, 172)">
+    <rect x="0" y="0" width="260" height="115" rx="6" fill="url(#folderBg)" stroke="#27272a" stroke-width="1"/>
+    <rect x="0" y="0" width="260" height="22" rx="6" fill="#18181b"/>
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">FILE 04 // SATELLITE</text>
+
+    <!-- Status Tag -->
+    <rect x="185" y="3" width="65" height="16" rx="3" fill="#121215" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="217" y="14" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#f4f4f5" text-anchor="middle">ONLINE</text>
+
+    <!-- Content -->
+    <text x="12" y="42" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#f4f4f5">KISAN-AI</text>
+    <text x="12" y="58" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">Orbital crop health intelligence</text>
+    <text x="12" y="72" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#71717a">Sentinel-2 L2A · NDVI · Soil Metrics</text>
+
+    <!-- Metrics -->
+    <rect x="10" y="85" width="240" height="18" rx="3" fill="#18181b"/>
+    <text x="16" y="97.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#d4d4d8">ORBIT: 10m Ground Sample Resolution</text>
+  </g>
+
+  <!-- CASE 05: BharatKart -->
+  <g transform="translate(295, 172)">
+    <rect x="0" y="0" width="260" height="115" rx="6" fill="url(#folderBg)" stroke="#3f3f46" stroke-width="1"/>
+    <rect x="0" y="0" width="260" height="22" rx="6" fill="#18181b"/>
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#c5a059">FILE 05 // VOICE AI</text>
+
+    <!-- Status Tag -->
+    <rect x="180" y="3" width="70" height="16" rx="3" fill="#121215" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="215" y="14" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">🥇 1ST PLACE</text>
+
+    <!-- Content -->
+    <text x="12" y="42" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#f4f4f5">BharatKart</text>
+    <text x="12" y="58" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">Voice-first artisan marketplace</text>
+    <text x="12" y="72" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#71717a">Speech-to-Catalog · Zero-Typing UI</text>
+
+    <!-- Metrics -->
+    <rect x="10" y="85" width="240" height="18" rx="3" fill="#18181b"/>
+    <text x="16" y="97.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#c5a059">HACKUEM: Grand Champion Winner</text>
+  </g>
+
+  <!-- CASE 06: ROADSoS -->
+  <g transform="translate(570, 172)">
+    <rect x="0" y="0" width="260" height="115" rx="6" fill="url(#folderBg)" stroke="#27272a" stroke-width="1"/>
+    <rect x="0" y="0" width="260" height="22" rx="6" fill="#18181b"/>
+    <text x="10" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" fill="#f4f4f5">FILE 06 // OFFLINE SOS</text>
+
+    <!-- Status Tag -->
+    <rect x="180" y="3" width="70" height="16" rx="3" fill="#121215" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="215" y="14" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#a1a1aa" text-anchor="middle">ARCHIVED</text>
+
+    <!-- Content -->
+    <text x="12" y="42" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#f4f4f5">ROADSoS</text>
+    <text x="12" y="58" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#a1a1aa">Zero-connectivity emergency platform</text>
+    <text x="12" y="72" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#71717a">Offline Caches · International SOS</text>
+
+    <!-- Metrics -->
+    <rect x="10" y="85" width="240" height="18" rx="3" fill="#18181b"/>
+    <text x="16" y="97.5" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#d4d4d8">DISPATCH: 12+ Nations Configured</text>
+  </g>
+</svg>

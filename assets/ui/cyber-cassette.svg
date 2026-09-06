@@ -1,112 +1,145 @@
-<svg width="720" height="130" viewBox="0 0 720 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cyber Cassette Player: Yorozuya Blues audio player and agent status">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 180" width="100%" height="100%">
   <defs>
-    <style>
-      .bg { fill: #141414; stroke: #2b2b2b; stroke-width: 1.5; }
-      .tape-window { fill: #0d0d0d; stroke: #333; stroke-width: 1; }
-      .reel-ring { fill: none; stroke: #C0C0C0; stroke-width: 1.5; }
-      .reel-center { fill: #2b2b2b; }
-      .reel-teeth { fill: #C0C0C0; }
-      .gold { fill: #D4AF37; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: bold; }
-      .silver { fill: #C0C0C0; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
-      .dim { fill: #6e7681; font-family: 'JetBrains Mono', monospace; font-size: 9px; }
-      .rcb-red { fill: #e53935; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: bold; }
-    </style>
+    <!-- Matte Charcoal Chassis -->
+    <linearGradient id="tapeBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="60%" stop-color="#121215"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+
+    <!-- Warm Amber & Champagne VU -->
+    <linearGradient id="amberVu" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="60%" stop-color="#c5a059"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+
+    <linearGradient id="tapeSilk" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="48%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="52%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-1.2 0" to="1.8 0" dur="4.5s" repeatCount="indefinite"/>
+    </linearGradient>
   </defs>
 
-  <!-- Player Outer Body -->
-  <rect width="720" height="130" rx="8" class="bg"/>
+  <!-- Outer Cassette Frame -->
+  <rect x="0" y="0" width="820" height="180" rx="10" fill="url(#tapeBody)" stroke="#27272a" stroke-width="1.2"/>
+  <rect x="0" y="0" width="820" height="180" rx="10" fill="url(#tapeSilk)"/>
 
-  <!-- Left: Cassette Tape Window -->
-  <g transform="translate(18, 16)">
-    <!-- Tape Body -->
-    <rect width="180" height="98" rx="6" fill="#1c1c1c" stroke="#333" stroke-width="1"/>
-    <!-- Cassette Center Window -->
-    <rect x="25" y="24" width="130" height="50" rx="4" class="tape-window"/>
+  <!-- Four Corner Screws in Polished Titanium -->
+  <circle cx="14" cy="14" r="2.5" fill="#52525b"/>
+  <circle cx="806" cy="14" r="2.5" fill="#52525b"/>
+  <circle cx="14" cy="166" r="2.5" fill="#52525b"/>
+  <circle cx="806" cy="166" r="2.5" fill="#52525b"/>
 
-    <!-- Left Rotating Reel -->
-    <g transform="translate(58, 49)">
-      <animateTransform attributeName="transform" type="rotate" from="0 58 49" to="360 58 49" dur="2.5s" repeatCount="indefinite"/>
-      <circle cx="58" cy="49" r="16" class="reel-ring"/>
-      <circle cx="58" cy="49" r="7" class="reel-center"/>
-      <!-- 3 Reel Teeth -->
-      <rect x="56.5" y="36" width="3" height="5" class="reel-teeth"/>
-      <rect x="56.5" y="57" width="3" height="5" class="reel-teeth"/>
-      <rect x="47" y="47.5" width="5" height="3" class="reel-teeth"/>
-      <rect x="64" y="47.5" width="5" height="3" class="reel-teeth"/>
-    </g>
+  <!-- Top Cassette Label Area -->
+  <g transform="translate(25, 16)">
+    <!-- Label Paper -->
+    <rect x="0" y="0" width="770" height="72" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    
+    <!-- Top Red Stripe replaced by refined Champagne/Bronze Rule -->
+    <line x1="0" y1="2" x2="770" y2="2" stroke="#c5a059" stroke-width="2"/>
 
-    <!-- Right Rotating Reel -->
-    <g transform="translate(122, 49)">
-      <animateTransform attributeName="transform" type="rotate" from="0 122 49" to="360 122 49" dur="2.5s" repeatCount="indefinite"/>
-      <circle cx="122" cy="49" r="16" class="reel-ring"/>
-      <circle cx="122" cy="49" r="7" class="reel-center"/>
-      <!-- 3 Reel Teeth -->
-      <rect x="120.5" y="36" width="3" height="5" class="reel-teeth"/>
-      <rect x="120.5" y="57" width="3" height="5" class="reel-teeth"/>
-      <rect x="111" y="47.5" width="5" height="3" class="reel-teeth"/>
-      <rect x="128" y="47.5" width="5" height="3" class="reel-teeth"/>
-    </g>
+    <!-- Track Title -->
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#f4f4f5" letter-spacing="1">
+      SIDE A: YOROZUYA NOIR // 2:00 AM DEBUG SESSIONS
+    </text>
+    <text x="16" y="42" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#a1a1aa">
+      "Bleeds red &amp; gold for RCB · 40+ diecast scale models · Hardware is patient, logs never lie"
+    </text>
 
-    <!-- Magnetic Tape Band connecting reels -->
-    <line x1="74" y1="44" x2="106" y2="44" stroke="#483218" stroke-width="4"/>
-    <line x1="74" y1="54" x2="106" y2="54" stroke="#483218" stroke-width="4"/>
-
-    <!-- Tape Label Text -->
-    <text x="90" y="16" text-anchor="middle" class="dim" letter-spacing="1">YOROZUYA HI-FI TAPE</text>
+    <!-- Side indicator -->
+    <rect x="710" y="10" width="45" height="24" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="732" y="26" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#f4f4f5" text-anchor="middle">
+      A
+    </text>
   </g>
 
-  <!-- Center & Right: Track Metadata & Equalizer -->
-  <g transform="translate(225, 25)">
-    <!-- Currently Playing Line -->
-    <text x="0" y="10" class="gold">▶ NOW PLAYING: Gintama OST — "Yorozuya Blues (Lo-Fi Audit Mix)"</text>
-    
-    <!-- Audio Progress Bar -->
-    <g transform="translate(0, 26)">
-      <rect width="360" height="4" rx="2" fill="#2b2b2b"/>
-      <rect width="210" height="4" rx="2" fill="#D4AF37">
-        <animate attributeName="width" values="210;290;210" dur="8s" repeatCount="indefinite"/>
-      </rect>
-      <circle cx="210" cy="2" r="4" fill="#FFFFFF">
-        <animate attributeName="cx" values="210;290;210" dur="8s" repeatCount="indefinite"/>
-      </circle>
-      <text x="375" y="6" class="dim">02:45 / 04:12</text>
+  <!-- Center Transparent Tape Window & Spools -->
+  <g transform="translate(260, 95)">
+    <!-- Tape Window Chamber -->
+    <rect x="0" y="0" width="300" height="65" rx="4" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+
+    <!-- Left Spool Hub (Rotating) -->
+    <g transform="translate(60, 32)">
+      <circle cx="0" cy="0" r="20" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+      <circle cx="0" cy="0" r="14" fill="#09090b"/>
+      <!-- Rotating Hub Teeth -->
+      <g stroke="#71717a" stroke-width="1.5">
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="5s" repeatCount="indefinite"/>
+        <line x1="-10" y1="0" x2="10" y2="0"/>
+        <line x1="0" y1="-10" x2="0" y2="10"/>
+        <line x1="-7" y1="-7" x2="7" y2="7"/>
+        <line x1="-7" y1="7" x2="7" y2="-7"/>
+      </g>
     </g>
 
-    <!-- Off-The-Record Agent Metadata -->
-    <g transform="translate(0, 52)">
-      <text x="0" y="0" class="silver">CRICKET FAITH :</text>
-      <text x="120" y="0" class="rcb-red">❤️💛 BLEEDS RED &amp; GOLD FOR RCB [PLAY BOLD]</text>
-
-      <text x="0" y="18" class="silver">DIECAST VAULT :</text>
-      <text x="120" y="18" class="silver">🏎️ 40+ Scale Models Hoarded (Zero Garage Tech Debt)</text>
-
-      <text x="0" y="36" class="silver">CORE PHILOSOPHY:</text>
-      <text x="120" y="36" style="font-family:'JetBrains Mono',monospace;font-size:10px;fill:#39d353;">"Ship first, audit like an enemy agent afterward."</text>
+    <!-- Right Spool Hub (Rotating) -->
+    <g transform="translate(240, 32)">
+      <circle cx="0" cy="0" r="20" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+      <circle cx="0" cy="0" r="14" fill="#09090b"/>
+      <g stroke="#71717a" stroke-width="1.5">
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="5s" repeatCount="indefinite"/>
+        <line x1="-10" y1="0" x2="10" y2="0"/>
+        <line x1="0" y1="-10" x2="0" y2="10"/>
+        <line x1="-7" y1="-7" x2="7" y2="7"/>
+        <line x1="-7" y1="7" x2="7" y2="-7"/>
+      </g>
     </g>
 
-    <!-- Animated Equalizer Frequency Bars -->
-    <g transform="translate(435, 14)">
-      <!-- 7 dancing equalizer bars -->
-      <rect x="0" y="0" width="3" height="18" rx="1.5" fill="#39d353">
-        <animate attributeName="height" values="8;24;6;20;12;24" dur="0.8s" repeatCount="indefinite"/>
-        <animate attributeName="y" values="16;0;18;4;12;0" dur="0.8s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="6" y="0" width="3" height="18" rx="1.5" fill="#39d353">
-        <animate attributeName="height" values="16;6;24;10;22;6" dur="0.9s" repeatCount="indefinite"/>
-        <animate attributeName="y" values="8;18;0;14;2;18" dur="0.9s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="12" y="0" width="3" height="18" rx="1.5" fill="#D4AF37">
-        <animate attributeName="height" values="22;12;6;24;14;20" dur="0.7s" repeatCount="indefinite"/>
-        <animate attributeName="y" values="2;12;18;0;10;4" dur="0.7s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="18" y="0" width="3" height="18" rx="1.5" fill="#D4AF37">
-        <animate attributeName="height" values="6;24;14;8;22;16" dur="0.85s" repeatCount="indefinite"/>
-        <animate attributeName="y" values="18;0;10;16;2;8" dur="0.85s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="24" y="0" width="3" height="18" rx="1.5" fill="#f85149">
-        <animate attributeName="height" values="14;8;22;16;6;24" dur="0.75s" repeatCount="indefinite"/>
-        <animate attributeName="y" values="10;16;2;8;18;0" dur="0.75s" repeatCount="indefinite"/>
-      </rect>
-    </g>
+    <!-- Tape Bridge in Center with Tape Counter -->
+    <rect x="110" y="18" width="80" height="28" rx="2" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    <text x="150" y="36" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#f4f4f5" text-anchor="middle" letter-spacing="2">
+      01:018
+    </text>
+  </g>
+
+  <!-- Left Audio Equalizer (Bouncing Amber Bars) -->
+  <g transform="translate(45, 108)">
+    <rect x="0" y="16" width="4" height="28" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="10;36;10" dur="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="34;8;34" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="8" y="10" width="4" height="34" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="24;42;16;24" dur="0.55s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="20;2;28;20" dur="0.55s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="16" y="6" width="4" height="38" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="38;18;44;38" dur="0.7s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="6;26;0;6" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="24" y="14" width="4" height="30" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="16;36;22;16" dur="0.48s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="28;8;22;28" dur="0.48s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="32" y="22" width="4" height="22" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="10;28;10" dur="0.65s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="34;16;34" dur="0.65s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0" y="52" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">VU CH-L</text>
+  </g>
+
+  <!-- Right Audio Equalizer (Bouncing Amber Bars) -->
+  <g transform="translate(735, 108)">
+    <rect x="0" y="18" width="4" height="26" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="14;34;14" dur="0.52s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="30;10;30" dur="0.52s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="8" y="8" width="4" height="36" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="36;16;40;36" dur="0.68s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="8;28;4;8" dur="0.68s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="16" y="12" width="4" height="32" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="20;42;18;20" dur="0.45s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="24;2;26;24" dur="0.45s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="24" y="20" width="4" height="24" fill="url(#amberVu)" rx="1">
+      <animate attributeName="height" values="12;30;12" dur="0.62s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="32;14;32" dur="0.62s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0" y="52" font-family="'JetBrains Mono', monospace" font-size="7" fill="#71717a">VU CH-R</text>
   </g>
 </svg>

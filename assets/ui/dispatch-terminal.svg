@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="commsBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="820" height="180" rx="10" fill="url(#commsBg)" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Top Header -->
+  <g transform="translate(20, 16)">
+    <circle cx="6" cy="6" r="3" fill="#c5a059">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="18" y="9.5" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#f4f4f5" letter-spacing="2">
+      DISPATCH CHANNELS // OPEN COMMS TRANSCEIVER
+    </text>
+    <rect x="680" y="-3" width="120" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
+    <text x="740" y="9.5" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" fill="#f4f4f5" text-anchor="middle">
+      CARRIER: LOCKED
+    </text>
+    <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
+  </g>
+
+  <!-- Left: Carrier Frequency Waveform Visualizer -->
+  <g transform="translate(20, 44)">
+    <rect x="0" y="0" width="150" height="115" rx="6" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+    <text x="12" y="18" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#71717a">
+      RF UPLINK // 2.4 GHz
+    </text>
+
+    <!-- Animated Sine Wave Carrier -->
+    <path d="M 12 55 Q 26 25 40 55 T 68 55 T 96 55 T 124 55 T 138 55"
+          fill="none" stroke="#d4d4d8" stroke-width="1.2" stroke-dasharray="160" stroke-dashoffset="160">
+      <animate attributeName="stroke-dashoffset" values="160;0" dur="2s" repeatCount="indefinite"/>
+    </path>
+
+    <text x="12" y="85" font-family="'JetBrains Mono', monospace" font-size="7" fill="#a1a1aa">
+      CHANNELS: 4 MONITORED
+    </text>
+    <text x="12" y="98" font-family="'JetBrains Mono', monospace" font-size="7" fill="#c5a059">
+      LATENCY: 0.8ms
+    </text>
+  </g>
+
+  <!-- Center: Terminal Listening Console -->
+  <g transform="translate(185, 44)">
+    <rect x="0" y="0" width="615" height="115" rx="6" fill="#0c0c0e" stroke="#27272a" stroke-width="0.8"/>
+    
+    <g transform="translate(16, 20)" font-family="'JetBrains Mono', monospace" font-size="9">
+      <text x="0" y="0" fill="#c5a059" font-weight="600">
+        ➜ ~/yorozuya <tspan fill="#f4f4f5">./listen_dispatch --stream</tspan>
+      </text>
+
+      <text x="0" y="24" fill="#a1a1aa">
+        &gt; CASE QUEUE     : <tspan fill="#f4f4f5" font-weight="600">NOT EMPTY. NEVER WILL BE.</tspan>
+      </text>
+      <text x="0" y="40" fill="#a1a1aa">
+        &gt; ACCEPTING      : <tspan fill="#d4d4d8">REAL PROBLEMS &amp; ADVERSARIAL CHALLENGES ONLY.</tspan>
+      </text>
+      <text x="0" y="56" fill="#a1a1aa">
+        &gt; PAYMENT METHOD : <tspan fill="#c5a059">INTERESTING BUGS &amp; IMPOSSIBLE DEADLINES.</tspan>
+      </text>
+
+      <text x="0" y="76" fill="#71717a">
+        $ dispatch --destination=<tspan fill="#f4f4f5">pihujang0@gmail.com</tspan>
+      </text>
+
+      <!-- Blinking Cursor -->
+      <rect x="290" y="66" width="7" height="12" fill="#f4f4f5">
+        <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+</svg>
