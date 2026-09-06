@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SILVER SOUL STUDIOS // CYBER AUDIO &amp; COMBAT SFX DECK</title>
+  <style>
+    :root {
+      --bg: #09090b;
+      --panel: #121215;
+      --panel-2: #18181b;
+      --line: #27272a;
+      --line-bright: #3f3f46;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --text-dim: #71717a;
+      --gold: #c5a059;
+      --gold-light: #fef08a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      overflow-x: hidden;
+    }
+
+    /* Container Deck */
+    .deck {
+      width: 100%;
+      max-width: 780px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 28px 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    /* Top Nav / Mode Selector */
+    .deck-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .mode-tabs {
+      display: flex;
+      gap: 8px;
+      background: var(--panel-2);
+      padding: 4px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--line-bright);
+    }
+
+    /* Screen / Canvas Area */
+    .screen-chamber {
+      background: #060608;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100px;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .track-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .track-title {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .track-status {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* Cassette View Animation */
+    .cassette-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      padding: 16px 0;
+    }
+
+    .spool {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 2px solid var(--line-bright);
+      background: var(--panel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .spool-inner {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #060608;
+      border: 2px dashed var(--text-dim);
+    }
+
+    .spool.spinning .spool-inner {
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Controls Deck */
+    .controls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .action-btn {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 12px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .action-btn:hover {
+      background: #222227;
+      border-color: var(--line-bright);
+      transform: translateY(-1px);
+    }
+
+    .action-btn:active {
+      transform: translateY(1px);
+    }
+
+    .action-btn.primary {
+      background: #1c1914;
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    .action-btn.primary:hover {
+      background: #29241b;
+    }
+
+    /* Slider Row */
+    .slider-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--panel-2);
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      margin-bottom: 20px;
+    }
+
+    .slider-row label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      min-width: 60px;
+    }
+
+    input[type=range] {
+      flex: 1;
+      accent-color: var(--gold);
+      height: 4px;
+      background: var(--line);
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    /* Terminal SFX Console log */
+    .log-box {
+      background: #060608;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-size: 10.5px;
+      line-height: 1.6;
+      color: var(--text-dim);
+      min-height: 80px;
+      max-height: 120px;
+      overflow-y: auto;
+    }
+
+    .log-entry {
+      color: var(--text-muted);
+    }
+
+    .log-entry.gold {
+      color: var(--gold);
+    }
+
+    .log-entry.white {
+      color: var(--text);
+    }
+
+    /* Footer links */
+    .deck-footer {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: var(--text-dim);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .deck-footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .deck-footer a:hover {
+      color: var(--text);
+    }
+
+    /* Hidden utility */
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <div class="deck">
+    <!-- Header -->
+    <div class="deck-header">
+      <div class="brand">
+        <div class="brand-dot"></div>
+        SILVER SOUL STUDIOS // AUDIO &amp; COMBAT SFX ENGINE
+      </div>
+      <div class="mode-tabs">
+        <button class="tab-btn active" id="tabCassette" onclick="switchMode('cassette')">📻 NOIR RADIO</button>
+        <button class="tab-btn" id="tabShootout" onclick="switchMode('shootout')">⚔️ TACTICAL SFX</button>
+      </div>
+    </div>
+
+    <!-- Visualizer Screen -->
+    <div class="screen-chamber">
+      <div id="cassetteVisual" class="cassette-visual">
+        <div class="spool" id="spoolLeft"><div class="spool-inner"></div></div>
+        <div style="text-align: center;">
+          <div style="font-size: 13px; font-weight: bold; color: var(--text);">YOROZUYA NOIR MIX</div>
+          <div style="font-size: 9px; color: var(--text-dim); margin-top: 4px;">TAPE DECK: 44.1 kHz STEREO</div>
+        </div>
+        <div class="spool" id="spoolRight"><div class="spool-inner"></div></div>
+      </div>
+
+      <canvas id="spectrumCanvas"></canvas>
+
+      <div class="track-meta">
+        <div class="track-title" id="trackName">CURRENT: AMBIENT NOIR SYNTH CHORDS</div>
+        <div class="track-status" id="deckStatus">STATUS: READY</div>
+      </div>
+    </div>
+
+    <!-- Mode 1: Cassette Radio Controls -->
+    <div id="cassetteControls">
+      <div class="controls-grid">
+        <button class="action-btn primary" id="playBtn" onclick="togglePlayback()">
+          ▶ PLAY RADIO
+        </button>
+        <button class="action-btn" onclick="playTapeClick()">
+          ⏏ TAPE CLACK
+        </button>
+        <button class="action-btn" onclick="toggleTapeHiss()">
+          📻 TAPE HISS [OFF]
+        </button>
+        <button class="action-btn" onclick="cycleSynthChord()">
+          🎹 NEXT CHORD
+        </button>
+      </div>
+    </div>
+
+    <!-- Mode 2: Tactical Shootout SFX Controls -->
+    <div id="shootoutControls" class="hidden">
+      <div class="controls-grid">
+        <button class="action-btn primary" onclick="fireLeftRifle()">
+          💥 LEFT OPERATIVE FIRE
+        </button>
+        <button class="action-btn" onclick="fireRightRifle()">
+          💥 RIGHT OPERATIVE FIRE
+        </button>
+        <button class="action-btn" onclick="playRicochet()">
+          ⚡ BULLET RICOCHET
+        </button>
+        <button class="action-btn" onclick="playBrassDrop()">
+          🪙 BRASS CASING
+        </button>
+      </div>
+      <div class="controls-grid" style="margin-top: 8px;">
+        <button class="action-btn primary" id="autoCombatBtn" style="grid-column: span 2;" onclick="toggleAutoCombat()">
+          ▶ START AUTOMATED SHOOTOUT COMBAT LOOP
+        </button>
+      </div>
+    </div>
+
+    <!-- Master Volume -->
+    <div class="slider-row">
+      <label for="volSlider">VOLUME</label>
+      <input type="range" id="volSlider" min="0" max="1" step="0.01" value="0.75" oninput="setMasterVolume(this.value)">
+      <span id="volLabel" style="font-size: 10px; color: var(--text-dim); min-width: 32px;">75%</span>
+    </div>
+
+    <!-- Live Event Log -->
+    <div class="log-box" id="eventLog">
+      <div class="log-entry">[0.00s] Web Audio Synthesis Engine initialized in standby.</div>
+      <div class="log-entry gold">[INFO] Zero external audio assets required. 100% browser synthesized.</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="deck-footer">
+      <div>HOSTED ON GITHUB PAGES · YOROZUYA RESEARCH UNIT</div>
+      <div>
+        <a href="https://github.com/gintama1018">← RETURN TO GITHUB PROFILE</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Audio Context Setup
+    let audioCtx = null;
+    let masterGain = null;
+    let analyser = null;
+    let isPlaying = false;
+    let tapeHissNode = null;
+    let isTapeHissOn = false;
+    let autoCombatInterval = null;
+    let currentMode = 'cassette';
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.75, audioCtx.currentTime);
+
+        analyser = audioCtx.createAnalyser();
+        analyser.fftSize = 64;
+        masterGain.connect(analyser);
+        analyser.connect(audioCtx.destination);
+
+        drawSpectrum();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    function log(msg, type = '') {
+      const logBox = document.getElementById('eventLog');
+      const entry = document.createElement('div');
+      entry.className = `log-entry ${type}`;
+      const time = audioCtx ? audioCtx.currentTime.toFixed(2) : '0.00';
+      entry.innerText = `[${time}s] ${msg}`;
+      logBox.prepend(entry);
+    }
+
+    function setMasterVolume(val) {
+      if (masterGain && audioCtx) {
+        masterGain.gain.setValueAtTime(parseFloat(val), audioCtx.currentTime);
+      }
+      document.getElementById('volLabel').innerText = `${Math.round(val * 100)}%`;
+    }
+
+    // ==========================================
+    // SYNTHESIZER 1: MECHANICAL TAPE CLACK
+    // ==========================================
+    function playTapeClick() {
+      initAudio();
+      const t = audioCtx.currentTime;
+      // Mechanical latch thud (noise burst + filter)
+      const bufferSize = audioCtx.sampleRate * 0.04;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.2));
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(1400, t);
+      filter.Q.setValueAtTime(3, t);
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.9, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
+
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(masterGain);
+      noise.start(t);
+
+      log("Mechanical cassette latch engaged.", "white");
+    }
+
+    // ==========================================
+    // SYNTHESIZER 2: TAPE HISS & CRACKLE
+    // ==========================================
+    function toggleTapeHiss() {
+      initAudio();
+      const btn = event.target;
+      if (!isTapeHissOn) {
+        const bufferSize = audioCtx.sampleRate * 2;
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        let b0 = 0, b1 = 0, b2 = 0;
+        for (let i = 0; i < bufferSize; i++) {
+          const white = Math.random() * 2 - 1;
+          b0 = 0.99886 * b0 + white * 0.0555179;
+          b1 = 0.99332 * b1 + white * 0.0750759;
+          b2 = 0.96900 * b2 + white * 0.1538520;
+          data[i] = (b0 + b1 + b2) * 0.03;
+        }
+        tapeHissNode = audioCtx.createBufferSource();
+        tapeHissNode.buffer = buffer;
+        tapeHissNode.loop = true;
+
+        const hissFilter = audioCtx.createBiquadFilter();
+        hissFilter.type = 'highpass';
+        hissFilter.frequency.setValueAtTime(2500, audioCtx.currentTime);
+
+        const hissGain = audioCtx.createGain();
+        hissGain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+
+        tapeHissNode.connect(hissFilter);
+        hissFilter.connect(hissGain);
+        hissGain.connect(masterGain);
+        tapeHissNode.start();
+
+        isTapeHissOn = true;
+        btn.innerText = "📻 TAPE HISS [ON]";
+        btn.classList.add("primary");
+        log("Analog magnetic tape hiss generator started.", "gold");
+      } else {
+        if (tapeHissNode) {
+          tapeHissNode.stop();
+          tapeHissNode.disconnect();
+          tapeHissNode = null;
+        }
+        isTapeHissOn = false;
+        btn.innerText = "📻 TAPE HISS [OFF]";
+        btn.classList.remove("primary");
+        log("Tape hiss generator halted.");
+      }
+    }
+
+    // ==========================================
+    // SYNTHESIZER 3: NOIR SYNTH CHORDS
+    // ==========================================
+    const chordProgressions = [
+      [130.81, 155.56, 196.00, 246.94], // C Minor 9th
+      [116.54, 138.59, 174.61, 220.00], // Bb Minor 7th
+      [103.83, 130.81, 155.56, 196.00], // Ab Major 7th
+      [98.00, 123.47, 146.83, 185.00]   // G Dominant 7th
+    ];
+    let currentChordIndex = 0;
+    let activeOscillators = [];
+    let chordTimer = null;
+
+    function playChord(freqs) {
+      if (!audioCtx) return;
+      const t = audioCtx.currentTime;
+
+      // Stop previous
+      activeOscillators.forEach(osc => {
+        try {
+          osc.gain.gain.exponentialRampToValueAtTime(0.001, t + 0.3);
+          osc.osc.stop(t + 0.35);
+        } catch(e){}
+      });
+      activeOscillators = [];
+
+      freqs.forEach(f => {
+        const osc = audioCtx.createOscillator();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(f, t);
+
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(800, t);
+        filter.frequency.linearRampToValueAtTime(1400, t + 2);
+        filter.frequency.linearRampToValueAtTime(800, t + 4);
+
+        const gain = audioCtx.createGain();
+        gain.gain.setValueAtTime(0.001, t);
+        gain.gain.linearRampToValueAtTime(0.08, t + 0.5);
+        gain.gain.setValueAtTime(0.08, t + 3.2);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + 4.2);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(masterGain);
+
+        osc.start(t);
+        osc.stop(t + 4.5);
+        activeOscillators.push({ osc, gain });
+      });
+    }
+
+    function togglePlayback() {
+      initAudio();
+      const btn = document.getElementById('playBtn');
+      const status = document.getElementById('deckStatus');
+      const spoolL = document.getElementById('spoolLeft');
+      const spoolR = document.getElementById('spoolRight');
+
+      if (!isPlaying) {
+        isPlaying = true;
+        playTapeClick();
+        btn.innerText = "⏸ PAUSE RADIO";
+        status.innerText = "STATUS: STREAMING NOIR SYNTH";
+        spoolL.classList.add('spinning');
+        spoolR.classList.add('spinning');
+
+        playChord(chordProgressions[currentChordIndex]);
+        chordTimer = setInterval(() => {
+          currentChordIndex = (currentChordIndex + 1) % chordProgressions.length;
+          playChord(chordProgressions[currentChordIndex]);
+        }, 4000);
+
+        log("Noir audio stream broadcasting at 44.1 kHz.", "gold");
+      } else {
+        isPlaying = false;
+        clearInterval(chordTimer);
+        chordTimer = null;
+        activeOscillators.forEach(o => {
+          try { o.gain.gain.linearRampToValueAtTime(0.001, audioCtx.currentTime + 0.2); } catch(e){}
+        });
+        btn.innerText = "▶ PLAY RADIO";
+        status.innerText = "STATUS: PAUSED";
+        spoolL.classList.remove('spinning');
+        spoolR.classList.remove('spinning');
+        log("Audio stream paused.");
+      }
+    }
+
+    function cycleSynthChord() {
+      initAudio();
+      currentChordIndex = (currentChordIndex + 1) % chordProgressions.length;
+      playChord(chordProgressions[currentChordIndex]);
+      log(`Chord progressed to Step [0${currentChordIndex + 1}/04]`, "white");
+    }
+
+    // ==========================================
+    // SYNTHESIZER 4: TACTICAL SHOOTOUT SFX
+    // ==========================================
+    function fireLeftRifle() {
+      initAudio();
+      const t = audioCtx.currentTime;
+      // High-velocity silenced rifle crack (noise burst + steep lowpass decay)
+      const bufferSize = audioCtx.sampleRate * 0.12;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.15));
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(2800, t);
+      filter.frequency.exponentialRampToValueAtTime(300, t + 0.1);
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(1.0, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(masterGain);
+      noise.start(t);
+
+      setTimeout(playBrassDrop, 250);
+      log("LEFT OPERATIVE: 5.56mm suppressed salvo fired.", "white");
+    }
+
+    function fireRightRifle() {
+      initAudio();
+      const t = audioCtx.currentTime;
+      // Heavy tactical rifle boom (bass transient + noise)
+      const osc = audioCtx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(160, t);
+      osc.frequency.exponentialRampToValueAtTime(30, t + 0.15);
+
+      const oscGain = audioCtx.createGain();
+      oscGain.gain.setValueAtTime(0.9, t);
+      oscGain.gain.exponentialRampToValueAtTime(0.001, t + 0.15);
+
+      osc.connect(oscGain);
+      oscGain.connect(masterGain);
+      osc.start(t);
+      osc.stop(t + 0.16);
+
+      // Gunshot air crack
+      const bufferSize = audioCtx.sampleRate * 0.08;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.2));
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const nGain = audioCtx.createGain();
+      nGain.gain.setValueAtTime(0.8, t);
+      nGain.gain.exponentialRampToValueAtTime(0.001, t + 0.08);
+
+      noise.connect(nGain);
+      nGain.connect(masterGain);
+      noise.start(t);
+
+      setTimeout(playRicochet, 90);
+      log("RIGHT OPERATIVE: Heavy defensive burst returned.", "gold");
+    }
+
+    function playRicochet() {
+      initAudio();
+      const t = audioCtx.currentTime;
+      // Frequency-modulated metal whistling ricochet
+      const osc = audioCtx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(3400, t);
+      osc.frequency.exponentialRampToValueAtTime(650, t + 0.22);
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.001, t);
+      gain.gain.linearRampToValueAtTime(0.35, t + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.22);
+
+      osc.connect(gain);
+      gain.connect(masterGain);
+      osc.start(t);
+      osc.stop(t + 0.25);
+
+      log("SPARK RICOCHET: Bullet deflected by commit block.", "gold");
+    }
+
+    function playBrassDrop() {
+      if (!audioCtx) return;
+      const t = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(4200, t);
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.15, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
+
+      osc.connect(gain);
+      gain.connect(masterGain);
+      osc.start(t);
+      osc.stop(t + 0.05);
+    }
+
+    let isAutoCombatOn = false;
+    function toggleAutoCombat() {
+      const btn = document.getElementById('autoCombatBtn');
+      if (!isAutoCombatOn) {
+        initAudio();
+        isAutoCombatOn = true;
+        btn.innerText = "⏹ STOP AUTOMATED COMBAT LOOP";
+        btn.classList.add('primary');
+        log("AUTOMATED TACTICAL SEQUENCE ENGAGED.", "gold");
+
+        let step = 0;
+        autoCombatInterval = setInterval(() => {
+          if (step % 2 === 0) {
+            fireLeftRifle();
+          } else {
+            fireRightRifle();
+          }
+          step++;
+        }, 850);
+      } else {
+        isAutoCombatOn = false;
+        clearInterval(autoCombatInterval);
+        autoCombatInterval = null;
+        btn.innerText = "▶ START AUTOMATED SHOOTOUT COMBAT LOOP";
+        btn.classList.remove('primary');
+        log("Tactical combat loop ceased.");
+      }
+    }
+
+    // ==========================================
+    // SPECTRUM VISUALIZER CANVAS
+    // ==========================================
+    function drawSpectrum() {
+      requestAnimationFrame(drawSpectrum);
+      const canvas = document.getElementById('spectrumCanvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.parentElement.clientWidth - 40;
+      canvas.height = 80;
+
+      ctx.fillStyle = '#060608';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      if (!analyser) return;
+
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
+      analyser.getByteFrequencyData(dataArray);
+
+      const barWidth = (canvas.width / bufferLength) * 1.5;
+      let x = 0;
+
+      for (let i = 0; i < bufferLength; i++) {
+        const barHeight = (dataArray[i] / 255) * canvas.height;
+        // Aesthetic champagne & platinum gradient
+        ctx.fillStyle = i % 2 === 0 ? '#c5a059' : '#f4f4f5';
+        ctx.fillRect(x, canvas.height - barHeight, barWidth - 2, barHeight);
+        x += barWidth;
+      }
+    }
+
+    // ==========================================
+    // MODE SWITCHER
+    // ==========================================
+    function switchMode(mode) {
+      currentMode = mode;
+      const tabC = document.getElementById('tabCassette');
+      const tabS = document.getElementById('tabShootout');
+      const ctrlC = document.getElementById('cassetteControls');
+      const ctrlS = document.getElementById('shootoutControls');
+      const visC = document.getElementById('cassetteVisual');
+
+      if (mode === 'cassette') {
+        tabC.classList.add('active');
+        tabS.classList.remove('active');
+        ctrlC.classList.remove('hidden');
+        ctrlS.classList.add('hidden');
+        visC.classList.remove('hidden');
+        document.getElementById('trackName').innerText = "CURRENT: AMBIENT NOIR SYNTH CHORDS";
+      } else {
+        tabS.classList.add('active');
+        tabC.classList.remove('active');
+        ctrlS.classList.remove('hidden');
+        ctrlC.classList.add('hidden');
+        visC.classList.add('hidden');
+        document.getElementById('trackName').innerText = "CURRENT: 2D CONTRIBUTION COMBAT SFX";
+      }
+    }
+
+    // Parse URL parameter on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const mode = params.get('mode');
+      if (mode === 'shootout') {
+        switchMode('shootout');
+      } else {
+        switchMode('cassette');
+      }
+    });
+  </script>
+</body>
+</html>

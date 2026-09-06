@@ -53,7 +53,11 @@
 
 <!-- Animated Audio Cassette Player & Lore Widget -->
 <div align="center">
-  <img src="./assets/ui/cyber-cassette.svg" width="100%" alt="Cyber Cassette Tape: Yorozuya Blues Audio Player" />
+  <a href="https://gintama1018.github.io/player.html?mode=cassette" title="Click to play synthesized Noir Radio audio">
+    <img src="./assets/ui/cyber-cassette.svg" width="100%" alt="Cyber Cassette Tape: Yorozuya Blues Audio Player" />
+  </a>
+  <br/>
+  <sub><em>(▶ <strong>Click the Cassette above to launch the live synthesized Noir Radio audio player</strong> — runs natively in browser)</em></sub>
 </div>
 
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
@@ -210,7 +214,11 @@ GitHub won't let you run binaries in a README — so we transformed the contribu
 
 <!-- 2D Animated Contribution Shootout SVG -->
 <div align="center">
-  <img src="./assets/ui/contribution-shootout.svg" width="100%" alt="Tactical Shootout on Contribution Grid: Operatives using commit blocks as tactical cover" />
+  <a href="https://gintama1018.github.io/player.html?mode=shootout" title="Click to launch live Tactical Combat Soundboard">
+    <img src="./assets/ui/contribution-shootout.svg" width="100%" alt="Tactical Shootout on Contribution Grid: Operatives using commit blocks as tactical cover" />
+  </a>
+  <br/>
+  <sub><em>(🔊 <strong>Click the Commit Grid above to play live tactical shootout gunfire &amp; ricochet sound effects</strong>)</em></sub>
 </div>
 
 <img src="./assets/ui/divider-tape.svg" width="100%" alt="Evidence Tape" />
