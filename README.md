@@ -13,7 +13,7 @@
 <br/>
 
 <!-- Animated Stamp Header -->
-<img src="./assets/hero/case-stamp.svg" width="760" alt="Case file stamped OPEN — Silver Soul Studios subject file" />
+<img src="./assets/hero/case-stamp.svg" width="100%" alt="Case file stamped OPEN — Silver Soul Studios subject file" />
 
 <br/><br/>
 

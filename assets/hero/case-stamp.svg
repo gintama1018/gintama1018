@@ -1,40 +1,200 @@
-<svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Case file opened, stamped, Silver Soul Studios" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2OTc0MzI3Ny02YjEyLTQ2MjUtODZjOC02MGVhM2M2ZGViNzIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaFgwfum7xfaobeB7Rewf1R4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjM2Q1ZTNhYS1lNmEzLTRlNWEtYjZjYS1kNWVjZDliZTU5NmNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoR3x96go+Qv4266xLWH7UMwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggBKkEHlzmSPDlUMwMxK66TFvPji6A0eHWwxdACe5U7kmkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJt3w6SOEeUbk4dA9/yhzm0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDNQT4oOGHwTW1rDkxSdc14C/6Z4pPsQHVbF5EzlCI1j2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjdZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjY5NzQzMjc3LTZiMTItNDYyNS04NmM4LTYwZWEzYzZkZWI3Mi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmU1NGZiOWVjLTJmZTYtNGMwNi1iMzY4LWIxYTIwMThmODE4ZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAEqQQeXOZI8OVQzAzErrpMW8+OLoDR4dbDF0AJ7lTuSaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggNi6R3dCaTQS1HM4n7TyFFyhvEzkdCOSqmTm0AitQ8OKiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggnfKGh5dKswqm5l4q9jOolM8ORFP9YUg4GYpc/2vrBV90Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQLw7xoHK9bpsFl67k+2ah4eVkzmeAAS4b/96Lat7udBSpf7rLB4XJ1jGbgQtJ2ulRhURBypoRZUH2/rRuFve0z4=</c2pa:manifest></metadata>
+<svg width="880" height="250" viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Classified Subject Dossier #01018: Sonu Jangir — Case File Stamped OPEN">
   <defs>
-    <pattern id="paper-lines" width="900" height="26" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="25" x2="900" y2="25" stroke="#232323" stroke-width="1"/>
+    <style>
+      .bg { fill: #09090b; }
+      .border-line { stroke: #27272a; stroke-width: 1; rx: 8px; }
+      .mono-txt { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; fill: #d4d4d8; }
+      .mono-dim { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; fill: #71717a; }
+      .mono-gold { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; fill: #c5a059; font-weight: 700; }
+      .mono-bold { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; fill: #f4f4f5; font-weight: 700; }
+      .header-title { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10px; fill: #f4f4f5; font-weight: 700; letter-spacing: 1.5px; }
+      .stamp-sub { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9px; font-weight: 700; letter-spacing: 3px; fill: #a1a1aa; }
+      .stamp-main { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 21px; font-weight: 900; letter-spacing: 3.5px; fill: #f4f4f5; }
+      .stamp-id { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 9.5px; font-weight: 700; letter-spacing: 2px; fill: #c5a059; }
+    </style>
+
+    <!-- Tech Grid Background -->
+    <pattern id="card-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="20" x2="20" y2="20" stroke="#18181b" stroke-width="0.8"/>
+      <line x1="20" y1="0" x2="20" y2="20" stroke="#18181b" stroke-width="0.8"/>
+      <circle cx="20" cy="20" r="0.8" fill="#27272a"/>
     </pattern>
+
+    <!-- Scanline Sweep -->
+    <linearGradient id="scanline" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#c5a059" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Rubber Stamp Glow -->
+    <filter id="stamp-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#c5a059" flood-opacity="0.3"/>
+    </filter>
   </defs>
 
-  <rect width="900" height="260" fill="#0d0d0d"/>
-  <rect width="900" height="260" fill="url(#paper-lines)"/>
+  <!-- Background Card -->
+  <rect width="880" height="250" class="bg"/>
+  <rect width="880" height="250" fill="url(#card-grid)"/>
+  <rect x="1" y="1" width="878" height="248" fill="none" class="border-line"/>
 
-  <!-- redacted bars, fade in first -->
-  <g fill="#1c1c1c" opacity="0">
-    <animate attributeName="opacity" values="0;1" begin="0.1s" dur="0.4s" fill="freeze"/>
-    <rect x="60" y="46" width="260" height="16"/>
-    <rect x="60" y="78" width="380" height="16"/>
-    <rect x="60" y="110" width="200" height="16"/>
-    <rect x="60" y="142" width="320" height="16"/>
-    <rect x="60" y="174" width="150" height="16"/>
+  <!-- Scanning Sweep Beam -->
+  <rect x="0" y="0" width="880" height="40" fill="url(#scanline)" opacity="0.6">
+    <animate attributeName="y" values="-40; 250; -40" dur="8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Corner Tech Brackets -->
+  <g stroke="#3f3f46" stroke-width="1.5" fill="none">
+    <path d="M 8 18 L 8 8 L 18 8"/>
+    <path d="M 872 18 L 872 8 L 862 8"/>
+    <path d="M 8 232 L 8 242 L 18 242"/>
+    <path d="M 872 232 L 872 242 L 862 242"/>
   </g>
 
-  <text x="60" y="30" font-family="JetBrains Mono, monospace" font-size="13" fill="#8b8b8b" letter-spacing="2">SILVER SOUL STUDIOS — SUBJECT FILE 01018</text>
+  <!-- ================================================================= -->
+  <!-- TOP HEADER RIBBON                                                 -->
+  <!-- ================================================================= -->
+  <g transform="translate(28, 22)">
+    <!-- Red Surveillance REC LED -->
+    <circle cx="5" cy="5" r="4" fill="#f85149">
+      <animate attributeName="opacity" values="1; 0.2; 1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="16" y="8.5" class="header-title">CLASSIFIED DOSSIER // DEPT. OF PROTOCOL RESEARCH</text>
 
-  <!-- the stamp: starts big + rotated + transparent, slams to final position -->
-  <g transform="translate(660,150)" opacity="0">
-    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.55;0.6" dur="2.4s" begin="0.6s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="rotate"
-      values="-18 660 150; -18 660 150; -10 660 150; -12 660 150"
-      keyTimes="0;0.55;0.75;1" dur="2.4s" begin="0.6s" fill="freeze" additive="sum"/>
-    <animateTransform attributeName="transform" type="scale"
-      values="2.4;2.4;0.95;1" keyTimes="0;0.55;0.72;1" dur="2.4s" begin="0.6s" fill="freeze" additive="sum"/>
-    <g transform="rotate(-12)">
-      <rect x="-190" y="-58" width="380" height="116" fill="none" stroke="#C0C0C0" stroke-width="6"/>
-      <rect x="-178" y="-46" width="356" height="92" fill="none" stroke="#C0C0C0" stroke-width="2"/>
-      <text x="0" y="-8" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="34" font-weight="700" fill="#C0C0C0" letter-spacing="4">CASE FILE</text>
-      <text x="0" y="30" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="26" font-weight="700" fill="#C0C0C0" letter-spacing="6">OPENED</text>
+    <!-- Center Badge -->
+    <text x="350" y="8.5" class="mono-dim">ARCHIVE ID: #01018-YOROZUYA</text>
+
+    <!-- Right Clearance Pill -->
+    <rect x="660" y="-3" width="164" height="17" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+    <text x="742" y="9" class="mono-gold" text-anchor="middle">LEVEL 4 // TOP SECRET</text>
+  </g>
+
+  <!-- Header Separator Line -->
+  <line x1="28" y1="36" x2="852" y2="36" stroke="#27272a" stroke-width="1"/>
+
+  <!-- ================================================================= -->
+  <!-- LEFT & CENTER: DE-REDACTED SUBJECT DOSSIER TELEMETRY              -->
+  <!-- ================================================================= -->
+  <g transform="translate(32, 64)">
+    <!-- Row 1: Operative Identity -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="10" class="mono-gold">OPERATIVE:</text>
+      <text x="100" y="10" class="mono-bold">Sonu Jangir</text>
+      <text x="210" y="10" class="mono-dim">// CODENAME: @gintama1018</text>
+      <!-- Subtle De-redaction Wipe (Reveals from Left to Right) -->
+      <rect x="96" y="-3" width="370" height="18" fill="#18181b" stroke="#3f3f46" stroke-width="0.8">
+        <animate attributeName="width" values="370; 0" dur="0.9s" begin="0.3s" fill="freeze"/>
+        <animate attributeName="opacity" values="1; 0" dur="0.9s" begin="0.3s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Row 2: Primary Specialization -->
+    <g transform="translate(0, 28)">
+      <text x="0" y="10" class="mono-gold">SYSTEMS:</text>
+      <text x="100" y="10" class="mono-txt">Protocol Eng · Applied Cryptography · Edge Neural Engines</text>
+      <rect x="96" y="-3" width="410" height="18" fill="#18181b" stroke="#3f3f46" stroke-width="0.8">
+        <animate attributeName="width" values="410; 0" dur="0.9s" begin="0.6s" fill="freeze"/>
+        <animate attributeName="opacity" values="1; 0" dur="0.9s" begin="0.6s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Row 3: Active Key Projects -->
+    <g transform="translate(0, 56)">
+      <text x="0" y="10" class="mono-gold">KEY CASES:</text>
+      <text x="100" y="10" class="mono-txt">
+        <tspan fill="#f4f4f5">MeshWhisper</tspan> (BLE Mesh), <tspan fill="#f4f4f5">InfraWatch</tspan> (106 MCD Nodes), <tspan fill="#f4f4f5">AI Teacher</tspan>
+      </text>
+      <rect x="96" y="-3" width="410" height="18" fill="#18181b" stroke="#3f3f46" stroke-width="0.8">
+        <animate attributeName="width" values="410; 0" dur="0.9s" begin="0.9s" fill="freeze"/>
+        <animate attributeName="opacity" values="1; 0" dur="0.9s" begin="0.9s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Row 4: Verified Commendations -->
+    <g transform="translate(0, 84)">
+      <text x="0" y="10" class="mono-gold">RECORDS:</text>
+      <text x="100" y="10" class="mono-txt">
+        <tspan fill="#c5a059">★ Best Paper Award</tspan> (ICAHTE-2026) · National Hackathon Finalist
+      </text>
+      <rect x="96" y="-3" width="390" height="18" fill="#18181b" stroke="#3f3f46" stroke-width="0.8">
+        <animate attributeName="width" values="390; 0" dur="0.9s" begin="1.2s" fill="freeze"/>
+        <animate attributeName="opacity" values="1; 0" dur="0.9s" begin="1.2s" fill="freeze"/>
+      </rect>
+    </g>
+
+    <!-- Row 5: Operational Philosophy -->
+    <g transform="translate(0, 112)">
+      <text x="0" y="10" class="mono-gold">DIRECTIVE:</text>
+      <text x="100" y="10" class="mono-dim">"Every bug is a cold case until someone inspects the disassembly."</text>
+      <rect x="96" y="-3" width="430" height="18" fill="#18181b" stroke="#3f3f46" stroke-width="0.8">
+        <animate attributeName="width" values="430; 0" dur="0.9s" begin="1.5s" fill="freeze"/>
+        <animate attributeName="opacity" values="1; 0" dur="0.9s" begin="1.5s" fill="freeze"/>
+      </rect>
     </g>
   </g>
 
-  <text x="60" y="230" font-family="JetBrains Mono, monospace" font-size="13" fill="#5f5f5f">STATUS: under active investigation — see FILE 01 below</text>
+  <!-- ================================================================= -->
+  <!-- RIGHT SIDE: FORENSIC MILITARY STAMP & AUTHENTICATION SEAL         -->
+  <!-- Permanent, prominent, animated impact slam with zero hidden state -->
+  <!-- ================================================================= -->
+  <g transform="translate(685, 126)" filter="url(#stamp-glow)">
+    <!-- Slam Animation: Scales from 1.6 down to 1.0 with recoil, remains permanently visible -->
+    <animateTransform attributeName="transform" type="scale"
+      values="1.6; 1.6; 0.96; 1.0"
+      keyTimes="0; 0.3; 0.45; 1"
+      dur="2.2s" fill="freeze" additive="sum"/>
+    <animateTransform attributeName="transform" type="rotate"
+      values="-16; -16; -7; -8"
+      keyTimes="0; 0.3; 0.45; 1"
+      dur="2.2s" fill="freeze" additive="sum"/>
+
+    <!-- Double Outer Stamp Box -->
+    <g transform="translate(-145, -50)">
+      <!-- Outer Solid Border -->
+      <rect x="0" y="0" width="290" height="100" rx="3" fill="#121215" fill-opacity="0.9" stroke="#d4d4d8" stroke-width="3"/>
+      <!-- Inner Dashed Border -->
+      <rect x="6" y="6" width="278" height="88" rx="2" fill="none" stroke="#c5a059" stroke-width="1.4" stroke-dasharray="8,4"/>
+
+      <!-- Stamp Typography -->
+      <text x="145" y="27" class="stamp-sub" text-anchor="middle">SILVER SOUL ARCHIVES</text>
+      <text x="145" y="58" class="stamp-main" text-anchor="middle">CASE FILE: OPENED</text>
+      <text x="145" y="81" class="stamp-id" text-anchor="middle">AUTH BY YOROZUYA // #01018</text>
+    </g>
+  </g>
+
+  <!-- High-Density Forensic Barcode (Bottom Right) -->
+  <g transform="translate(560, 206)">
+    <!-- Barcode Bars -->
+    <g fill="#71717a">
+      <rect x="0" y="0" width="2" height="16"/>
+      <rect x="4" y="0" width="4" height="16"/>
+      <rect x="10" y="0" width="1" height="16"/>
+      <rect x="13" y="0" width="3" height="16"/>
+      <rect x="18" y="0" width="1" height="16"/>
+      <rect x="21" y="0" width="5" height="16"/>
+      <rect x="28" y="0" width="2" height="16"/>
+      <rect x="32" y="0" width="3" height="16"/>
+      <rect x="37" y="0" width="1" height="16"/>
+      <rect x="40" y="0" width="4" height="16"/>
+      <rect x="46" y="0" width="2" height="16"/>
+      <rect x="50" y="0" width="5" height="16"/>
+      <rect x="57" y="0" width="1" height="16"/>
+      <rect x="60" y="0" width="3" height="16"/>
+      <rect x="65" y="0" width="2" height="16"/>
+      <rect x="69" y="0" width="4" height="16"/>
+      <rect x="75" y="0" width="1" height="16"/>
+      <rect x="78" y="0" width="5" height="16"/>
+      <rect x="85" y="0" width="2" height="16"/>
+    </g>
+    <text x="96" y="12" class="mono-dim" font-size="9">SER: 01018-98968B-JAIPUR</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- BOTTOM STATUS FOOTER RIBBON                                       -->
+  <!-- ================================================================= -->
+  <line x1="28" y1="226" x2="852" y2="226" stroke="#27272a" stroke-width="1"/>
+  <g transform="translate(32, 240)">
+    <text x="0" y="0" class="mono-dim">STATUS: ACTIVE INVESTIGATION — READY FOR PROTOCOL AUDIT &amp; CONTRACTS</text>
+    <text x="700" y="0" class="mono-gold">GRID: 27.02° N, 75.83° E</text>
+  </g>
 </svg>
