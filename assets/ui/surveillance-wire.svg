@@ -28,7 +28,7 @@
     </text>
     <rect x="650" y="-3" width="150" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
     <text x="725" y="9.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
-      REC: 2026-09-06 20:06 UTC
+      REC: 2026-09-07 03:25 UTC
     </text>
     <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
   </g>
@@ -40,10 +40,10 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 04, 12:32 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/BIT-FOR-US</tspan>
+        [Sep 04, 19:50 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/BRO</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ "fix(router): bound store-and-forward queue per recipient and glob..." (main@256fcf5)
+        └─ "docs: add senior-level architecture README and documentation" (main@d545341)
       </text>
     </g>
     <!-- Intercept Row 2 -->
@@ -51,10 +51,10 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 04, 10:35 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/BIT-FOR-US</tspan>
+        [Sep 04, 18:46 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/BIT-FOR-US</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ "docs: comprehensive update of README with CameraX scanner and PBK..." (main@84afc67)
+        └─ "feat: implement Milestone 3 dynamic route engine, directed next-h..." (main@092bcb0)
       </text>
     </g>
     <!-- Intercept Row 3 -->
@@ -62,10 +62,10 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 06, 13:08 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/BRO</tspan>
+        [Sep 06, 08:16 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/gintama1018</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ "feat: implement modern 2-column visual Tab Switcher" (main@98d49d6)
+        └─ "fix(hero): center stamp origin to eliminate off-screen clipping a..." (main@5be27c4)
       </text>
     </g>
     <!-- Intercept Row 4 -->
@@ -73,10 +73,10 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 06, 08:16 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/gintama1018</tspan>
+        [Sep 06, 08:09 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/gintama1018.github.io</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ "fix(hero): center stamp origin to eliminate off-screen clipping a..." (main@5be27c4)
+        └─ "feat(audio): add cover shatter, critical hit, and tournament soun..." (main@ee5dee0)
       </text>
     </g>
 
