@@ -28,7 +28,7 @@
     </text>
     <rect x="650" y="-3" width="150" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
     <text x="725" y="9.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
-      REC: 2026-09-12 03:36 UTC
+      REC: 2026-09-12 10:15 UTC
     </text>
     <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
   </g>
@@ -40,14 +40,25 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
+        [Sep 11, 08:29 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/GHOSTLINK</tspan>
+      </text>
+      <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
+        └─ "GhostLink v0.2.8: Guard in-progress reassembly against reset, pre..." (main@281f20a)
+      </text>
+    </g>
+    <!-- Intercept Row 2 -->
+    <g transform="translate(16, 100)">
+      <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+      <circle cx="14" cy="21" r="3" fill="#c5a059"/>
+      <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
         [Sep 11, 09:30 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/GHOSTLINK</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
         └─ "feat(core): harden zero-RF protocol v2, ECDH crypto, multi-mode a..." (main@2b46518)
       </text>
     </g>
-    <!-- Intercept Row 2 -->
-    <g transform="translate(16, 100)">
+    <!-- Intercept Row 3 -->
+    <g transform="translate(16, 148)">
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
@@ -57,8 +68,8 @@
         └─ Initialized new branch on gintama1018/GHOSTLINK
       </text>
     </g>
-    <!-- Intercept Row 3 -->
-    <g transform="translate(16, 148)">
+    <!-- Intercept Row 4 -->
+    <g transform="translate(16, 196)">
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
@@ -66,17 +77,6 @@
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
         └─ Marked investigative interest on Anakin-Inc/anakin
-      </text>
-    </g>
-    <!-- Intercept Row 4 -->
-    <g transform="translate(16, 196)">
-      <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
-      <circle cx="14" cy="21" r="3" fill="#c5a059"/>
-      <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 09, 08:45 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/SachLabel</tspan>
-      </text>
-      <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ "fix(camera): prevent crash on nav bar camera button with safe act..." (main@62e8cc2)
       </text>
     </g>
 
