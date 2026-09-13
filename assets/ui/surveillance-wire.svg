@@ -28,7 +28,7 @@
     </text>
     <rect x="650" y="-3" width="150" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
     <text x="725" y="9.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
-      REC: 2026-09-13 11:15 UTC
+      REC: 2026-09-13 15:46 UTC
     </text>
     <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
   </g>
@@ -40,14 +40,25 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 11, 06:21 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/GHOSTLINK</tspan>
+        [Sep 13, 15:12 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/SANGAM</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ "GhostLink v0.2.5: Physical phone CameraX rowStride fix, 640x480 l..." (main@83a4771)
+        └─ "feat: implement Phases 1-5 for local-first event photo network" (main@420882c)
       </text>
     </g>
     <!-- Intercept Row 2 -->
     <g transform="translate(16, 100)">
+      <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
+      <circle cx="14" cy="21" r="3" fill="#c5a059"/>
+      <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
+        [Sep 11, 10:04 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/GHOSTLINK</tspan>
+      </text>
+      <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
+        └─ "fix(crypto,phy): implement true ECDH with transcript binding, wir..." (main@26bcadb)
+      </text>
+    </g>
+    <!-- Intercept Row 3 -->
+    <g transform="translate(16, 148)">
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
@@ -57,8 +68,8 @@
         └─ Initialized new branch on gintama1018/SANGAM
       </text>
     </g>
-    <!-- Intercept Row 3 -->
-    <g transform="translate(16, 148)">
+    <!-- Intercept Row 4 -->
+    <g transform="translate(16, 196)">
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
@@ -66,17 +77,6 @@
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
         └─ Initialized new branch on gintama1018/GHOSTLINK
-      </text>
-    </g>
-    <!-- Intercept Row 4 -->
-    <g transform="translate(16, 196)">
-      <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
-      <circle cx="14" cy="21" r="3" fill="#c5a059"/>
-      <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 11, 06:07 UTC] <tspan fill="#f4f4f5" font-weight="bold">STARRED</tspan> ➔ <tspan fill="#d4d4d8">Anakin-Inc/anakin</tspan>
-      </text>
-      <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ Marked investigative interest on Anakin-Inc/anakin
       </text>
     </g>
 
