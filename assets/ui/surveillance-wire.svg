@@ -28,7 +28,7 @@
     </text>
     <rect x="650" y="-3" width="150" height="18" rx="3" fill="#18181b" stroke="#3f3f46" stroke-width="0.8"/>
     <text x="725" y="9.5" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="600" fill="#c5a059" text-anchor="middle">
-      REC: 2026-09-14 12:05 UTC
+      REC: 2026-09-14 21:35 UTC
     </text>
     <line x1="0" y1="18" x2="800" y2="18" stroke="#27272a" stroke-width="0.8"/>
   </g>
@@ -40,10 +40,10 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 11, 12:41 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/GHOSTLINK</tspan>
+        [Sep 13, 16:34 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/SANGAM</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ "feat(phy): multi-carrier OFDM breakthrough, continuous streaming ..." (main@c0bc331)
+        └─ "feat(security): enforce JPEG validation and size limits on full-r..." (main@7dab4c8)
       </text>
     </g>
     <!-- Intercept Row 2 -->
@@ -51,10 +51,10 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 13, 15:59 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/SANGAM</tspan>
+        [Sep 13, 16:21 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/SANGAM</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ "feat(security): gate room-close behind private hostSecret to prev..." (main@9a39477)
+        └─ "feat(security): sanitize photo IDs and block path traversal on se..." (main@ae519a4)
       </text>
     </g>
     <!-- Intercept Row 3 -->
@@ -62,10 +62,10 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 13, 09:00 UTC] <tspan fill="#f4f4f5" font-weight="bold">CREATED</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/SANGAM</tspan>
+        [Sep 11, 12:41 UTC] <tspan fill="#f4f4f5" font-weight="bold">PUSH EVENT</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/GHOSTLINK</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ Initialized new branch on gintama1018/SANGAM
+        └─ "feat(phy): multi-carrier OFDM breakthrough, continuous streaming ..." (main@c0bc331)
       </text>
     </g>
     <!-- Intercept Row 4 -->
@@ -73,10 +73,10 @@
       <rect x="0" y="0" width="788" height="42" rx="4" fill="#121215" stroke="#27272a" stroke-width="0.8"/>
       <circle cx="14" cy="21" r="3" fill="#c5a059"/>
       <text x="26" y="17" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="600" fill="#a1a1aa">
-        [Sep 11, 05:41 UTC] <tspan fill="#f4f4f5" font-weight="bold">CREATED</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/GHOSTLINK</tspan>
+        [Sep 13, 09:00 UTC] <tspan fill="#f4f4f5" font-weight="bold">CREATED</tspan> ➔ <tspan fill="#d4d4d8">gintama1018/SANGAM</tspan>
       </text>
       <text x="26" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#71717a">
-        └─ Initialized new branch on gintama1018/GHOSTLINK
+        └─ Initialized new branch on gintama1018/SANGAM
       </text>
     </g>
 
